@@ -1,0 +1,1 @@
+<h2>test mail : {{ $data['newPass'] }}</h2>

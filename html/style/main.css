@@ -1,0 +1,3785 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Inter";
+    font-weight: 400;
+    color: #000;
+    background: #fff;
+    word-break: break-word;
+}
+
+@font-face {
+    font-family: "SVN-Monument Extended";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/SVN/SVN-Monument Extended Regular.otf");
+}
+
+@font-face {
+    font-family: "SVN-Monument Extended";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/SVN/SVN-Monument Extended Light.otf");
+}
+
+@font-face {
+    font-family: "SVN-Monument Extended";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/SVN/SVN-Monument Extended Bold.otf");
+}
+
+@font-face {
+    font-family: "SVN-Monument Extended";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/SVN/SVN-Monument Extended UltraBold.otf");
+}
+
+@font-face {
+    font-family: "SVN-Monument Extended";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/SVN/SVN-Monument Extended Light.otf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Inter/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Inter/Inter-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Inter/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/Inter/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/Inter/Inter-Black.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Inter/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../fonts/Inter/Inter-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../fonts/Inter/Inter-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Inter VariableFont";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+
+.tatu_all {
+    background: transparent url("../images/bg-home.jpg") no-repeat top center;
+    background-size: cover;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tatu_nst {
+    background: transparent url("../images/bg-nst.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.tatu_title {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 130%;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.img-app3-1 {
+    display: none;
+}
+/* tatu_header */
+.tatu_header {
+    float: left;
+    width: 100%;
+    padding: 12px 0 13px;
+    /* background: transparent url('../images/bg-header.png') no-repeat center center; */
+    background: #000734;
+    background-size: cover;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+
+.tatu_header .container {
+    width: 95.98%;
+    max-width: 1826px;
+}
+
+.tatu_header_mb {
+    padding: 12px 15px 13px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background: #000734;
+    width: 100%;
+    display: none;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_list {
+    padding: 0;
+    margin: 0;
+}
+
+.menu_list li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.menu_list li:first-child {
+    margin-left: 0;
+}
+
+.menu_item {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #a8a8a8;
+}
+
+.menu_item:hover,
+.menu_item.active,
+.menu_item:active {
+    color: #FF0055;
+    text-decoration: none;
+    /* text-shadow: 1px 0px #fff; */
+}
+
+.img-h {
+    display: none;
+}
+
+.header_sp a:hover .img-df {
+    display: none;
+}
+
+.header_sp a:hover .img-h {
+    display: inline-block;
+}
+
+.header_sp {}
+
+.header_sp a {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.header_sp a:first-child {
+    margin-left: 0;
+}
+
+/* tatu_banner */
+.tatu_banner {
+    float: left;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    /* padding-bottom: 76px; */
+}
+
+.future-hover {
+    display: flex;
+    transition: 0.85s;
+    padding: 0 20px 0 12px;
+    background: transparent;
+    border-radius: 60px;
+    align-items: center;
+    position: absolute;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.future-hover1 {
+    top: 15%;
+    left: 63%;
+}
+
+.future-hover2 {
+    top: 27%;
+    left: 51%;
+}
+
+.future-hover3 {
+    top: 41%;
+    left: 66%;
+}
+
+.future-hover4 {
+    top: 52%;
+    left: 67.5%;
+}
+
+.future-hover-img {
+    width: 82px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(2, 8, 8, 0.36);
+    height: 82px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.future-hover-img img {
+    animation: xoayvong 6s linear 0s infinite;
+    -webkit-animation: xoayvong 6s linear 0s infinite;
+    -moz-animation: xoayvong 6s linear 0s infinite;
+    -o-animation: xoayvong 6s linear 0s infinite;
+}
+
+.future-hover-body {
+    width: calc(100% - 62px);
+    padding-left: 24px;
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #00feff;
+    opacity: 0;
+    transition: 0.85s;
+}
+
+.future-hover-body span {
+    display: block;
+    width: 100%;
+    font-family: "SVN-Monument Extended";
+    font-weight: 200;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 7px;
+}
+
+.future-hover:hover {
+    background: rgba(2, 8, 8, 0.72);
+}
+
+.future-hover:hover .future-hover-body {
+    opacity: 1;
+}
+
+.future-hover:hover .future-hover-img {
+    background: transparent;
+}
+
+.img-banner {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.banner_content {
+    width: 100%;
+    max-width: 623px;
+    position: absolute;
+    z-index: 6;
+    left: calc((100% - 1170px) / 2);
+    top: 27.59%;
+}
+
+.banner_content h1 {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 130%;
+    color: #ffffff;
+    margin-bottom: 38px;
+}
+
+.banner_content h1 span {
+    color: #5438ff;
+    display: block;
+}
+
+.banner_content_txt {
+    font-size: 20px;
+    line-height: 160%;
+    text-align: justify;
+    color: #ffffff;
+    width: 100%;
+    max-width: 570px;
+    margin-bottom: 90px;
+}
+
+.banner_content_box {
+    display: flex;
+}
+
+.banner_box_first {
+    margin-right: 36px;
+}
+
+.banner_box_first span {
+    display: block;
+    font-size: 12.9267px;
+    line-height: 150%;
+    color: #ffffff;
+    margin-bottom: 3px;
+}
+
+.btn_banner {
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding: 11px 32px 9px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    color: #ffffff;
+    transition: 0.65s;
+}
+
+.btn_banner:hover {
+    color: #ffffff;
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+    border: 1px solid transparent;
+    border-left: 0;
+    border-right: 0;
+}
+
+.ic-1 {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background: transparent url("../images/ic-1.png") no-repeat center center;
+    margin-left: 19px;
+    vertical-align: -3px;
+}
+
+.tatu_marqee {
+    display: flex;
+    position: absolute;
+    z-index: 7;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tatu_marqee .inner {
+    width: 100%;
+    height: 76px;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 76px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.tatu_marqee .inner:first-child {
+    background-color: transparent;
+    /* color: darkred; */
+    transform-origin: right;
+    transform: perspective(00px) rotateY(0);
+}
+
+.tatu_marqee .inner:last-child {
+    background-color: transparent;
+    /* color: antiquewhite; */
+    transform-origin: left;
+    transform: perspective(00px) rotateY(0);
+}
+
+.tatu_marqee .inner span {
+    position: absolute;
+    animation: marquee 15s linear infinite;
+}
+
+.tatu_marqee .inner:first-child span {
+    animation-delay: 0s;
+    left: -100%;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+/* tatu_th */
+.tatu_th {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background: transparent url("../images/bg-ttth.png") no-repeat 41.5% -20px;
+    padding: 103px 0 77px;
+}
+
+.th_content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.th_left {
+    float: left;
+    width: 50.51%;
+}
+
+.th_left .col-md-6 {
+    padding-bottom: 20px;
+}
+
+.th_right {
+    float: left;
+    width: 49.49%;
+    padding-left: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.th_right_content .tatu_title {
+    margin-bottom: 42px;
+}
+
+.sub {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.th_item {
+    width: 100%;
+    max-width: 240px;
+    padding: 57px 43px 0 0;
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.th_item_img {
+    display: block;
+    width: calc(100% - 22px);
+    height: 231px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    left: 22px;
+    padding: 1px;
+    transition: 0.85s;
+}
+
+.th_item_img span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.th_item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.85s;
+}
+
+.th_item_body {
+    width: 100%;
+    display: block;
+    padding: 189px 5px 14px 22px;
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #ffffff;
+    background: transparent url("../images/bg-2.png") no-repeat center center;
+    background-size: 100% 100%;
+    transition: 0.85s;
+}
+.th_list_mb .th_item_body {
+    height: 100%;
+}
+
+.th_item:hover .th_item_img img {
+    transform: scale(1.2);
+}
+
+.th_item:hover .th_item_body {
+    background: transparent url("../images/bg-2-1.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.th_item:hover .th_item_img {
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+}
+
+.th_item:hover {
+    text-decoration: none;
+}
+
+.th_item2 {
+    margin-top: 27px;
+}
+
+.th_item3 {
+    margin-left: 38px;
+}
+
+.img-ttth1 {
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: -90px;
+}
+
+.th_right_content {
+    padding-top: 23px;
+}
+
+.th_list_mb {
+    float: left;
+    width: 100%;
+    display: none;
+}
+
+.th_list_mb .th_slide,
+.th_list_mb .nstnd_slide,
+.th_list_mb .cdst_slide,
+.th_list_mb .cdst_slide2,
+.th_list_mb .tt_slide {
+    padding-bottom: 34px !important;
+}
+.th_list_mb .swiper-slide {
+    height: auto;
+}
+.th_list_mb .creators_box_btn {
+    padding-top: 36px;
+}
+
+.th_list_mb .swiper-pagination {
+    bottom: 0;
+}
+
+.th_list_mb .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+}
+
+.th_list_mb .swiper-pagination-bullet-active {
+    background: #E9314C;
+}
+
+/* tatu_towards */
+.tatu_towards {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 4px 0 38px;
+}
+
+.towards_title {
+    margin-top: 73px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.towards_item {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.towards_item h3 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 160%;
+    color: #ffffff;
+    transition: 0.5s;
+    margin-bottom: 15px;
+}
+
+.towards_item .sub {
+    line-height: 32px;
+}
+
+.towards_item:hover h3 {
+    background: linear-gradient(270deg, #0c196b 0%, #f5255f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img-ttth2 {
+    position: absolute;
+    left: -17px;
+    top: -87%;
+}
+
+.img-ttth3 {
+    position: absolute;
+    right: 0;
+    bottom: -109%;
+}
+
+/* tatu_dlapp */
+.tatu_dlapp {
+    float: left;
+    width: 100%;
+    padding: 0 0 172px;
+    position: relative;
+}
+
+.dlapp_title {
+    margin-bottom: 121px;
+    position: relative;
+    z-index: 5;
+}
+
+.dlapp_title .tatu_title {
+    text-align: center;
+}
+
+.dlapp_box {
+    width: 100%;
+    max-width: 577px;
+    background: rgba(255, 255, 255, 0.17);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 49px 30px 36px 43px;
+    border-radius: 16px;
+    position: relative;
+    z-index: 5;
+}
+
+.dlapp_box h5 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: #ffffff;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.dlapp_box_item {
+    padding-left: 74px;
+    background: transparent url("../images/ic-5-1.png") no-repeat -16px -12px;
+    font-size: 14px;
+    line-height: 150%;
+    color: #eef3ff;
+    margin-bottom: 24px;
+}
+
+.dlapp_box_item:nth-of-type(2) {
+    background: transparent url("../images/ic-5-2.png") no-repeat -16px -12px;
+}
+
+.dlapp_box_item:nth-of-type(3) {
+    background: transparent url("../images/ic-5-3.png") no-repeat -16px -12px;
+}
+
+.dlapp_box_item:nth-of-type(4) {
+    background: transparent url("../images/ic-5-4.png") no-repeat -16px -12px;
+}
+
+.dlapp_box_item span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #ffffff;
+}
+
+.dlapp_box_ic {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    justify-content: center;
+}
+
+.dlapp_box_ic_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin-right: 36px;
+}
+
+.dlapp_box_ic_left a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.dlapp_box_ic_left a:last-child {
+    margin-bottom: 0;
+}
+
+.dlapp_box_ic_right {
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.dlapp_box_ic_right img {
+    max-width: 100%;
+}
+
+.img-app3 {
+    position: absolute;
+    bottom: -191px;
+    right: -274px;
+}
+
+.img-qr {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    z-index: 6;
+    top: 31%;
+    right: 10%;
+}
+
+/* tatu_creators */
+.tatu_creators {
+    float: left;
+    width: 100%;
+    padding: 0 0 50px;
+    position: relative;
+}
+
+.creators_top {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.img-ttth4 {
+    position: absolute;
+    left: 0;
+    top: -15%;
+}
+
+.img-ttth5 {
+    position: absolute;
+    right: 0;
+    bottom: -70%;
+}
+
+.creators_top h2 {}
+
+.creators_top_tab {
+    padding-top: 40px;
+}
+
+.creators_top .nav-tabs {
+    border-bottom: 0;
+}
+
+.creators_top .nav-tabs .nav-item {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.creators_top .nav-tabs .nav-item:last-child {
+    margin-right: 0;
+}
+
+.creators_top .nav-tabs .nav-link {
+    border: 1px solid #a3a3a3;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.creators_top .nav-tabs .nav-item.show .nav-link,
+.creators_top .nav-tabs .nav-link.active {
+    /* background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%); */
+    background: #fff;
+    color: #2D40B9;
+}
+
+.creators_nstnd {}
+
+.creators_nstnd .col-md-4 {
+    padding-bottom: 30px;
+}
+
+.nstnd_item {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 3.7/5;
+    position: relative;
+    display: block;
+    padding: 1px;
+}
+
+.nstnd_item_other {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+.nstnd_item:hover {
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+}
+
+.nstnd_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.85s;
+}
+
+.nstnd_item:hover img {
+    transform: scale(1.2);
+}
+
+#myTabContent {
+    position: relative;
+    z-index: 6;
+}
+
+.nstnd_item_info {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    padding: 0 5px 0 29px;
+    left: 0;
+    bottom: 31px;
+    z-index: 4;
+    font-size: 16px;
+    line-height: 150%;
+    color: #ffffff;
+    overflow: hidden;
+    /* flex-direction: column-reverse; */
+    transition: 0.85s;
+}
+
+.nstnd_item:hover .nstnd_item_info {
+    /* flex-direction: column; */
+}
+
+.nstnd_item_info_top {
+    display: block;
+    width: 100%;
+    transition: 0.85s;
+}
+
+.nstnd_item_name {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ffffff;
+    display: block;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+    padding-top: 6px;
+}
+
+.nstnd_box_info {
+    display: flex;
+    column-gap: 30px;
+    padding-top: 12px;
+    transition: 0.85s;
+    transform: translateY(100%);
+}
+
+.nstnd_item:hover .nstnd_box_info {
+    transform: translateY(0);
+}
+
+.nstnd_box_col {
+    max-width: 33.33%;
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.nstnd_box_col span {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+}
+
+.nstnd_item_other::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: transparent url("../images/bg-nstnd-i-1.png") no-repeat center center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-size: 100% 100%;
+    z-index: 3;
+}
+
+.creators_box_btn {
+    text-align: center;
+}
+
+.creators_cdst {}
+
+.creators_cdst .row {
+    margin: 0 -9px;
+}
+
+.creators_cdst .col-lg-6,
+.creators_cdst .col-lg-12 {
+    padding: 0 9px 0;
+}
+
+.cdst_all .col-lg-6,
+.cdst_all .col-lg-12 {
+    padding-bottom: 20px;
+}
+
+.cdst_item {
+    width: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.cdst_slide .cdst_item,
+.cdst_slide2 .cdst_item {
+    aspect-ratio: 3/4;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cdst_slide .cdst_item_txt,
+.cdst_slide2 .cdst_item_txt {
+    bottom: 0;
+    padding: 0 10px 20px 20px;
+}
+
+
+.cdst_item::after {
+    transition: 0.85s;
+    content: "";
+    width: 100%;
+    height: 283px;
+    display: none;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #5d10ce 100%);
+}
+
+.cdst_slide .cdst_item::after,
+.cdst_slide2 .cdst_item::after {
+    display: block;
+}
+
+.nstnd_cddt .th_list_mb {
+    padding: 0 15px;
+}
+
+.cdst_item_txt {
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+    padding: 0 10px 22px 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #ffffff;
+    left: 0;
+    bottom: -100%;
+    transition: 0.85s;
+    display: block;
+}
+
+.cdst_item:hover .cdst_item_txt {
+    bottom: 0;
+}
+
+.cdst_item:hover::after {
+    display: block;
+}
+
+.cdst_item_txt span {
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 150%;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.cdst_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.85s;
+}
+
+.cdst_item:hover img {
+    transform: scale(1.2);
+}
+
+.cdst_item2 {
+    aspect-ratio: 2/0.969;
+}
+
+.cdst_item3 {
+    aspect-ratio: 1/2;
+    height: 100%;
+}
+
+.cdst_item_other .cdst_item {
+    margin-bottom: 20px;
+}
+
+.cdst_item_other .cdst_item:last-child {
+    margin-bottom: 0;
+}
+
+/* tatu_bcvct */
+.tatu_bcvct {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.bcvct_title {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 36px;
+}
+
+.bcvct_title .tatu_title {
+    float: left;
+}
+
+.bcvct_btn {
+    display: flex;
+    direction: rtl;
+    float: right;
+    padding-top: 33px;
+}
+
+.bcvct_btn .swiper-button-next:after,
+.bcvct_btn .swiper-button-prev:after {
+    display: none;
+}
+
+.bcvct_btn .swiper-button-next,
+.bcvct_btn .swiper-button-prev {
+    position: unset;
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0;
+    opacity: 1;
+}
+
+.bcvct_btn .swiper-button-next {
+    background-image: url("../images/ic-sl2.png");
+    margin-left: 12px;
+}
+
+.bcvct_btn .swiper-button-prev {
+    background-image: url("../images/ic-sl1.png");
+}
+
+.bcvct_btn .swiper-button-next:hover,
+.bcvct_btn .swiper-button-next:active {
+    background-image: url("../images/ic-sl4.png");
+    margin-left: 12px;
+}
+
+.bcvct_btn .swiper-button-prev:hover,
+.bcvct_btn .swiper-button-prev:active {
+    background-image: url("../images/ic-sl3.png");
+}
+
+.bcvct_list {
+    position: relative;
+    z-index: 6;
+    padding-left: calc((100% - 1170px) / 2);
+}
+
+.bcvct_list .swiper-slide {
+    height: auto;
+}
+
+.bcvct_item {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    overflow: hidden;
+    display: block;
+    padding: 1px;
+}
+
+/*.bcvct_item:hover {
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+}*/
+
+.bcvct_item_other {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #ffffff;
+}
+
+.bcvct_item:hover {
+    text-decoration: none;
+}
+
+.bcvct_item_img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 37/22;
+    overflow: hidden;
+}
+
+.bcvct_item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.85s;
+}
+
+.bcvct_item_title {
+    padding: 20px 17px 23px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: #0c196b;
+    display: block;
+}
+
+.bcvct_item:hover .bcvct_item_title,
+.bcvct_item_title:hover,
+.tt_item:hover .bcvct_item_title,
+.tt_item:hover .tt_item_links {
+    color: #f5255f;
+    text-decoration: none;
+}
+
+.bcvct_item:hover .bcvct_item_img img {
+    transform: scale(1.2);
+}
+
+/* tatu_tt */
+.tatu_tt {
+    float: left;
+    width: 100%;
+    padding: 60px 0 85px;
+    position: relative;
+    z-index: 3;
+}
+
+.tt_title {
+    margin-bottom: 58px;
+}
+
+.tt_title .tatu_title {
+    float: left;
+}
+
+.tt_btn {
+    float: right;
+    padding-top: 8px;
+}
+
+.tt_list {
+    position: relative;
+    z-index: 6;
+    /* -ms-flex-wrap: wrap;
+    flex-wrap: wrap; */
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    orphans: 2;
+    widows: 2;
+    column-gap: 30px;
+}
+
+.tt_list .tt_col {
+    margin-bottom: 30px;
+    background: transparent;
+    border: 0;
+}
+
+.tt_item_ms {
+    width: calc(100% - 26px);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    display: block;
+    position: relative;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+}
+
+.tt_item_ms_last {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.tt_item_ms img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    animation: xoayvong 10s linear 0s infinite;
+    -webkit-animation: xoayvong 10s linear 0s infinite;
+    -moz-animation: xoayvong 10s linear 0s infinite;
+    -o-animation: xoayvong 10s linear 0s infinite;
+}
+
+.tt_item_ms_play {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transition: 0.85s;
+}
+
+.tt_item_ms_play::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 14px;
+    background: transparent url("../images/ic-6.png") no-repeat center center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 7;
+    position: absolute;
+}
+.tt_item_ms_play.active::after {
+    background: transparent url("../images/ic-6-1.png") no-repeat center center;
+}
+
+.tt_item_ms:hover .tt_item_ms_play, .tt_item_ms_play.active {
+    background: #2d40b9;
+}
+
+@-webkit-keyframes xoayvong {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes xoayvong {
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.tt_item_ms:hover img {}
+
+.tt_item {
+    background: #ffffff;
+    box-shadow: 0px 0px 27px rgba(34, 52, 65, 0.07);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.tt_item_mr {
+    margin-top: 64px;
+}
+
+.tt_item_img {
+    width: 100%;
+    aspect-ratio: 37/24;
+    overflow: hidden;
+    display: block;
+}
+
+.tt_item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tt_item_body {
+    padding: 0 1px 1px;
+    background: #fff;
+    height: 100%;
+}
+
+.tt_item:hover .tt_item_body {
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+}
+
+.tt_item_body_other {
+    padding: 35px 24px 19px;
+    background: #fff;
+    height: 100%;
+}
+
+.tt_item_date {
+    font-size: 12px;
+    line-height: 20px;
+    color: #6f6f6f;
+    margin-bottom: 16px;
+}
+
+.tt_item_body .bcvct_item_title {
+    display: block;
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.tt_item_body .bcvct_item_title:hover {
+    text-decoration: none;
+}
+
+.tt_item_text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #393939;
+    margin-bottom: 20px;
+}
+
+.tt_item_links {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #0c196b;
+}
+
+.tatu_boxlast {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-image: url("../images/bg-boxlast.png");
+    background-repeat: no-repeat;
+    background-position: bottom -44px right 38%;
+}
+
+.img-ttth6 {
+    position: absolute;
+    top: -16.3%;
+    left: 0;
+}
+
+.img-ttth7 {
+    position: absolute;
+    top: 37%;
+    right: 0;
+}
+
+/* tatu_footer */
+.tatu_footer {
+    float: left;
+    width: 100%;
+    padding: 30px 0 65px;
+    position: relative;
+    z-index: 5;
+}
+
+.footer_title {}
+
+.footer_title .tatu_title {
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 56px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.footer_list {
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.footer_list li {
+    list-style: none;
+    padding: 3px 42px;
+    border-left: 1px solid #fff;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer_list li:first-child {
+    border-left: 0;
+    padding-left: 0;
+}
+
+.footer_list li a {
+    font-size: 32px;
+    line-height: 39px;
+    color: #ffffff;
+}
+
+.footer_list li a:hover,
+.footer_sp .footer_list li a:hover {
+    text-decoration: none;
+    background: linear-gradient(270deg, #0c196b 0%, #f5255f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer_sp {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer_sp .footer_list {
+    margin: 0;
+}
+
+.footer_sp .footer_list li {
+    padding: 0;
+    border: 0;
+    margin-right: 36px;
+}
+
+.footer_sp .footer_list li a {
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.footer_sp_txt {
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+._backTop {
+    display: block;
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    bottom: 128px;
+    z-index: 100;
+    right: calc((100% - 1170px) / 2);
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: 0.85s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+._backTop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+._backTop:hover {
+    background: linear-gradient(270deg, #0c196b 0%, #f5255f 100%);
+    border: 0;
+}
+
+/* nha-sang-tao-noi-dung */
+/* nstnd_banner */
+.nstnd_banner {
+    float: left;
+    width: 100%;
+    padding: 81px 0 0;
+    /* min-height: 889px; */
+    position: relative;
+    z-index: 2;
+}
+
+.nstnd_banner::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: transparent;
+}
+
+.nstnd_banner_video {
+    width: 100%;
+    aspect-ratio: 240/101;
+    position: relative;
+    z-index: 3;
+}
+
+.img-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 50.73%;
+    max-width: 958px;
+    max-height: max-content;
+    background: linear-gradient(109.86deg, rgba(244, 238, 244, 0.17) -59.62%, rgba(98, 28, 100, 0) 140.65%, #FA06FF 140.67%), radial-gradient(123.11% 288.11% at 44.46% 13%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%, rgba(5, 5, 5, 0.2) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+        , linear-gradient(255.43deg, rgba(15, 10, 240, 0.12) 1.61%, rgba(22, 18, 206, 0.02) 137.06%), linear-gradient(105.08deg, rgba(235, 0, 255, 0.2) -58.44%, rgba(222, 5, 241, 0.05) 178.74%);
+
+    backdrop-filter: blur(43px);
+    border-radius: 20px;
+    z-index: 6;
+}
+
+.img-title-left {
+    float: left;
+    width: 67.12%;
+    padding: 63px 0 51px 45px;
+    font-family: 'SVN-Monument Extended';
+    font-weight: 400;
+    font-size: 44px;
+    font-size: 2.2917vw;
+    line-height: 130%;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 5;
+}
+
+.img-title-left span {
+    color: #5438FF;
+    display: block;
+}
+
+.img-title-right {
+    width: 32.88%;
+    float: left;
+}
+
+.img-title-right img {
+    /* max-width: none!important; */
+    display: block;
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    width: 48.17%;
+    max-width: 404px;
+}
+
+
+.img-nst1 {
+    display: block;
+    right: 0;
+    position: absolute;
+    top: 12%;
+}
+
+/* nstnd_dg */
+.nstnd_dg {
+    float: left;
+    width: 100%;
+    padding: 70px 0 65px;
+    position: relative;
+}
+
+.img-nst2 {
+    left: 0;
+    position: absolute;
+    top: -187px;
+}
+
+.dg_title {
+    margin-bottom: 48px;
+}
+
+.dg_list {}
+
+.dg_list .col-lg-4 {
+    padding-bottom: 30px;
+}
+
+/* nstnd_gmst */
+.nstnd_gmst {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 69px;
+}
+
+.nstnd_gmst .bcvct_list {
+    padding: 0;
+}
+
+.gmst_slide .nstnd_item {
+    margin-bottom: 30px;
+}
+
+.bcvct_list .gmst_slide {
+    padding-bottom: 22px !important;
+}
+
+.bcvct_list .swiper-pagination {
+    bottom: 0;
+    display: none;
+}
+
+.bcvct_list .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 1;
+}
+
+.bcvct_list .swiper-pagination-bullet-active {
+    background: #e9314c;
+}
+
+.img-nst8 {
+    position: absolute;
+    left: 0;
+    top: -763px;
+}
+
+.img-nst4 {
+    position: absolute;
+    right: 0;
+    top: 30%;
+}
+
+/* nstnd_dktt */
+.nstnd_dktt {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 157px;
+    background: transparent url("../images/nha-sang-tao/bg-dktt.png") no-repeat 77.2% 108%;
+}
+
+.dktt_title {
+    margin-bottom: 59px;
+}
+
+.dktt_title .tatu_title {
+    text-align: center;
+}
+
+.dktt_form {
+    width: 100%;
+    max-width: 577px;
+    background: rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(50px);
+    border-radius: 16px;
+    padding: 59px 43px;
+}
+
+.dktt_form h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.dktt_form_row {
+    margin-bottom: 36px;
+    width: 100%;
+}
+
+.dktt_form_row input {
+    border: 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+    background: transparent;
+    height: 44px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.dktt_form_row input:focus-visible {
+    outline: 0;
+}
+
+.dktt_form_row ::placeholder {
+    color: #ffffff;
+}
+
+.dktt_form_box {
+    text-align: center;
+    padding-top: 44px;
+}
+
+/* nstnd_qw */
+.nstnd_qw {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 110px;
+}
+
+.qw_title {
+    margin-bottom: 35px;
+}
+
+.qw_title .tatu_title {
+    text-align: center;
+}
+
+.qw_list {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.qw_item {
+    margin-bottom: 35px;
+}
+
+.qw_item_title {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #ffffff;
+    background-image: url("../images/nha-sang-tao/ic-1.png");
+    background-repeat: no-repeat;
+    background-position: top 5px right;
+    cursor: pointer;
+}
+
+.qw_item_title[aria-expanded="true"] {
+    background-image: url("../images/nha-sang-tao/ic-2.png");
+}
+
+.qw_item_txt {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ffffff;
+    padding-top: 15px;
+}
+
+.img-nst6 {
+    position: absolute;
+    left: 0;
+    top: 166px;
+}
+
+.img-nst7 {
+    position: absolute;
+    right: 0;
+    top: -90px;
+}
+
+/* cong-dong */
+/* tatu_cd */
+.tatu_cd {
+    background: transparent url(../images/cong-dong/bg-cd.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.cd_banner {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-top: 81px;
+    padding: 54px 0 105px;
+}
+
+.img-cd1 {
+    position: absolute;
+    left: 0;
+    bottom: -360px;
+}
+
+.cd_banner .banner_content_txt {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #ffffff;
+    margin-bottom: 84px;
+    width: 100%;
+    max-width: 455px;
+}
+
+.cd_banner_title {
+    font-family: "SVN-Monument Extended";
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 130%;
+    color: #fff;
+    margin-bottom: 24px;
+    margin-top: 100px;
+}
+
+.cd_banner_title span {
+    font-weight: 700;
+    color: #5438ff;
+}
+
+.cd_banner_right {
+    text-align: center;
+}
+
+.cd_banner_right img {
+    max-width: 100%;
+}
+
+.cd_banner_right .row {
+    margin: 0 -5px;
+}
+
+.cd_banner_right .col-md-4,
+.cd_banner_right .col-md-5,
+.cd_banner_right .col-md-3 {
+    padding: 0 5px 15px;
+}
+
+.cd_banner_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_item_img {
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.banner_item_img img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.banner_item_img:nth-of-type(1) {
+    aspect-ratio: 13/9;
+}
+
+.banner_item_img:nth-of-type(2) {
+    aspect-ratio: 13/11;
+}
+
+.banner_item_img:nth-of-type(3) {
+    aspect-ratio: 26/17;
+}
+
+.banner_item_img:last-child {
+    margin-bottom: 0;
+}
+
+.cd_banner_item3 .banner_item_img:nth-of-type(1) {
+    aspect-ratio: 19/32;
+}
+
+/* nstnd_cdttt */
+.nstnd_cdttt {
+    position: relative;
+    padding: 0 0 25px;
+    float: left;
+    width: 100%;
+}
+
+.img-cd2 {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 93px;
+}
+
+/* nstnd_cddt */
+.nstnd_cddt {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.nstnd_cddt .bcvct_title {
+    margin-bottom: 60px;
+}
+
+.nstnd_cddt .bcvct_btn {
+    padding-top: 0;
+}
+
+.nstnd_cddt .bcvct_list {
+    padding: 0;
+}
+
+/* tic-tuc */
+.tatu_news {
+    background: transparent url(../images/tin-tuc/bg-new.jpg) no-repeat top center;
+    background-size: cover;
+    position: relative;
+}
+
+.news_banner {
+    float: left;
+    width: 100%;
+    padding: 50px 0 30px;
+    background: transparent;
+    position: relative;
+    margin-top: 81px;
+}
+
+.news_banner_content {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.news_banner_img {
+    aspect-ratio: 1170/523;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+.news_banner_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.news_banner_box {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: auto;
+    max-width: 803px;
+    padding: 0 10px 35px 35px;
+}
+
+.news_banner_date {
+    font-size: 26px;
+    line-height: 150%;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.news_banner_title {
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 130%;
+    color: #ffffff;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news_banner_content:hover .news_banner_title {
+    color: #f5255f;
+}
+
+.img-news1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img-news3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.news_main {
+    float: left;
+    width: 100%;
+    padding-bottom: 75px;
+    position: relative;
+}
+
+.news_main .tt_item {
+    width: 100%;
+    height: 100%;
+}
+
+.news_main .col-md-4 {
+    padding-bottom: 30px;
+}
+
+.news_pagination {
+    padding-top: 18px;
+}
+
+.news_pagination ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.news_pagination li {
+    padding: 1px;
+    width: 55px;
+    height: 55px;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.news_pagination li:last-child {
+    margin-right: 0;
+}
+
+.news_pagination li a {
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(255, 255, 255, 0.05); */
+    background: #6645be;
+    font-size: 26px;
+    line-height: 130%;
+    color: #ffffff;
+}
+
+.news_pagination li a:hover {
+    text-decoration: none;
+}
+
+.news_pagination li:hover,
+.news_pagination li.active,
+.news_pagination li:active {
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+}
+
+.th_list_mb .news_pagination li a {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.th_list_mb .news_pagination li:hover,
+.th_list_mb .news_pagination li.active,
+.th_list_mb .news_pagination li:active {
+    background: transparent;
+}
+
+/* tin-tuc-detail */
+.tatu_news_detail {
+    background: transparent url(../images/tin-tuc/bg-news-detail.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.newsdetail_main {
+    float: left;
+    width: 100%;
+    margin-top: 81px;
+    padding: 12px 0 0;
+}
+
+.newsdetail_breadcrumb {
+    float: left;
+    width: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.17);
+    padding: 50px 0;
+}
+
+.newsdetail_title {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.newsdetail_breadcrumb .breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.newsdetail_breadcrumb .breadcrumb-item {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.newsdetail_breadcrumb .breadcrumb-item a {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+.newsdetail_breadcrumb .breadcrumb-item+.breadcrumb-item::before {
+    color: #fff;
+}
+
+.newsdetail_content {
+    float: left;
+    width: 100%;
+    padding: 12px 0 0;
+    position: relative;
+}
+
+.newsdetail_txt {
+    font-size: 24px;
+    line-height: 150%;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.newsdetail_txt p {
+    margin-bottom: 30px;
+}
+
+.newsdetail_txt img {
+    display: block;
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.newsdetail_txt h3 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* newsdetail_hot */
+.newsdetail_hot {
+    float: left;
+    width: 100%;
+    padding: 50px 0 35px;
+    position: relative;
+}
+
+.hot_title {
+    margin-bottom: 35px;
+}
+
+.hot_title .tatu_title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.hot_list {}
+
+.hot_list .col-md-4 {
+    padding-bottom: 30px;
+}
+.newsdetail_hot .tt_item  {
+    width: 100%;
+    height: 100%;
+}
+/* Lien-he */
+.tatu_contact {
+    background: transparent url(../images/tin-tuc/bg-lien-he.jpg) no-repeat top center;
+    background-size: cover;
+    position: relative;
+}
+
+/* contact_main */
+.contact_main {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 81px 0 0;
+    background-image: url("../images/tin-tuc/img-lh.png");
+    background-repeat: no-repeat;
+    background-position: top 40px right;
+}
+
+.contact_banner {
+    float: left;
+    width: 100%;
+    padding: 45px 0 170px;
+}
+
+.contact_banner .banner_content_txt {
+    max-width: 475px;
+    text-align: left;
+}
+
+.ic-down {
+    display: inline-block;
+    width: 14px;
+    height: 9px;
+    background: transparent url("../images/tin-tuc/ic-down.png") no-repeat center center;
+    margin-left: 16px;
+}
+
+/* contact_form */
+.contact_form {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 0 0 110px;
+}
+
+.contact_form_left {
+    width: 100%;
+    /*max-width: 630px;*/
+}
+
+.contact_form_left .dktt_form_row {
+    margin-bottom: 24px;
+}
+
+.contact_form_left .dktt_form_row2 {
+    margin-bottom: 21px;
+}
+
+.contact_form_left .dktt_form_row input {
+    background: rgba(255, 255, 255, 0.17);
+    width: 100%;
+    height: 63px;
+    padding: 0 24px;
+    border: 0;
+}
+
+.contact_form_left .dktt_form_row textarea {
+    background: rgba(255, 255, 255, 0.17);
+    width: 100%;
+    border: 0;
+    height: 177px;
+    padding: 24px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.contact_form_box {}
+
+.contact_form_submit {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    padding: 0;
+}
+
+.contact_form_submit span {
+    display: block;
+    background: #1d1d1d;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 18px 73px;
+    position: relative;
+    z-index: 2;
+    transition: 0.85s;
+}
+
+.contact_form_submit:hover {
+    color: #fff;
+}
+
+.contact_form_submit::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    /* border: 1px solid #848484; */
+    background: #848484;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    transition: 0.85s;
+}
+
+.contact_form_submit::before {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    z-index: 2;
+    background: #140C1B;
+}
+
+.contact_form_submit:hover:after,
+.contact_form_submit:hover span {
+    background: linear-gradient(100.78deg, #ff0000 -1.57%, #ff0055 16.33%, #241975 56.12%, #000a44 93.91%);
+}
+
+.contact_form_right {
+    padding: 30px 0 0 0;
+}
+
+.contact_form_title {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.contact_form_title::after {
+    display: block;
+    content: "";
+    width: 58px;
+    height: 2px;
+    background: #fff;
+    margin-top: 22px;
+}
+
+.contact_form_txt {
+    font-size: 20px;
+    line-height: 150%;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.contact_form_adress {}
+
+.contact_adress_item {
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.contact_adress_item a {
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* doi-tac */
+.tatu_partner {
+    background: transparent url(../images/tin-tuc/bg-doi-tac.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.partner_main {
+    float: left;
+    width: 100%;
+    padding: 90px 0 120px;
+}
+
+.partner_title {
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 85px;
+}
+
+.partner_title span {
+    display: inline-block;
+    padding: 25px 0 41px;
+    background: transparent url('../images/bg-dt-title.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.partner_list {
+    padding: 30px 10px 0;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.partner_list .col-lg-2 {
+    padding-bottom: 30px;
+}
+
+.partner_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 83px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.partner_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.partner_list .swiper-pagination {
+    display: none;
+}
+
+/* chinh-sach */
+/* tatu_policy */
+.tatu_policy {
+    background: transparent url(../images/tin-tuc/bg-chinh-sach.jpg) no-repeat top center;
+    background-size: cover;
+    position: relative;
+}
+
+.img-policy {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+}
+
+.policy_main {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin-top: 81px;
+    padding: 36px 0 38px;
+}
+
+.policy_title {
+    background: linear-gradient(109.86deg,
+        rgba(244, 238, 244, 0.17) -59.62%,
+        rgba(98, 28, 100, 0) 140.65%,
+        #fa06ff 140.67%),
+        radial-gradient(123.11% 288.11% at 44.46% 13%,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%,
+        rgba(5, 5, 5, 0.2) 100%),
+        linear-gradient(255.43deg, rgba(15, 10, 240, 0.12) 1.61%, rgba(22, 18, 206, 0.02) 137.06%);
+    border-radius: 20px;
+    padding: 70px 15px 42px;
+    font-family: "SVN-Monument Extended";
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    border: 2px solid rgba(15, 10, 240, 0.12);
+    margin-bottom: 36px;
+}
+
+.policy_note {
+    width: 100%;
+    max-width: 1041px;
+    height: 1296px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: justify;
+    color: #ffffff;
+    /* padding-right: 7px !important; */
+    overflow: hidden;
+}
+
+.policy_note h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    text-align: justify;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+
+.policy_note h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+    text-align: justify;
+    color: #45ddcc;
+}
+
+.img-mb {
+    display: none;
+    width: 100%;
+}
+
+/* 404 */
+.tatu_error {
+    background: transparent url("../images/bg-404.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-404 {
+    max-width: 100%;
+}
+
+.policy_note_box {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header_sp_mb {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-hamburger-close {
+    display: none;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 17px;
+    right: 17px;
+    z-index: 557;
+    background: transparent;
+    cursor: pointer;
+}
+
+.tatu_header.active .menu-hamburger-close {
+    display: block;
+}
+
+.menu-hamburger-close::after,
+.menu-hamburger-close::before {
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.85s;
+}
+
+.menu-hamburger-close::after {
+    transform: rotate(45deg);
+}
+
+.menu-hamburger-close::before {
+    transform: rotate(-45deg);
+}
+
+.header_sp_mb span:hover:after,
+.header_sp_mb span:hover:before {
+    background: #FF0055;
+}
+
+
+.header_sp_mb a {
+    margin: 10px 0;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 87.85%;
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .tatu_banner {
+        padding-bottom: 76px;
+    }
+
+    .banner_content {
+        top: 19.372%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    ._backTop {
+        right: 15px;
+    }
+
+    .banner_content {
+        left: 15px;
+    }
+
+    .banner_content h1 {
+        font-size: 40px;
+    }
+
+    .banner_content_txt {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+}
+
+/* .header_sp_mb {
+    display: none;
+} */
+.logo {
+    float: left;
+}
+
+.logo-mb {
+    display: none;
+}
+
+.tatu_header.active {
+    height: 100%;
+    z-index: 555;
+}
+
+.menu-hamburger {
+    display: none;
+}
+
+.header_content_box_new {
+    height: 0%;
+    position: fixed;
+    z-index: 555;
+    width: 70px;
+    background: #000734;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: stretch;
+    transition: 0.85s;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .newsdetail_main {
+        margin-top: 0;
+    }
+
+    .nstnd_banner {
+        padding-top: 0;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .tatu_banner {
+        /* margin-top: 81px; */
+        background: transparent url('../images/bg-mb.png') no-repeat top left;
+        background-size: cover;
+    }
+
+    .tatu_header.active .header_content_box_new {
+        height: 100%;
+    }
+
+
+    .header_content {
+        /* height: 66px; */
+        position: relative;
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .tatu_header.active .logo-mb {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+    }
+
+    .logo img {
+        /* width: 80px; */
+    }
+
+    .tatu_header {
+        width: 70px;
+        height: auto;
+        left: auto;
+        right: 0;
+        padding: 0;
+    }
+
+    .tatu_header .container {
+        width: 100%;
+        max-width: 1826px;
+        padding: 0;
+        height: 100%;
+    }
+
+    .tatu_header .col-lg-12,
+    .tatu_header .row {
+        height: 100%;
+    }
+
+    .header_content {
+        height: 100%;
+    }
+
+    .header_sp {
+        display: none;
+    }
+
+    .menu-hamburger {
+        cursor: pointer;
+        position: fixed;
+        width: 70px;
+        height: 70px;
+        top: 0;
+        right: 0;
+        background: transparent;
+        padding: 10px 17px 17px;
+        z-index: 21;
+    }
+
+    .header_sp.active {
+        display: flex;
+    }
+
+    .menu-hamburger-line {
+        height: 2px;
+        background: #fff;
+        margin: 10px 0 10px auto;
+    }
+
+    .menu-hamburger-line:first-child,
+    .menu-hamburger-line:last-child {
+        width: 35px;
+    }
+
+    .menu-hamburger-line:nth-of-type(2) {
+        width: 35px;
+    }
+
+    .menu-overlay {
+        display: block;
+    }
+
+    .menu-overlay.active {
+        display: block;
+        position: fixed;
+        background: #000;
+        opacity: 0.5;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 111;
+    }
+
+    .menu-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #000734 url('../images/logo-mn-mb.png') no-repeat bottom right;
+        height: 100%;
+        width: 90%;
+        max-width: 580px;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        padding: 30px 70px 10px 40px;
+    }
+
+    .menu-items.active {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        z-index: 111;
+    }
+
+    .menu_list li {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 55px;
+    }
+
+    .menu_list li a {
+        font-size: 24px;
+    }
+
+    .contact_main {
+        background-position: top 40px right -300px;
+    }
+}
+
+.th_list_mb_other {
+    display: flex;
+    width: max-content;
+}
+
+.th_list_all {
+    width: 75%;
+    margin-right: 20px;
+}
+
+.tt_item_mb {
+    width: 100%;
+    height: 100%;
+}
+
+.news_main .tt_item_mb {
+    padding: 24px 0;
+    border-top: 1px solid #F6F9FF;
+}
+
+.newsdetail_hot .tt_item_mb {
+    padding: 24px 0;
+    border-bottom: 1px solid #F6F9FF;
+}
+
+.tt_item_mb h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 72px;
+    margin-bottom: 14px;
+}
+
+.tt_item_mb_body {
+    display: flex;
+}
+
+.tt_item_mb_img {
+    width: 50%;
+    aspect-ratio: 170/95;
+    overflow: hidden;
+}
+
+.tt_item_mb_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tt_item_mb_other {
+    width: 50%;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 150%;
+    color: #C6C6C6;
+}
+
+.tt_item_mb_date {
+    margin-bottom: 8px;
+}
+
+.tt_item_mb_txt {
+    margin-bottom: 8px;
+    ;
+}
+
+.tt_item_mb_other .tt_item_links {
+    color: #C6C6C6;
+    font-size: 12px;
+    line-height: 150%;
+    color: #C6C6C6;
+}
+
+@media screen and (max-width: 991px) {
+    .future-hover {
+        display: none;
+    }
+
+    .banner_content {
+        position: unset;
+        padding: 20px 15px 40px;
+    }
+
+    .th_left {
+        width: 100%;
+        display: none;
+    }
+
+    .th_right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .cd_banner_right {
+        margin-top: 30px;
+    }
+
+    .dg_title .tatu_title br {
+        display: none;
+    }
+
+    .cd_banner_title,
+    .contact_form_title {
+        font-size: 26px;
+    }
+
+    .news_banner_title,
+    .partner_title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .contact_form_left {
+        max-width: 100%;
+    }
+
+    .nstnd_box_col {
+        font-size: 12px;
+    }
+
+    .nstnd_box_col span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (width: 768px) {
+
+    .img-ttth2,
+    .img-ttth1,
+    .img-ttth3,
+    .img-ttth4,
+    .img-ttth5,
+    .img-ttth6,
+    .img-ttth7,
+    .img-nst1,
+    .img-nst2,
+    .img-nst3,
+    .img-nst4,
+    .img-nst5,
+    .img-nst6,
+    .img-nst7,
+    .img-nst8 {
+        display: none;
+    }
+
+    .nstnd_box_info {
+        transform: translateX(0);
+    }
+
+    .contact_main {
+        background: transparent;
+        padding-bottom: 30px;
+    }
+
+    .contact_banner {
+        padding-bottom: 30px;
+    }
+
+    .cd_banner_title {
+        margin-top: 0;
+    }
+
+    .img-app3,
+    .img-qr {
+        position: relative;
+        z-index: 5;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        top: auto;
+    }
+
+    .dlapp_box {
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 30px 20px 12px;
+    }
+
+    .img-mb {
+        display: block;
+    }
+
+    .img-banner {
+        display: none;
+    }
+
+    .nstnd_box_info {
+        display: flex;
+    }
+
+    .nstnd_item_name {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .nstnd_item_info {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.news_banner_img span {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+    color: #FFFFFF;
+    padding: 8px 15px 6px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(45, 64, 185, 0.8);
+    display: none;
+}
+
+.news_banner_box .sub {
+    display: none;
+    font-size: 12px;
+}
+
+.img-lh {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .partner_list .swiper-pagination {
+        display: block;
+    }
+    .policy_main {
+        margin-top: 0;
+    }
+    .policy_title {
+        font-size: 36px;
+        padding: 36px 15px;
+    }
+    .partner_main {
+        padding-top: 0;
+    }
+    .partner_title br, .policy_note h2 br {
+        display: none;
+    }
+    .policy_note h2 {
+        text-align: left;
+    }
+    .contact_banner .btn_banner {
+        display: none;
+    }
+    .contact_form_right {
+        display: none;
+    }
+
+    .contact_main,
+    .contact_banner {
+        padding-top: 0;
+    }
+
+    .img-lh {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto 32px;
+    }
+
+    .hot_title {
+        margin-bottom: 24px;
+    }
+
+    .hot_list {
+        display: none;
+    }
+
+    .newsdetail_main {
+        padding-top: 0;
+    }
+
+    .newsdetail_title {
+        display: none;
+    }
+
+    .newsdetail_breadcrumb {
+        padding: 37px 0 20px;
+    }
+
+    .news_main_pc {
+        display: none;
+    }
+
+    .news_banner_img span {
+        display: block;
+    }
+
+    .news_banner_img {
+        aspect-ratio: 75/44;
+        border-radius: 0;
+        position: relative;
+    }
+
+    .news_banner_content {}
+
+    .news_banner_box .sub {
+        display: block;
+    }
+
+    .news_banner_box {
+        position: unset;
+        padding: 20px 15px;
+    }
+
+    .news_banner_date {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .news_banner_title {
+        font-size: 22px;
+        line-height: 150%;
+        margin-bottom: 14px;
+        font-family: "Inter";
+    }
+
+    .news_banner_content:hover {
+        text-decoration: none;
+    }
+
+    .news_banner {
+        padding: 0;
+        margin: 0;
+    }
+
+    .news_banner .container {
+        padding: 0 !important;
+    }
+
+    .cd_banner {
+        margin-top: 0;
+    }
+
+    .dktt_form {
+        margin: 0 auto;
+    }
+
+    .bcvct_list {
+        display: none;
+    }
+    .bcvct_list.bcvct_list_mb{
+        display: block;
+    }
+
+    .nstnd_dg {
+        padding: 30px 0 35px;
+    }
+
+    .dg_title {
+        margin-bottom: 30px;
+    }
+
+    .tatu_title {
+        font-size: 30px;
+    }
+
+    .tatu_tt {
+        padding-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .tt_list,
+    .tt_btn {
+        display: none;
+    }
+
+    .bcvct_btn {
+        display: none;
+    }
+
+    .bcvct_list .swiper-pagination {
+        display: block;
+    }
+
+    .bcvct_list {
+        padding: 0 15px;
+    }
+
+    .bcvct_list .bcvct_slide {
+        padding-bottom: 36px !important;
+    }
+
+    .creators_top .nav-tabs .nav-item {
+        margin-bottom: 16px;
+    }
+
+    .dlapp_box_ic {
+        padding-top: 12px;
+    }
+
+    .th_list_mb {
+        display: block;
+    }
+
+    .th_right {
+        padding-top: 0;
+        margin-bottom: 35px;
+    }
+
+    .tatu_title br {
+        display: none;
+    }
+
+    .sub {
+        font-size: 14px;
+        line-height: 160%;
+    }
+
+    .tatu_th {
+        background: transparent;
+        ;
+    }
+
+    .tatu_all {
+        padding-top: 77px;
+        background: transparent url(../images/bg-mb-home.jpg) no-repeat top center;
+        background-size: cover;
+    }
+
+    .tatu_news_detail {
+        background: transparent url(../images/bg-news-detail-mb.jpg) no-repeat top center;
+        background-size: cover;
+    }
+
+    .tatu_partner, .tatu_policy {
+        background: transparent url(../images/bg-par-mb.jpg) no-repeat top center;
+        background-size: cover;
+    }
+    .tatu_boxlast {
+        background: transparent;
+    }
+    .img-policy,
+    .img-news1,
+    .img-news3,
+    .img-ttth2,
+    .img-ttth1,
+    .img-ttth3,
+    .img-ttth4,
+    .img-ttth5,
+    .img-ttth6,
+    .img-ttth7,
+    .img-nst1,
+    .img-nst2,
+    .img-nst3,
+    .img-nst4,
+    .img-nst5,
+    .img-nst6,
+    .img-nst7,
+    .img-nst8,
+    .img-cd1,
+    .img-cd2 {
+        display: none;
+    }
+
+    .tatu_header_mb {
+        display: block;
+    }
+
+    .banner_content h1 span {
+        color: #E9314C;
+    }
+
+    .nstnd_box_info {
+        transform: translateX(0);
+    }
+
+    .contact_main {
+        background: transparent;
+    }
+
+    .cd_banner_title {
+        margin-top: 0;
+        font-size: 28px;
+        line-height: 150%;
+    }
+
+    .contact_main {
+        background: transparent;
+        padding-bottom: 30px;
+    }
+
+    .contact_banner {
+        padding-bottom: 30px;
+    }
+
+    .tatu_th {
+        padding: 30px 0;
+    }
+
+    .th_right_content .tatu_title {
+        margin-bottom: 25px;
+    }
+
+    .towards_title {
+        margin: 0 0 25px;
+    }
+
+    .towards_item h3 {
+        font-size: 50px;
+        line-height: 100%;
+        padding-right: 5px;
+        float: left;
+        margin-bottom: 0;
+        padding-top: 5px;
+    }
+
+    .tatu_dlapp {
+        padding-bottom: 40px;
+    }
+
+    .img-qr {
+        position: relative;
+        z-index: 5;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        top: auto;
+    }
+
+    .img-app3 {
+        display: none;
+    }
+
+    .img-app3-1 {
+        display: block;
+        width: 100%;
+    }
+
+    .dlapp_title {
+        margin-bottom: 20px;
+        ;
+    }
+
+    .dlapp_box h5 {
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    .dlapp_box {
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 30px 20px 40px;
+    }
+
+    .img-mb {
+        display: block;
+    }
+
+    .img-banner {
+        display: none;
+    }
+
+    .nstnd_item_name {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .nstnd_box_info {
+        display: flex;
+    }
+
+    .nstnd_item_info {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .banner_content h1 {
+        font-size: 30px;
+        line-height: 130%;
+        margin-bottom: 24px;
+    }
+
+    .banner_content {
+        padding-top: 0;
+    }
+
+    .banner_content_txt {
+        font-size: 14px;
+        margin-bottom: 24px;
+        font-weight: 400;
+    }
+
+    .cd_banner .banner_content_txt {
+        font-weight: 400;
+        margin-bottom: 24px;
+    }
+
+    .creators_nstnd,
+    .creators_cdst {
+        display: none;
+    }
+
+    .tab-content .th_list_mb {
+        padding: 0 15px;
+    }
+
+    .nstnd_dktt {
+        background: transparent;
+        padding-bottom: 40px;
+    }
+
+    .qw_item_title {
+        font-size: 18px;
+    }
+
+    .qw_item_txt {
+        font-size: 14px;
+    }
+
+    .qw_item {
+        margin-bottom: 24px;
+    }
+
+    .nstnd_qw {
+        padding-bottom: 60px;
+    }
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 480px) {
+    .menu_list li {
+        margin-bottom: 25px;
+    }
+
+    .menu_list li a {
+        font-size: 14px;
+    }
+
+    .nstnd_box_col {
+        /*font-size: 9px;*/
+    }
+
+    .tt_item_mr {
+        margin-top: 0;
+    }
+
+    .creators_top .nav-tabs {}
+
+    .dlapp_box_ic {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dlapp_box_ic a:first-child {
+        margin-right: 0;
+    }
+
+    .th_item {
+        margin: 0 auto;
+    }
+
+    .tatu_title,
+    .footer_title .tatu_title {
+        font-size: 26px;
+    }
+
+    .footer_title .tatu_title {
+        margin-bottom: 20px;
+    }
+
+
+
+    .tt_list {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+
+    .footer_list li a {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .footer_list li {
+        padding: 3px 10px;
+    }
+
+    .img-nst6 {
+        display: none;
+    }
+
+    .dktt_form {
+        padding: 30px 20px;
+    }
+
+    .dktt_form h3 {
+        font-size: 20px;
+        line-height: normal;
+        display: none;
+    }
+
+    .dktt_form_box {
+        padding-top: 0;
+    }
+
+
+
+    .news_pagination li {
+        width: 40px;
+        height: 40px;
+    }
+
+    .news_pagination li a {
+        font-size: 18px;
+    }
+
+    .newsdetail_title,
+    .hot_title .tatu_title {
+        font-size: 26px;
+    }
+
+    .newsdetail_breadcrumb .breadcrumb-item,
+    .newsdetail_breadcrumb .breadcrumb-item,
+    .newsdetail_txt h3 {
+        font-size: 16px;
+    }
+
+    .newsdetail_breadcrumb .breadcrumb-item a {
+        font-size: 16px;
+    }
+
+    .newsdetail_txt {
+        font-size: 16px;
+    }
+    ._backTop {
+        bottom: 40px;
+    }
+    .tatu_footer {
+        padding-bottom: 40px;
+    }
+    .footer_sp_txt {
+        margin-top: 30px;
+    }
+    .nstnd_box_col {
+        font-size: 10px;
+    }
+}
+#popup-success {
+
+}
+#popup-success .modal-dialog {
+    max-width: 540px;
+    width: 100%;
+    position: fixed;
+    top: 124px;
+    right: 42px;
+}
+#popup-success .modal-content {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+.popup-success-content {
+    background: #F6F9FF;
+    border-radius: 16px;
+    padding: 24px 44px 24px 16px;
+    display: flex;
+}
+#popup-success .close {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    height: max-content;
+}
+.popup-success-img {
+    display: flex;
+    width: max-content;
+    align-items: center;
+}
+.popup-success-txt {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    font-size: 13px;
+    line-height: 140%;
+    color: #334B9D;
+    padding-left: 16px;
+}
+.popup-success-txt span{
+    display: block;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16.5px;
+    line-height: 140%;
+    color: #0C196B;
+}
+#popup-success .modal-backdrop {
+  z-index: -1;
+}
+
+/*tatu_comingsoon*/
+.tatu_comingsoon {
+    float: left;
+    width: 100%;
+    height: 100vh;
+}
+.tatu_comingsoon video {
+    height: 100%!important;
+}

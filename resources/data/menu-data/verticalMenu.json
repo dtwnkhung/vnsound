@@ -1,0 +1,82 @@
+{
+  "menu": [
+    {
+      "url": "/admin/",
+      "name": "Home",
+      "icon": "home",
+      "slug": "home"
+    },
+    {
+      "url": "/admin/artists",
+      "name": "Artists",
+      "icon": "users",
+      "slug": "artists.index"
+    },
+    {
+      "url": "/admin/products",
+      "name": "Products",
+      "icon": "layers",
+      "slug": "products.index"
+    },
+    {
+      "url": "/admin/events",
+      "name": "Events",
+      "icon": "layers",
+      "slug": "events.index"
+    },
+    {
+      "url": "/admin/services",
+      "name": "Services",
+      "icon": "layers",
+      "slug": "services.index"
+    },
+    {
+      "url": "/admin/projects",
+      "name": "Projects",
+      "icon": "layers",
+      "slug": "projects.index"
+    },
+    {
+      "url": "/admin/students/representativeStudent",
+      "name": "Representative Student",
+      "icon": "user",
+      "slug": "products.students"
+    },
+    {
+      "url": "/admin/students/opinionStudent",
+      "name": "Opinion Student",
+      "icon": "user",
+      "slug": "products.students"
+    },
+    {
+      "url": "/admin/news",
+      "name": "News",
+      "icon": "file-text",
+      "slug": "news.index"
+    },
+    {
+      "url": "/admin/sliders",
+      "name": "Sliders",
+      "icon": "sliders",
+      "slug": "sliders.index"
+    },
+    {
+      "url": "/admin/partners",
+      "name": "Partners",
+      "icon": "share-2",
+      "slug": "partners.index"
+    },
+    {
+      "url": "/admin/components",
+      "name": "Components",
+      "icon": "settings",
+      "slug": "components.index"
+    },
+    {
+      "url": "/admin/contacts/lienhe",
+      "name": "Contact",
+      "icon": "mail",
+      "slug": "contacts.indexContact"
+    }
+  ]
+}
