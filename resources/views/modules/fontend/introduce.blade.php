@@ -88,10 +88,16 @@
             <div class="col-md-6">
               <div class="mttn_left">
                 <h3 class="mttn_left_title">
-                  {{ $data['gioi-thieu-block-2-title'] }}
+                  {{ $data['gioi-thieu-block-2-title'] }} fdfsdfd
                 </h3>
                 <div class="mttn_left_txt">
-                  {{ $data['gioi-thieu-block-2-text'] }}
+                  <!-- {{ $data['gioi-thieu-block-2-text'] }} -->
+                  - Năm thành lập: 2017<br />
+                  - Số lượng học viên đã đào tạo: 93<br />
+                  - 30 sản phẩm phát hành bởi VNSound Music<br />
+                  - 32,000+ người hâm mộ trên fanpage VNSound<br />
+                  - Gần 500,000 lượt người đọc trên cổng thông tin về âm nhạc điện tử vietnamsound.com Bamboo City
+                  Carnival - chuỗi sự kiện do VNSound đồng tổ chức thu hút hơn 2500 người tham dự
                 </div>
               </div>
             </div>
