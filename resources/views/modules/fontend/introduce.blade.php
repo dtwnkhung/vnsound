@@ -88,7 +88,7 @@
             <div class="col-md-6">
               <div class="mttn_left">
                 <h3 class="mttn_left_title">
-                  {{ $data['gioi-thieu-block-2-title'] }} fdfsdfd
+                  {{ $data['gioi-thieu-block-2-title'] }}
                 </h3>
                 <div class="mttn_left_txt">
                   <!-- {{ $data['gioi-thieu-block-2-text'] }} -->
