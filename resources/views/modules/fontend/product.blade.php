@@ -227,7 +227,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  basic
+                  Basic
                 </div>
                 <div class="opinion_bot_money">
                   {{ $item['basic_price'] }}
@@ -246,7 +246,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  premeum
+                  Premium
                 </div>
                 <div class="opinion_bot_money">
                   {{ $item['premium_price'] }}
