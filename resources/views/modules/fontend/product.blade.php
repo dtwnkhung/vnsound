@@ -92,7 +92,7 @@
                 <h3 class="mttn_left_title">
                   {{ $item['block_2_title'] }}
                 </h3>
-                <div class="mttn_left_txt">
+                <div class="mttn_left_txt html-convert">
                   {{ $item['block_2_content'] }}
                 </div>
               </div>
@@ -106,7 +106,7 @@
                 <h3 class="mttn_left_title">
                   {{ $item['block_3_title'] }}
                 </h3>
-                <div class="mttn_left_txt">
+                <div class="mttn_left_txt html-convert">
                   {{ $item['block_3_content'] }}
                 </div>
                 <div class="khartist_box_btn">
@@ -425,6 +425,9 @@
 @section('script')
 <script>
 $(document).ready(function() {
+
+  $(".html-convert").html($(".html-convert").text());
+
   function change_image(image) {
 
     var container = document.getElementById("main-image");
