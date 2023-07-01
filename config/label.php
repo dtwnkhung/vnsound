@@ -25,6 +25,8 @@
             'teacher' => 'Nghệ sĩ',
             'status' => 'Trạng thái',
             'color' => 'Background',
+            'start_time' => 'Thời gian bắt đầu',
+            'end_time' => 'Thời gian kết thúc',
         ],
         'artists' => [
             'name' => 'Họ và tên',

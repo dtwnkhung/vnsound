@@ -144,7 +144,8 @@
                                         <option value="">-- Lựa chọn --</option>
                                         @foreach ($teachers as $teacher)
                                             @if ($teacher->id == $item->teacher_id)
-                                                <option value="{{ $teacher->id }}" selected>{{ $teacher->name }}</option>
+                                                <option value="{{ $teacher->id }}" selected>{{ $teacher->name }}
+                                                </option>
                                             @else
                                                 <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
                                             @endif
@@ -180,7 +181,8 @@
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
-                                    <label for="start_time">{{ config('label.products.start_time') }}</label>
+                                    <label for="start_time">{{ config('label.products.start_time') }}<span
+                                        class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="input-group input-group-merge">
@@ -201,7 +203,8 @@
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
-                                    <label for="end_time">{{ config('label.products.end_time') }}</label>
+                                    <label for="end_time">{{ config('label.products.end_time') }}<span
+                                        class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="input-group input-group-merge">
@@ -357,6 +360,8 @@
                                             class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-sm-9">
+                                    {{-- <textarea class="form-control" name="block_2_content" id="block_2_content" placeholder="Nội dung text"
+                                        id="floatingTextarea2" style="height: 100px">{{ $item->block_2_content }}</textarea> --}}
                                     <textarea class="form-control" name="block_2_content" id="block_2_content" placeholder="Nội dung text"
                                         id="floatingTextarea2" style="height: 100px">{{ $item->block_2_content }}</textarea>
                                     {{-- @if ($errors->has('block_2_content'))
@@ -432,6 +437,8 @@
                                             class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-sm-9">
+                                    {{-- <textarea class="form-control" name="block_3_content" id="block_3_content" placeholder="Nội dung text"
+                                        id="floatingTextarea2" style="height: 100px">{{ $item->block_3_content }}</textarea> --}}
                                     <textarea class="form-control" name="block_3_content" id="block_3_content" placeholder="Nội dung text"
                                         id="floatingTextarea2" style="height: 100px">{{ $item->block_3_content }}</textarea>
                                     {{-- @if ($errors->has('block_3_content'))
@@ -640,6 +647,9 @@
                             </div>
                         </div>
 
+                        {{-- <div class="col-12">
+                            <textarea id="editor" name="editor"></textarea>
+                        </div> --}}
 
                         <div class="col-sm-9 offset-sm-3">
                             <button class="btn btn-primary mr-1" id="submitForm">Lưu</button>
@@ -663,7 +673,10 @@
     {{-- number input --}}
     <script src="{{ asset(mix('vendors/js/forms/cleave/cleave.min.js')) }}"></script>
     <script src="{{ asset(mix('vendors/js/forms/cleave/addons/cleave-phone.us.js')) }}"></script>
+    <script src="//cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
     <script>
+        CKEDITOR.replace('block_3_content');
+        CKEDITOR.replace('block_2_content');
         $(document).ready(function() {
 
             $('#start_time').flatpickr();
@@ -797,7 +810,7 @@
 
         })
         document.addEventListener('DOMContentLoaded', function() {
-          // console.log($('#start_time').val())
+            // console.log($('#start_time').val())
             // Mong muốn của chúng ta
             Validator({
                 form: '#main-form',
@@ -813,9 +826,9 @@
                     Validator.isRequired('#block_1_title', "vui lòng nhập Tiêu đề lock 1 !"),
                     Validator.isRequired('#block_1_content', "vui lòng nhập Nội dung block 1 !"),
                     Validator.isRequired('#block_2_title', "vui lòng nhập Tiêu đề lock 2 !"),
-                    Validator.isRequired('#block_2_content', "vui lòng nhập Nội dung block 2 !"),
+                    // Validator.isRequired('#block_2_content', "vui lòng nhập Nội dung block 2 !"),
                     Validator.isRequired('#block_3_title', "vui lòng nhập Tiêu đề lock 3 !"),
-                    Validator.isRequired('#block_3_content', "vui lòng nhập Nội dung block 3 !"),
+                    // Validator.isRequired('#block_3_content', "vui lòng nhập Nội dung block 3 !"),
                     Validator.isRequired('#free_price', "vui lòng nhập Giá gói free !"),
                     Validator.isRequired('#free_benefit', "vui lòng chọn Lợi ích giá gói free!"),
                     Validator.isRequired('#basic_price', "vui lòng nhập Giá gói basic !"),

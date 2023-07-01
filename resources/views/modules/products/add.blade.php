@@ -172,7 +172,8 @@
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
-                                    <label for="start_time">{{ config('label.products.start_time') }}</label>
+                                    <label for="start_time">{{ config('label.products.start_time') }}<span
+                                        class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="input-group input-group-merge">
@@ -191,7 +192,8 @@
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
-                                    <label for="end_time">{{ config('label.products.end_time') }}</label>
+                                    <label for="end_time">{{ config('label.products.end_time') }}<span
+                                        class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="input-group input-group-merge">
@@ -592,7 +594,11 @@
     {{-- number input --}}
     <script src="{{ asset(mix('vendors/js/forms/cleave/cleave.min.js')) }}"></script>
     <script src="{{ asset(mix('vendors/js/forms/cleave/addons/cleave-phone.us.js')) }}"></script>
+    <script src="//cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
     <script>
+        CKEDITOR.replace('block_3_content');
+        CKEDITOR.replace('block_2_content');
+        
         $(document).ready(function() {
             $('#start_time').flatpickr();
             $('#end_time').flatpickr();
@@ -740,9 +746,9 @@
                     Validator.isRequired('#block_1_title', "vui lòng nhập Tiêu đề lock 1 !"),
                     Validator.isRequired('#block_1_content', "vui lòng nhập Nội dung block 1 !"),
                     Validator.isRequired('#block_2_title', "vui lòng nhập Tiêu đề lock 2 !"),
-                    Validator.isRequired('#block_2_content', "vui lòng nhập Nội dung block 2 !"),
+                    // Validator.isRequired('#block_2_content', "vui lòng nhập Nội dung block 2 !"),
                     Validator.isRequired('#block_3_title', "vui lòng nhập Tiêu đề lock 3 !"),
-                    Validator.isRequired('#block_3_content', "vui lòng nhập Nội dung block 3 !"),
+                    // Validator.isRequired('#block_3_content', "vui lòng nhập Nội dung block 3 !"),
                     Validator.isRequired('#free_price', "vui lòng nhập Giá gói free !"),
                     Validator.isRequired('#free_benefit', "vui lòng chọn Lợi ích giá gói free!"),
                     Validator.isRequired('#basic_price', "vui lòng nhập Giá gói basic !"),

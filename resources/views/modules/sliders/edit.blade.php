@@ -97,10 +97,10 @@
                   {{-- <label for="color">{{ config('label.products.images') }}</label> --}}
                 </div>
                 <div class="col-sm-9">
-                  <button id="select-files" class="btn btn-outline-primary mb-1">
+                  <button id="select-files_2" class="btn btn-outline-primary mb-1">
                     <i data-feather="file"></i> Chọn ảnh
                   </button>
-                  <input type="file" id="images" class="form-control hidden" name="images[]"/>
+                  <input type="file" id="images" class="form-control hidden" name="images[]" multiple accept="image/*" />
 
                   <div class="row" id="images">
                     @foreach ($item->images as $img)
@@ -109,7 +109,7 @@
                       </div>
                     @endforeach
                   </div>
-                  <ul class="list-group" id="list-images">
+                  <ul class="list-group" id="list-images_2">
                   </ul>
                   @if ($errors->has('images'))
                     <script>
@@ -196,6 +196,21 @@
   <script>
     $(document).ready(function(){
       $('#select-files').click(function () {
+        $('#images_key').click()
+        return false
+      })
+      $('#images_key').change(function () {
+        $('#images_key').html('')
+        var html = ''
+        if(this.files.length > 0){
+          for(let i=0;i<this.files.length;i++){
+            html += '<li class="list-group-item list-group-item-action list-group-item-success">'+this.files[i].name+'('+this.files[i].size+'B)</li>'
+          }
+          $('#list-images').html(html)
+        }
+      })
+
+      $('#select-files_2').click(function () {
         $('#images').click()
         return false
       })
@@ -206,9 +221,10 @@
           for(let i=0;i<this.files.length;i++){
             html += '<li class="list-group-item list-group-item-action list-group-item-success">'+this.files[i].name+'('+this.files[i].size+'B)</li>'
           }
-          $('#list-images').html(html)
+          $('#list-images_2').html(html)
         }
       })
+
       $('#select-image_mobile').click(function () {
         $('#image_mobile').click()
         return false
