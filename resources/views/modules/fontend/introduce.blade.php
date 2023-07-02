@@ -18,7 +18,7 @@
     </div>
   </div>
 </div>
-<div class="introduct_ceo">
+<div class="introduct_ceo d-none">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">

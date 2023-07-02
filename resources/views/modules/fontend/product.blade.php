@@ -1,4 +1,7 @@
 @extends('modules.fontend.layout.index')
+@section('facebook_meta')
+<meta property="og:image" content="{{ URL::to('/images/products'). '/'. $item['block_2_image']}}" />
+@endsection
 @section('content')
 <!--Section: Block Content-->
 
@@ -31,17 +34,17 @@
           <div class="welcome_right">
             <div class="welcome_right_content">
               <div class="welcome_right_title">
-                <span>
-                  Welcome to
-                </span>
-                Profile {{ $artist['name'] }}
+                PRO DJ COURSE
               </div>
               <div class="mttn_left_txt">
                 {{ $artist['profile'] }}
               </div>
               <div class="welcome_right_box">
-                <a href="javascript:void(0)" class="btn welcome_right_btn" data-toggle="modal"
+                <!-- <a href="javascript:void(0)" class="btn welcome_right_btn" data-toggle="modal"
                   data-target="#proj_follow">
+                  Liên hệ với tôi
+                </a> -->
+                <a href="http://m.me/vnsoundstudio" class="btn welcome_right_btn" target="_blank">
                   Liên hệ với tôi
                 </a>
                 <!-- <a href="javascript:void(0)" class="welcome_right_links">

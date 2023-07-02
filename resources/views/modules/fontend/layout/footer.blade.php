@@ -9,7 +9,7 @@
           VNSound là công ty giải trí về âm nhạc điện tử, với thế mạnh đào tạo & xây dựng hình ảnh toàn diện cho nghệ sĩ
           là DJ/Music Producer/MC Hype.<br /><br />
           Khởi nguồn từ một diễn đàn về âm nhạc điện tử trên internet năm 2014, sau 3 năm, VNSOUND đã chính thức đi vào
-          hoạt động hoạt động dưới danh nghĩa “Công Ty Truyền Thông và Giải Trí VNSOUND” từ tháng 06/2017 & được cấp
+          hoạt động dưới danh nghĩa “Công Ty Truyền Thông và Giải Trí VNSOUND” từ tháng 06/2017 & được cấp
           giấy phép bởi Bộ Thông Tin và Truyền Thông.
         </div>
 

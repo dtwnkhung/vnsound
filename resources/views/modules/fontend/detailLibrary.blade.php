@@ -61,22 +61,22 @@
         </div>
         <ul class="libary_menu_sidebar_list">
           <li>
-            <a href="{{ route('home.artists') }}">
+            <a href="/">
               Trang chủ
             </a>
           </li>
           <li>
-            <a href="{{ route('home.introduce') }}">
+            <a href="/gioi-thieu.html">
               Giới thiệu
             </a>
           </li>
           <li>
-            <a href="{{ route('home.artists') }}">
+            <a href="/nghe-si.html">
               Profile
             </a>
           </li>
           <li>
-            <a href="#" class="active">
+            <a href="thu-vien.html" class="active">
               Thư viện
             </a>
           </li>
