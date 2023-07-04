@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
+  @yield('facebook_meta')
+  <!-- <meta property="og:image" content="" /> -->
   <title>VNSOUND</title>
   <!--Meta view -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

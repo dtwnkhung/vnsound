@@ -1443,7 +1443,7 @@ header.header-mobile {
   line-height: 68px;
   color: #ffffff;
   margin-bottom: 51px;
-  margin-left: -109px;
+  /* margin-left: -109px; */
 }
 
 .welcome_right_title span {
