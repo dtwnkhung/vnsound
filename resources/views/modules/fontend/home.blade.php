@@ -128,7 +128,7 @@
                                             <h3>
                                                 {{ $pro['name']}}
                                             </h3>
-                                            <div class="course_content_txt">
+                                            <div class="course_content_txt" id="html-convert">
                                                 {{ $pro['description'] }}
                                             </div>
                                             <a href="{{ route('home.products', ['id' => $pro['id']]) }}"
@@ -349,6 +349,7 @@ alert(message)
 @section('script')
 <script>
 $(document).ready(function() {
+    $("#html-convert").html($("#html-convert").text());
     $('#select-files').click(function() {
         console.log('test')
         $('#certificate').click()
