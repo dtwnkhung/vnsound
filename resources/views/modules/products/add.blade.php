@@ -598,6 +598,10 @@
     <script>
         CKEDITOR.replace('block_3_content');
         CKEDITOR.replace('block_2_content');
+        CKEDITOR.replace('block_1_content');
+        CKEDITOR.replace('description');
+
+
         
         $(document).ready(function() {
             $('#start_time').flatpickr();
@@ -740,11 +744,11 @@
                     Validator.isRequired('#name', "vui lòng nhập Tên khóa học !"),
                     Validator.isRequired('#sub_name', "vui lòng nhập Slogan !"),
                     Validator.isRequired('#teacher_id', "vui lòng chọn Nghệ sĩ !"),
-                    Validator.isRequired('#description', "vui lòng nhập Mô tả !"),
+                    // Validator.isRequired('#description', "vui lòng nhập Mô tả !"),
                     Validator.isRequired('#start_time', "vui lòng chọn Thời gian bắt đầu !"),
                     Validator.isRequired('#end_time', "vui lòng chọn Thời gian kết thúc !"),
                     Validator.isRequired('#block_1_title', "vui lòng nhập Tiêu đề lock 1 !"),
-                    Validator.isRequired('#block_1_content', "vui lòng nhập Nội dung block 1 !"),
+                    // Validator.isRequired('#block_1_content', "vui lòng nhập Nội dung block 1 !"),
                     Validator.isRequired('#block_2_title', "vui lòng nhập Tiêu đề lock 2 !"),
                     // Validator.isRequired('#block_2_content', "vui lòng nhập Nội dung block 2 !"),
                     Validator.isRequired('#block_3_title', "vui lòng nhập Tiêu đề lock 3 !"),

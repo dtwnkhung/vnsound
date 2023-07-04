@@ -677,6 +677,8 @@
     <script>
         CKEDITOR.replace('block_3_content');
         CKEDITOR.replace('block_2_content');
+        CKEDITOR.replace('block_1_content');
+        CKEDITOR.replace('description');
         $(document).ready(function() {
 
             $('#start_time').flatpickr();
