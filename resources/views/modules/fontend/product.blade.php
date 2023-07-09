@@ -28,13 +28,14 @@
       <div class="col-lg-12">
         <div class="welcome_content">
           <div class="welcome_left">
-            <img src="images/img-welcom1.png" alt="" />
+            {{-- <img src="images/img-welcom1.png" alt="" /> --}}
+            <img src="{{ URL::to('/images/artists'). '/'. $artist['images']}}" alt="" />
             <img src="images/img-welcom2.png" alt="" style="display: block;margin: 35px auto 0;" />
           </div>
           <div class="welcome_right">
             <div class="welcome_right_content">
               <div class="welcome_right_title">
-                PRO DJ COURSE
+                {{ $artist['name'] }}
               </div>
               <div class="mttn_left_txt">
                 {{ $artist['profile'] }}
