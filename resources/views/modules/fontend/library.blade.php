@@ -105,13 +105,13 @@
           </li>
         </ul>
         <div class="footer_bot_last">
-          <a href="">
+          <a href="https://www.facebook.com/VNSoundStudio" target="_blank">
             <img src="images/ic-7.png" alt="">
           </a>
-          <a href="">
+          <a href="https://www.youtube.com/@VNSoundMusic" target="_blank">
             <img src="images/ic-8.png" alt="">
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/vnsoundmusic" target="_blank">
             <img src="images/ic-9.png" alt="">
           </a>
         </div>

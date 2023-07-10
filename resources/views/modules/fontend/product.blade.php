@@ -212,7 +212,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Miễn phí
+                  Free
                 </div>
                 <div class="opinion_bot_money">
                   {{ $item['free_price'] }}
@@ -250,7 +250,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Premium
+                  Pro
                 </div>
                 <div class="opinion_bot_money">
                   {{ $item['premium_price'] }}
@@ -282,16 +282,13 @@
           </h3>
           <div class="mttn_left_txt">
             <p>
-              Bạn được nhận ngay chế độ hấp dẫn khi đăng ký lịch học, được nhận ngay 3 buổi học
-              miễn phí
+              Tìm hiểu chi tiết thông tin về khóa học MC Hype/DJ tại VNSound Studio
             </p>
             <p>
-              Hệ thống sinh thái cực kỳ hỗ trợ của chúng tôi sẽ thúc đẩy sự nghiệp dj của bạn phát
-              triển
+              Bắt đầu con đường ngắn nhất để trở thành DJ và MC Hype chuyên nghiệp
             </p>
             <p>
-              Hệ thống sinh thái cực kỳ hỗ trợ của chúng tôi sẽ thúc đẩy sự nghiệp dj của bạn phát
-              triển
+              Gia nhập cộng đồng các bạn trẻ cùng đam mê và kết nối với những DJ, MC Hype đã có kinh nghiệm trong nghề
             </p>
           </div>
           <div class="khartist_box_btn">
@@ -321,10 +318,10 @@
                 <input type="text" class="input_control" placeholder="Gmail" />
               </div>
               <div class="form_row">
-                <input type="text" class="input_control" placeholder="Đại chỉ" />
+                <input type="text" class="input_control" placeholder="Địa chỉ" />
               </div>
               <div class="form_row">
-                <textarea class="input_control" placeholder="Nội dung mong muốn hợp tác"></textarea>
+                <textarea class="input_control" placeholder="Nội dung"></textarea>
               </div>
             </div>
             <a href="javascript:void(0)" class="btn btn-form">

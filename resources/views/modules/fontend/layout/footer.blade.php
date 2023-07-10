@@ -94,17 +94,18 @@
             <img src="images/logo-main.png" class="img-fluid" alt="" style="height:45px" />
           </a>
           <div class="footer_bot_center">
-            VNSOUND, <span>2022 All Rights Reserved.</span>
+            VNSOUND, <span style="color:#fff"><span class="current-year" style="color:#fff"></span> All Rights
+              Reserved.</span>
           </div>
           <div class="footer_bot_last">
-            <a href="javascript:void(0)">
-              <img src="images/ic-7.png" alt="" />
+            <a href="https://www.facebook.com/VNSoundStudio" target="_blank">
+              <img src="images/ic-7.png" alt="">
             </a>
-            <a href="javascript:void(0)">
-              <img src="images/ic-8.png" alt="" />
+            <a href="https://www.youtube.com/@VNSoundMusic" target="_blank">
+              <img src="images/ic-8.png" alt="">
             </a>
-            <a href="javascript:void(0)">
-              <img src="images/ic-9.png" alt="" />
+            <a href="https://www.instagram.com/vnsoundmusic" target="_blank">
+              <img src="images/ic-9.png" alt="">
             </a>
           </div>
         </div>
@@ -112,3 +113,10 @@
     </div>
   </div>
 </div>
+
+<script>
+const d = new Date();
+const fullYear = d.getFullYear();
+const currentYear = document.querySelector('.current-year');
+currentYear.innerText = fullYear;
+</script>
