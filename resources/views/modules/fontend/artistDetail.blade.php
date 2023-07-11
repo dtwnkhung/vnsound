@@ -3,10 +3,16 @@
 <meta property="og:image" content="{{ URL::to('/images/artists'). '/' .$item["images"] }}" />
 @endsection
 @section('content')
+<style>
+  #html-convert_1 p {
+    background: none
+  }
+</style>
 
 
-<div class="vnsound_banner banner_introduct banner_pfartist"
-  style="background: url({{ URL::to('/images/artists'). '/'. $item['banner']}})">
+<div class="vnsound_banner banner_introduct banner_pfartist" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('http://localhost/images/anh_tu_lieu/khoa_hoc/banner-top.png') no-repeat
+      center center;background-size: cover;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -39,7 +45,7 @@
                 </span>
                 Profile {{ $item['name'] }}
               </div>
-              <div class="mttn_left_txt">
+              <div class="mttn_left_txt" id="html-convert_1">
                 {{ $item['profile'] }}
               </div>
               <div class="welcome_right_box">
@@ -349,6 +355,7 @@ alert(message)
 @section('script')
 <script>
 $(document).ready(function() {
+  $("#html-convert_1").html($("#html-convert_1").text());
   $('#select-files').click(function() {
     console.log('test')
     $('#certificate').click()

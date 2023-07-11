@@ -836,7 +836,13 @@
   {{-- number input --}}
   <script src="{{ asset(mix('vendors/js/forms/cleave/cleave.min.js')) }}"></script>
   <script src="{{ asset(mix('vendors/js/forms/cleave/addons/cleave-phone.us.js')) }}"></script>
+  <script src="//cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
   <script>
+
+    CKEDITOR.replace('profile');
+    CKEDITOR.replace('project_1_text');
+    CKEDITOR.replace('project_2_text');
+
     $(document).ready(function(){
       $('#select-images').click(function () {
         $('#images').click()
@@ -1177,35 +1183,35 @@
     })
 
     document.addEventListener('DOMContentLoaded', function() {
-            // Mong muốn của chúng ta
-            Validator({
-                form: '#main-form',
-                formGroupSelector: '.form-group',
-                errorSelector: '.form-message',
-                rules: [
-                    Validator.isRequired('#name', "vui lòng nhập họ tên !"),
-                    Validator.isRequired('#profile', "vui lòng nhập nội dung profile !"),
-                    Validator.isRequired('#project_1_title', "vui lòng nhập title project 1 !"),
-                    Validator.isRequired('#project_1_text', "vui lòng nhập nội dung project 1 !"),
-                    Validator.isRequired('#project_2_title', "vui lòng nhập title project 2 !"),
-                    Validator.isRequired('#project_2_text', "vui lòng nhập nội dung project 2 !"),
-                    Validator.isRequired('#bts_text', "vui lòng nhập BTS title !"),
-                    // Validator.isRequired('#name', "Vui lòng nhập nội dung profile !"),
-                    // Validator.isRequired('#name', "Vui lòng nhập nội dung profile !"),
-                    // Validator.isRequired('#images', "vui lòng chọn hình ảnh !"),
-                    // Validator.isRequired('#banner', "vui lòng chọn ảnh banner!"),
-                    // Validator.isRequired('#project_1_image', "vui lòng chọn hình ảnh project 1 !"),
-                    // Validator.isRequired('#project_2_image', "vui lòng chọn hình ảnh project 2!"),
-                    // Validator.isRequired('#bts_image', "vui lòng chọn  BTS hình ảnh!"),
-                    // Validator.isRequired('#images', "vui lòng chọn hình ảnh!"),
-                    Validator.minLength('#name', 2)
-                ],
-                onSubmit: function(data) {
-                    // $('#main-form').submit()
-                    // console.log(data);
-                }
-            });
-        });
+      // Mong muốn của chúng ta
+      Validator({
+          form: '#main-form',
+          formGroupSelector: '.form-group',
+          errorSelector: '.form-message',
+          rules: [
+              Validator.isRequired('#name', "vui lòng nhập họ tên !"),
+              // Validator.isRequired('#profile', "vui lòng nhập nội dung profile !"),
+              Validator.isRequired('#project_1_title', "vui lòng nhập title project 1 !"),
+              // Validator.isRequired('#project_1_text', "vui lòng nhập nội dung project 1 !"),
+              Validator.isRequired('#project_2_title', "vui lòng nhập title project 2 !"),
+              // Validator.isRequired('#project_2_text', "vui lòng nhập nội dung project 2 !"),
+              Validator.isRequired('#bts_text', "vui lòng nhập BTS title !"),
+              // Validator.isRequired('#name', "Vui lòng nhập nội dung profile !"),
+              // Validator.isRequired('#name', "Vui lòng nhập nội dung profile !"),
+              // Validator.isRequired('#images', "vui lòng chọn hình ảnh !"),
+              // Validator.isRequired('#banner', "vui lòng chọn ảnh banner!"),
+              // Validator.isRequired('#project_1_image', "vui lòng chọn hình ảnh project 1 !"),
+              // Validator.isRequired('#project_2_image', "vui lòng chọn hình ảnh project 2!"),
+              // Validator.isRequired('#bts_image', "vui lòng chọn  BTS hình ảnh!"),
+              // Validator.isRequired('#images', "vui lòng chọn hình ảnh!"),
+              Validator.minLength('#name', 2)
+          ],
+          onSubmit: function(data) {
+              // $('#main-form').submit()
+              // console.log(data);
+          }
+      });
+    });
   </script>
 
 @endsection

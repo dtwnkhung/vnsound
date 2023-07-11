@@ -4,6 +4,11 @@
 @endsection
 @section('content')
 <!--Section: Block Content-->
+<style>
+  #html-convert_4 p {
+    background: none
+  }
+</style>
 
 
 <div class="vnsound_banner banner_introduct banner_khartist">
@@ -37,7 +42,7 @@
               <div class="welcome_right_title">
                 {{ $artist['name'] }}
               </div>
-              <div class="mttn_left_txt">
+              <div class="mttn_left_txt" id="html-convert_4">
                 {{ $artist['profile'] }}
               </div>
               <div class="welcome_right_box">
@@ -212,7 +217,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Free
+                  Miễn phí
                 </div>
                 <div class="opinion_bot_money">
                   {{ $item['free_price'] }}
@@ -250,7 +255,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Pro
+                  Premium
                 </div>
                 <div class="opinion_bot_money">
                   {{ $item['premium_price'] }}
@@ -282,13 +287,16 @@
           </h3>
           <div class="mttn_left_txt">
             <p>
-              Tìm hiểu chi tiết thông tin về khóa học MC Hype/DJ tại VNSound Studio
+              Bạn được nhận ngay chế độ hấp dẫn khi đăng ký lịch học, được nhận ngay 3 buổi học
+              miễn phí
             </p>
             <p>
-              Bắt đầu con đường ngắn nhất để trở thành DJ và MC Hype chuyên nghiệp
+              Hệ thống sinh thái cực kỳ hỗ trợ của chúng tôi sẽ thúc đẩy sự nghiệp dj của bạn phát
+              triển
             </p>
             <p>
-              Gia nhập cộng đồng các bạn trẻ cùng đam mê và kết nối với những DJ, MC Hype đã có kinh nghiệm trong nghề
+              Hệ thống sinh thái cực kỳ hỗ trợ của chúng tôi sẽ thúc đẩy sự nghiệp dj của bạn phát
+              triển
             </p>
           </div>
           <div class="khartist_box_btn">
@@ -318,10 +326,10 @@
                 <input type="text" class="input_control" placeholder="Gmail" />
               </div>
               <div class="form_row">
-                <input type="text" class="input_control" placeholder="Địa chỉ" />
+                <input type="text" class="input_control" placeholder="Đại chỉ" />
               </div>
               <div class="form_row">
-                <textarea class="input_control" placeholder="Nội dung"></textarea>
+                <textarea class="input_control" placeholder="Nội dung mong muốn hợp tác"></textarea>
               </div>
             </div>
             <a href="javascript:void(0)" class="btn btn-form">
@@ -430,6 +438,7 @@ $(document).ready(function() {
   $("#html-convert_1").html($("#html-convert_1").text());
   $("#html-convert_2").html($("#html-convert_2").text());
   $("#html-convert_3").html($("#html-convert_3").text());
+  $("#html-convert_4").html($("#html-convert_4").text());
 
   function change_image(image) {
 

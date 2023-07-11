@@ -652,7 +652,13 @@
     <script src="{{ asset(mix('vendors/js/forms/cleave/cleave.min.js')) }}"></script>
     <script src="{{ asset(mix('vendors/js/forms/cleave/addons/cleave-phone.us.js')) }}"></script>
     {{-- <script type="text/javascript" src="./js/fontend/validator.js"></script> --}}
+    <script src="//cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
     <script>
+
+        CKEDITOR.replace('profile');
+        CKEDITOR.replace('project_1_text');
+        CKEDITOR.replace('project_2_text');
+
         $(document).ready(function() {
             $('#select-images').click(function() {
                 $('#images').click()
@@ -925,11 +931,11 @@
                 errorSelector: '.form-message',
                 rules: [
                     Validator.isRequired('#name', "vui lòng nhập họ tên !"),
-                    Validator.isRequired('#profile', "vui lòng nhập nội dung profile !"),
+                    // Validator.isRequired('#profile', "vui lòng nhập nội dung profile !"),
                     Validator.isRequired('#project_1_title', "vui lòng nhập title project 1 !"),
-                    Validator.isRequired('#project_1_text', "vui lòng nhập nội dung project 1 !"),
+                    // Validator.isRequired('#project_1_text', "vui lòng nhập nội dung project 1 !"),
                     Validator.isRequired('#project_2_title', "vui lòng nhập title project 2 !"),
-                    Validator.isRequired('#project_2_text', "vui lòng nhập nội dung project 2 !"),
+                    // Validator.isRequired('#project_2_text', "vui lòng nhập nội dung project 2 !"),
                     Validator.isRequired('#bts_text', "vui lòng nhập BTS title !"),
                     // Validator.isRequired('#name', "Vui lòng nhập nội dung profile !"),
                     // Validator.isRequired('#name', "Vui lòng nhập nội dung profile !"),
