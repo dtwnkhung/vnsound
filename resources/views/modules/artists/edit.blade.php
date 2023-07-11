@@ -98,7 +98,7 @@
             </div>
             <div class="col-sm-9">
               <div class="input-group input-group-merge">
-                <input type="text" id="slug" value="" class="form-control" name="slug" />
+                <input type="text" id="slug" value="{{ $item->slug }}" class="form-control" name="slug" />
               </div>
             </div>
           </div>

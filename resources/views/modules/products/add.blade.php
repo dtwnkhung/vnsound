@@ -743,7 +743,7 @@
                 rules: [
                     Validator.isRequired('#name', "vui lòng nhập Tên khóa học !"),
                     Validator.isRequired('#sub_name', "vui lòng nhập Slogan !"),
-                    Validator.isRequired('#teacher_id', "vui lòng chọn Nghệ sĩ !"),
+                    Validator.isRequired('#teacher_id', "vui lòng chọn Nghệ sỹ !"),
                     // Validator.isRequired('#description', "vui lòng nhập Mô tả !"),
                     Validator.isRequired('#start_time', "vui lòng chọn Thời gian bắt đầu !"),
                     Validator.isRequired('#end_time', "vui lòng chọn Thời gian kết thúc !"),

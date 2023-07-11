@@ -51,7 +51,7 @@
     <thead>
     <tr>
       <th>Tên khóa học</th>
-      <th>Nghệ sĩ</th>
+      <th>Nghệ sỹ</th>
       <th>Created At</th>
       <th>Updated At</th>
       <th>Thao tác</th>

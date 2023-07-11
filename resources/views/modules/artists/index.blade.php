@@ -50,7 +50,7 @@
   <table class="table table-bordered" id="users-table">
     <thead>
     <tr>
-      <th>Tên nghệ sĩ</th>
+      <th>Tên Nghệ sỹ</th>
       <th>Hình ảnh</th>
       <th>Created At</th>
       <th>Updated At</th>

@@ -533,7 +533,9 @@ header.header-mobile {
 /* vnsound_course */
 .vnsound_course {
   padding: 0 0 15px;
-  background: #030303 url("../images/bg-course.png") no-repeat bottom center;
+  background: #030303
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/khoa-hoc-banner.png")
+    no-repeat bottom center;
 }
 
 .course_tab {
@@ -718,7 +720,9 @@ header.header-mobile {
 /* vnsound_knowledge */
 .vnsound_knowledge {
   padding: 90px 0 154px;
-  background: #030303 url("../images/bg-knowledge.png") no-repeat top center;
+  background: #030303
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/tin-tuc-banner.png")
+    no-repeat top center;
   background-size: cover;
 }
 

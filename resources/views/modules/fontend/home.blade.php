@@ -51,7 +51,7 @@
                         artists
                     </div> -->
           <h2 class="vnsound_title wow fadeInUp animated" data-wow-delay="0.2s">
-            Nghệ sĩ
+            Nghệ sỹ
           </h2>
         </div>
         <div class="artists_list">

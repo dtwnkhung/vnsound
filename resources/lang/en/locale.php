@@ -1,8 +1,8 @@
 <?php
 
 return [
-  "Home"=>"Home",
-  "Starter Kit"=>"Starter Kit",
+  "Home" => "Home",
+  "Starter Kit" => "Starter Kit",
   "Dashboards" => "Dashboards",
   "Analytics" => "Analytics",
   "eCommerce" => "eCommerce",
@@ -189,11 +189,11 @@ return [
   "Achievements" => "Thánh tích",
   "Partners" => "Đối tác",
   "Students" => "Học viên",
-  "Artists" => "Nghệ sĩ",
+  "Artists" => "Nghệ sỹ",
   "Events" => "Sự kiện",
   "Services" => "Dịch vụ",
   "Projects" => "Dự án",
-  "message" => "Cake sesame snaps cupcake gingerbread danish I love gingerbread. Apple pie pie jujubes chupa chups muffin halvah lollipop. Chocolate cake oat cake tiramisu marzipan sugar plum. Donut sweet pie oat cake dragée fruitcake cotton candy lemon drops.", 
+  "message" => "Cake sesame snaps cupcake gingerbread danish I love gingerbread. Apple pie pie jujubes chupa chups muffin halvah lollipop. Chocolate cake oat cake tiramisu marzipan sugar plum. Donut sweet pie oat cake dragée fruitcake cotton candy lemon drops.",
   "Representative Student" => "Học viên tiêu biểu",
   "Opinion Student" => "Ý kiến học viên"
 ];
