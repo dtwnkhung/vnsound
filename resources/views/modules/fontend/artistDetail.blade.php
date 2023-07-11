@@ -1,17 +1,17 @@
 @extends('modules.fontend.layout.index')
 @section('facebook_meta')
-<meta property="og:image" content="{{ URL::to('/images/artists'). '/' .$item["images"] }}" />
+<meta property="og:image" content="{{ URL::to('/images/artists'). '/'. $item->images[0]}}" />
 @endsection
 @section('content')
 <style>
-  #html-convert_1 p {
-    background: none
-  }
+#html-convert_1 p {
+  background: none
+}
 </style>
 
 
 <div class="vnsound_banner banner_introduct banner_pfartist" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('http://localhost/images/anh_tu_lieu/khoa_hoc/banner-top.png') no-repeat
+    url('http://vnsound.com.vn/images/anh_tu_lieu/khoa_hoc/banner-top.png') no-repeat
       center center;background-size: cover;">
   <div class="container">
     <div class="row">
@@ -34,7 +34,7 @@
       <div class="col-lg-12">
         <div class="welcome_content">
           <div class="welcome_left">
-            <img src="{{ URL::to('/images/artists'). '/' .$item["images"] }}" alt="" class="w-100" />
+            <img src="{{ URL::to('/images/artists'). '/'. $item->images[0]}}" alt="" class="w-100" />
             <img src="images/img-welcom2.png" alt="" style="display: block;margin: 35px auto 0;" />
           </div>
           <div class="welcome_right">

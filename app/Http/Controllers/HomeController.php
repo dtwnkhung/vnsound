@@ -63,7 +63,8 @@ class HomeController extends Controller
         ComponentRepository $componentRepository,
         NewsRepository $newsRepository,
         PartnerRepository $partnerRepository
-    ) {
+    )
+    {
         $products = $productRepository->getListProduct(5);
         // $teachers = $userRepository->getTeachers();
         $sliders = $sliderRepository->getListByType(5, 6);
@@ -93,14 +94,15 @@ class HomeController extends Controller
     }
 
     function product(
-        Request $request, 
-        ProductRepository $productRepository, 
-        ComponentRepository $componentRepository, 
-        ArtistRepository $artistRepository,  
+        Request $request,
+        ProductRepository $productRepository,
+        ComponentRepository $componentRepository,
+        ArtistRepository $artistRepository,
         StudentRepository $studentRepository)
     {
         $pro_id = $request->id;
-        if (!$pro_id) {
+        if (!$pro_id)
+        {
             return redirect('/');
         }
         $product = $productRepository->getById($pro_id);
@@ -114,13 +116,16 @@ class HomeController extends Controller
         $free_benefit = [];
         $basic_benefit = [];
         $pre_benefit = [];
-        foreach ($product['free_benefit'] as $key => $opt) {
+        foreach ($product['free_benefit'] as $key => $opt)
+        {
             $free_benefit[] = $listOption[$opt];
         }
-        foreach ($product['basic_benefit'] as $key => $opt) {
+        foreach ($product['basic_benefit'] as $key => $opt)
+        {
             $basic_benefit[] = $listOption[$opt];
         }
-        foreach ($product['pre_benefit'] as $key => $opt) {
+        foreach ($product['pre_benefit'] as $key => $opt)
+        {
             $pre_benefit[] = $listOption[$opt];
         }
         $product['free_benefit'] = $free_benefit;
@@ -186,7 +191,8 @@ class HomeController extends Controller
         SliderRepository $sliderRepository,
         StudentRepository $studentRepository,
         PartnerRepository $partnerRepository
-    ) {
+    )
+    {
         $activeIntroduce = 'active';
         $artists = $artistRepository->getPagination(9);
         $services = $serviceRepository->getList(9);
@@ -278,11 +284,11 @@ class HomeController extends Controller
         ]);
     }
 
-    function artistDetail(ArtistRepository $artistRepository)
+    function artistDetail($slug, ArtistRepository $artistRepository)
     {
         $activeArtist = 'active';
-        $artist_id = $_GET['id'];
-        $artist =  $artistRepository->getById($artist_id);
+        // $artist_id = $_GET['id'];
+        $artist = $artistRepository->getBySlug($slug);
         $artist['clubs'] = explode(',', $artist['clubs']);
         $artist['partners'] = explode(',', $artist['partners']);
         $artist['project_1_image'] = explode(',', $artist['project_1_image']);
@@ -370,32 +376,33 @@ class HomeController extends Controller
 
     function addContact(Request $request)
     {
-        $arrRules =  [
-            'name'                  => 'required|max:255',
-            'description'                  => 'required|max:255',
-            'email'                  => 'required|max:255',
+        $arrRules = [
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'email' => 'required|max:255',
         ];
-        $arrMess  = [
-            'name.required'         => 'Trường dữ liệu không được bỏ trống!',
-            'name.max'              => 'Độ dài tối đa 255 kí tự!',
-            'email.required'         => 'Trường dữ liệu không được bỏ trống!',
-            'email.max'              => 'Độ dài tối đa 255 kí tự!',
-            'description.required'         => 'Trường dữ liệu không được bỏ trống!',
+        $arrMess = [
+            'name.required' => 'Trường dữ liệu không được bỏ trống!',
+            'name.max' => 'Độ dài tối đa 255 kí tự!',
+            'email.required' => 'Trường dữ liệu không được bỏ trống!',
+            'email.max' => 'Độ dài tối đa 255 kí tự!',
+            'description.required' => 'Trường dữ liệu không được bỏ trống!',
         ];
         $validator = Validator::make($request->all(), $arrRules, $arrMess);
 
-        if ($validator->fails()) {
+        if ($validator->fails())
+        {
             return redirect('/lien-he.html#main-form')
                 ->withErrors($validator)
                 ->withInput();
         }
         //        $this->validate($request, $arrRules, $arrMess);
         $contact = new Contact();
-        $contact->name              = $request->name;
-        $contact->description       = $request->description;
-        $contact->email             = $request->email;
-        $contact->status       = 0;
-        $contact->type       = 1;
+        $contact->name = $request->name;
+        $contact->description = $request->description;
+        $contact->email = $request->email;
+        $contact->status = 0;
+        $contact->type = 1;
         $contact->save();
         return redirect('/')->with('thongbao', 'Cảm ơn bạn đã liên hệ!');
     }
@@ -403,50 +410,50 @@ class HomeController extends Controller
     function addLienhe(Request $request)
     {
         $contact = new Contact();
-        $contact->name              = $request->name;
-        $contact->address              = $request->address;
-        $contact->phone              = $request->phone;
-        $contact->email              = $request->email;
-        $contact->description              = $request->description;
-        $contact->type       = 1;
-        $contact->status       = 0;
+        $contact->name = $request->name;
+        $contact->address = $request->address;
+        $contact->phone = $request->phone;
+        $contact->email = $request->email;
+        $contact->description = $request->description;
+        $contact->type = 1;
+        $contact->status = 0;
         $contact->save();
         return redirect('/')->with('thongbao', 'Cảm ơn bạn đã liên hệ!');
     }
 
     public function registerUser(Request $request)
     {
-        $arrRules =  [
-            'name'                  => 'required|max:255',
-            'email'                  => 'required|unique:users,email|max:255',
-            'password'              => 'required|max:16|min:6',
-            'phone'                 => 'required|min:11|numeric',
-            'repassword'             => 'required|max:16|min:6|same:password',
+        $arrRules = [
+            'name' => 'required|max:255',
+            'email' => 'required|unique:users,email|max:255',
+            'password' => 'required|max:16|min:6',
+            'phone' => 'required|min:11|numeric',
+            'repassword' => 'required|max:16|min:6|same:password',
         ];
-        $arrMess  = [
-            'name.required'         => 'Trường dữ liệu không được bỏ trống!',
-            'name.max'              => 'Độ dài tối đa 255 kí tự!',
-            'email.required'         => 'Trường dữ liệu không được bỏ trống!',
-            'email.max'              => 'Độ dài tối đa 255 kí tự!',
-            'email.unique'              => 'Email đã tồn tại trên hệ thống!',
-            'phone.required'         => 'Trường dữ liệu không được bỏ trống!',
-            'phone.min'              => 'Số điện thoại không hợp lệ!',
-            'phone.numeric'              => 'Số điện thoại không hợp lệ!',
-            'password.required'       => 'Trường dữ liệu không được bỏ trống!',
-            'password.max'              => 'Độ dài tối đa 16 kí tự!',
-            'password.min'              => 'Độ dài tối thiểu 6 kí tự!',
-            'repassword.required'       => 'Trường dữ liệu không được bỏ trống!',
-            'repassword.max'              => 'Độ dài tối đa 16 kí tự!',
-            'repassword.min'              => 'Độ dài tối thiểu 6 kí tự!',
-            'repassword.same'              => 'Mật khẩu xác nhận không chính xác!',
+        $arrMess = [
+            'name.required' => 'Trường dữ liệu không được bỏ trống!',
+            'name.max' => 'Độ dài tối đa 255 kí tự!',
+            'email.required' => 'Trường dữ liệu không được bỏ trống!',
+            'email.max' => 'Độ dài tối đa 255 kí tự!',
+            'email.unique' => 'Email đã tồn tại trên hệ thống!',
+            'phone.required' => 'Trường dữ liệu không được bỏ trống!',
+            'phone.min' => 'Số điện thoại không hợp lệ!',
+            'phone.numeric' => 'Số điện thoại không hợp lệ!',
+            'password.required' => 'Trường dữ liệu không được bỏ trống!',
+            'password.max' => 'Độ dài tối đa 16 kí tự!',
+            'password.min' => 'Độ dài tối thiểu 6 kí tự!',
+            'repassword.required' => 'Trường dữ liệu không được bỏ trống!',
+            'repassword.max' => 'Độ dài tối đa 16 kí tự!',
+            'repassword.min' => 'Độ dài tối thiểu 6 kí tự!',
+            'repassword.same' => 'Mật khẩu xác nhận không chính xác!',
         ];
         $user = new User();
         $this->validate($request, $arrRules, $arrMess);
-        $user->name              = $request->name;
-        $user->email              = $request->email;
-        $user->phone              = $request->phone;
-        $user->password       = Hash::make($request->password);
-        $user->type       = 2; //1-giasu|2-hocvien
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->phone = $request->phone;
+        $user->password = Hash::make($request->password);
+        $user->type = 2; //1-giasu|2-hocvien
         $user->save();
         return redirect('/')->with('thongbao', 'Đắng ký học viên thành công!');
     }
@@ -462,10 +469,13 @@ class HomeController extends Controller
 
         $user = User::where('name', $request->name)->first();
 
-        if (auth()->attempt($credentials)) {
+        if (auth()->attempt($credentials))
+        {
 
             return redirect()->route('fe.home');
-        } else {
+        }
+        else
+        {
             session()->flash('message', 'Invalid credentials');
             return redirect()->back();
         }
@@ -483,7 +493,8 @@ class HomeController extends Controller
 
         $user = User::where('email', '=', $to_email)->first();
 
-        if (!$user) {
+        if (!$user)
+        {
             return redirect('/')->with('thongbao', 'Email không tồn tại!');
         }
         $newPass = Common::generateRandomString(8);

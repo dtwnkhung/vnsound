@@ -186,7 +186,7 @@
     </div>
   </div>
 </div>
-<div class="introduct_mttn introduct_mttn2">
+<div class="introduct_mttn introduct_mttn2" style="background-color:#030303!important;background-image:none">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">

@@ -39,23 +39,31 @@ class ArtistController extends Controller
         $artists = $this->getListData();
 
         return Datatables::of($artists)
-            ->addColumn('name', function ($product) {
+            ->addColumn('name', function ($product)
+            {
                 return '<a href="' . route('artists.edit', $product->id) . '" class=""><i class="fa fa-eye"></i> ' . $product->name . '</a>';
             })
-            ->addColumn('images', function ($item) {
+            ->addColumn('images', function ($item)
+            {
                 return '<img src="' . url("/images/artists") . '/' . $item->images . '" width="150px" />';
             })
-            ->addColumn('created_at', function ($product) {
+            ->addColumn('created_at', function ($product)
+            {
                 return '<span>' . date('d-m-Y', strtotime($product->created_at)) . '</span>';
             })
-            ->addColumn('status', function ($product) {
-                if ($product->status == 1) {
+            ->addColumn('status', function ($product)
+            {
+                if ($product->status == 1)
+                {
                     return 'Online';
-                } else {
+                }
+                else
+                {
                     return 'Offline';
                 }
             })
-            ->addColumn('updated_at', function ($product) {
+            ->addColumn('updated_at', function ($product)
+            {
                 return '<span>' . date('d-m-Y', strtotime($product->created_at)) . '</span>';
             })
             ->rawColumns(['name', 'images', 'created_at', 'updated_at'])
@@ -83,7 +91,8 @@ class ArtistController extends Controller
             ['link' => "admin/artists", 'name' => "Danh sách"],
             ['name' => "Thêm mới"]
         ];
-        if (!public_path('images/artists/')) {
+        if (!public_path('images/artists/'))
+        {
             mkdir(public_path('images/artists/'), 0777, true);
         }
         $teachers = $userRepository->getTeachers();
@@ -131,17 +140,23 @@ class ArtistController extends Controller
         // var_dump($request->name);exit();
         // $this->validate($request, $arrRules, $arrMess);
         $images = [];
-        if ($request->has('images')) {
-            foreach ($request->file('images') as $file) {
+        if ($request->has('images'))
+        {
+            foreach ($request->file('images') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -155,17 +170,23 @@ class ArtistController extends Controller
         }
 
         $banner = [];
-        if ($request->has('banner')) {
-            foreach ($request->file('banner') as $file) {
+        if ($request->has('banner'))
+        {
+            foreach ($request->file('banner') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'banner-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'banner-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -179,17 +200,23 @@ class ArtistController extends Controller
         }
 
         $clubs = [];
-        if ($request->has('clubs')) {
-            foreach ($request->file('clubs') as $file) {
+        if ($request->has('clubs'))
+        {
+            foreach ($request->file('clubs') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'clubs-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'clubs-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -202,17 +229,23 @@ class ArtistController extends Controller
             }
         }
         $partners = [];
-        if ($request->has('partners')) {
-            foreach ($request->file('partners') as $file) {
+        if ($request->has('partners'))
+        {
+            foreach ($request->file('partners') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'partners-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'partners-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -226,17 +259,23 @@ class ArtistController extends Controller
         }
 
         $project_1_image = [];
-        if ($request->has('project_1_image')) {
-            foreach ($request->file('project_1_image') as $file) {
+        if ($request->has('project_1_image'))
+        {
+            foreach ($request->file('project_1_image') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'project_1_image-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'project_1_image-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -250,17 +289,23 @@ class ArtistController extends Controller
         }
 
         $project_2_image = [];
-        if ($request->has('project_2_image')) {
-            foreach ($request->file('project_2_image') as $file) {
+        if ($request->has('project_2_image'))
+        {
+            foreach ($request->file('project_2_image') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'project_2_image-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'project_2_image-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -273,17 +318,23 @@ class ArtistController extends Controller
             }
         }
         $bts_image = [];
-        if ($request->has('bts_image')) {
-            foreach ($request->file('bts_image') as $file) {
+        if ($request->has('bts_image'))
+        {
+            foreach ($request->file('bts_image') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'bts_image-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'bts_image-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -297,17 +348,23 @@ class ArtistController extends Controller
         }
 
         $life_style_1 = [];
-        if ($request->has('life_style_1')) {
-            foreach ($request->file('life_style_1') as $file) {
+        if ($request->has('life_style_1'))
+        {
+            foreach ($request->file('life_style_1') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_1-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_1-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -321,17 +378,23 @@ class ArtistController extends Controller
         }
 
         $life_style_2 = [];
-        if ($request->has('life_style_2')) {
-            foreach ($request->file('life_style_2') as $file) {
+        if ($request->has('life_style_2'))
+        {
+            foreach ($request->file('life_style_2') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_2-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_2-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -345,17 +408,23 @@ class ArtistController extends Controller
         }
 
         $life_style_3 = [];
-        if ($request->has('life_style_3')) {
-            foreach ($request->file('life_style_3') as $file) {
+        if ($request->has('life_style_3'))
+        {
+            foreach ($request->file('life_style_3') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_3-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_3-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -369,17 +438,23 @@ class ArtistController extends Controller
         }
 
         $life_style_4 = [];
-        if ($request->has('life_style_4')) {
-            foreach ($request->file('life_style_4') as $file) {
+        if ($request->has('life_style_4'))
+        {
+            foreach ($request->file('life_style_4') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_4-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_4-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -392,17 +467,23 @@ class ArtistController extends Controller
             }
         }
         $life_style_5 = [];
-        if ($request->has('life_style_5')) {
-            foreach ($request->file('life_style_5') as $file) {
+        if ($request->has('life_style_5'))
+        {
+            foreach ($request->file('life_style_5') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_5-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_5-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -415,17 +496,23 @@ class ArtistController extends Controller
             }
         }
         $life_style_6 = [];
-        if ($request->has('life_style_6')) {
-            foreach ($request->file('life_style_6') as $file) {
+        if ($request->has('life_style_6'))
+        {
+            foreach ($request->file('life_style_6') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
                 $filename = 'life_style_6-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
                     $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -450,18 +537,19 @@ class ArtistController extends Controller
         $product->life_style_4 = implode(',', $life_style_4);
         $product->life_style_5 = implode(',', $life_style_5);
         $product->life_style_6 = implode(',', $life_style_6);
-        $product->name              = $request->name;
-        $product->profile       = $request->profile;
-        $product->project_1_title       = $request->project_1_title;
-        $product->project_2_title       = $request->project_2_title;
-        $product->project_1_text       = $request->project_1_text;
-        $product->project_2_text       = $request->project_2_text;
-        $product->bts_text       = $request->bts_text;
-        $product->bts_link_fb       = $request->bts_link_fb;
-        $product->bts_link_ins       = $request->bts_link_ins;
-        $product->bts_link_tt       = $request->bts_link_tt;
-        $product->bts_link_yt       = $request->bts_link_yt;
-        $product->bts_link_sc       = $request->bts_link_sc;
+        $product->name = $request->name;
+        $product->slug = $request->slug;
+        $product->profile = $request->profile;
+        $product->project_1_title = $request->project_1_title;
+        $product->project_2_title = $request->project_2_title;
+        $product->project_1_text = $request->project_1_text;
+        $product->project_2_text = $request->project_2_text;
+        $product->bts_text = $request->bts_text;
+        $product->bts_link_fb = $request->bts_link_fb;
+        $product->bts_link_ins = $request->bts_link_ins;
+        $product->bts_link_tt = $request->bts_link_tt;
+        $product->bts_link_yt = $request->bts_link_yt;
+        $product->bts_link_sc = $request->bts_link_sc;
         $product->save();
         return redirect('admin/artists')->with('thongbao', 'Thêm mới nghệ sĩ thành công!');
     }
@@ -471,14 +559,18 @@ class ArtistController extends Controller
         $file = $request->file('image');
         $extension = $file->getClientOriginalExtension();
 
-        $filename =  Str::random(15) . '.' . $extension;
-        while (file_exists(public_path('/images/artists/') . $filename)) {
-            $filename =  Str::random(15) . '.' . $extension;
+        $filename = Str::random(15) . '.' . $extension;
+        while (file_exists(public_path('/images/artists/') . $filename))
+        {
+            $filename = Str::random(15) . '.' . $extension;
         }
-        try {
+        try
+        {
             $file->move(public_path('images/artists/'), $filename);
             return response()->json(['urlImg' => '/images/artists/' . $filename]);
-        } catch (\Exception $e) {
+        }
+        catch (\Exception $e)
+        {
             echo "<pre>";
             print_r($e->getMessage());
             echo "</pre>";
@@ -530,17 +622,23 @@ class ArtistController extends Controller
         $item = $this->getSingleData($id);
 
         // $this->validate($request, $arrRules, $arrMess);
-        if ($request->has('images')) {
+        if ($request->has('images'))
+        {
             $images = [];
-            foreach ($request->file('images') as $file) {
+            foreach ($request->file('images') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
-                $filename =  Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -554,18 +652,24 @@ class ArtistController extends Controller
             $item->images = implode(',', $images);
         }
 
-        if ($request->has('banner')) {
+        if ($request->has('banner'))
+        {
             $banner = [];
-            foreach ($request->file('banner') as $file) {
+            foreach ($request->file('banner') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'banner-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'banner-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -579,18 +683,24 @@ class ArtistController extends Controller
             $item->banner = implode(',', $banner);
         }
 
-        if ($request->has('clubs')) {
+        if ($request->has('clubs'))
+        {
             $clubs = [];
-            foreach ($request->file('clubs') as $file) {
+            foreach ($request->file('clubs') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'clubs-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'clubs-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -606,17 +716,23 @@ class ArtistController extends Controller
             $item->clubs = implode(',', $club_news);
         }
 
-        if ($request->has('partners')) {
+        if ($request->has('partners'))
+        {
             $partners = [];
-            foreach ($request->file('partners') as $file) {
+            foreach ($request->file('partners') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
-                $filename =  'partners-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'partners-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -632,18 +748,24 @@ class ArtistController extends Controller
             $item->partners = implode(',', $partners_news);
         }
 
-        if ($request->has('project_1_image')) {
+        if ($request->has('project_1_image'))
+        {
             $project_1_image = [];
-            foreach ($request->file('project_1_image') as $file) {
+            foreach ($request->file('project_1_image') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'project_1_image-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'project_1_image-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -659,18 +781,24 @@ class ArtistController extends Controller
             $item->project_1_image = implode(',', $project_1_image_new);
         }
 
-        if ($request->has('project_2_image')) {
+        if ($request->has('project_2_image'))
+        {
             $project_2_image = [];
-            foreach ($request->file('project_2_image') as $file) {
+            foreach ($request->file('project_2_image') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'project_2_image-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'project_2_image-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -686,18 +814,24 @@ class ArtistController extends Controller
             $item->project_2_image = implode(',', $project_2_image_new);
         }
 
-        if ($request->has('bts_image')) {
+        if ($request->has('bts_image'))
+        {
             $bts_image = [];
-            foreach ($request->file('bts_image') as $file) {
+            foreach ($request->file('bts_image') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'bts_image-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'bts_image-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -711,18 +845,24 @@ class ArtistController extends Controller
             $item->bts_image = implode(',', $bts_image);
         }
 
-        if ($request->has('life_style_1')) {
+        if ($request->has('life_style_1'))
+        {
             $life_style_1 = [];
-            foreach ($request->file('life_style_1') as $file) {
+            foreach ($request->file('life_style_1') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_1-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_1-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -736,18 +876,24 @@ class ArtistController extends Controller
             $item->life_style_1 = implode(',', $life_style_1);
         }
 
-        if ($request->has('life_style_2')) {
+        if ($request->has('life_style_2'))
+        {
             $life_style_2 = [];
-            foreach ($request->file('life_style_2') as $file) {
+            foreach ($request->file('life_style_2') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_2-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_2-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -761,18 +907,24 @@ class ArtistController extends Controller
             $item->life_style_2 = implode(',', $life_style_2);
         }
 
-        if ($request->has('life_style_3')) {
+        if ($request->has('life_style_3'))
+        {
             $life_style_3 = [];
-            foreach ($request->file('life_style_3') as $file) {
+            foreach ($request->file('life_style_3') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_3-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_3-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -786,18 +938,24 @@ class ArtistController extends Controller
             $item->life_style_3 = implode(',', $life_style_3);
         }
 
-        if ($request->has('life_style_4')) {
+        if ($request->has('life_style_4'))
+        {
             $life_style_4 = [];
-            foreach ($request->file('life_style_4') as $file) {
+            foreach ($request->file('life_style_4') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_4-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_4-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -811,18 +969,24 @@ class ArtistController extends Controller
             $item->life_style_4 = implode(',', $life_style_4);
         }
 
-        if ($request->has('life_style_5')) {
+        if ($request->has('life_style_5'))
+        {
             $life_style_5 = [];
-            foreach ($request->file('life_style_5') as $file) {
+            foreach ($request->file('life_style_5') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
-                $filename =  'life_style_5-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
-                    $filename =  Str::random(15) . '.' . $extension;
+                $filename = 'life_style_5-' . Str::random(15) . '.' . $extension;
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
+                    $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -836,18 +1000,24 @@ class ArtistController extends Controller
             $item->life_style_5 = implode(',', $life_style_5);
         }
 
-        if ($request->has('life_style_6')) {
+        if ($request->has('life_style_6'))
+        {
             $life_style_6 = [];
-            foreach ($request->file('life_style_6') as $file) {
+            foreach ($request->file('life_style_6') as $file)
+            {
                 $extension = $file->getClientOriginalExtension();
 
                 $filename = 'life_style_6-' . Str::random(15) . '.' . $extension;
-                while (file_exists(public_path('images/artists/') . $filename)) {
+                while (file_exists(public_path('images/artists/') . $filename))
+                {
                     $filename = Str::random(15) . '.' . $extension;
                 }
-                try {
+                try
+                {
                     $file->move(public_path('images/artists/'), $filename);
-                } catch (\Exception $e) {
+                }
+                catch (\Exception $e)
+                {
                     echo "<pre>";
                     print_r($e->getMessage());
                     echo "</pre>";
@@ -860,18 +1030,19 @@ class ArtistController extends Controller
             }
             $item->life_style_6 = implode(',', $life_style_6);
         }
-        $item->name              = $request->name;
-        $item->profile       = $request->profile;
-        $item->project_1_title       = $request->project_1_title;
-        $item->project_2_title       = $request->project_2_title;
-        $item->project_1_text       = $request->project_1_text;
-        $item->project_2_text       = $request->project_2_text;
-        $item->bts_text       = $request->bts_text;
-        $item->bts_link_fb       = $request->bts_link_fb;
-        $item->bts_link_ins       = $request->bts_link_ins;
-        $item->bts_link_tt       = $request->bts_link_tt;
-        $item->bts_link_yt       = $request->bts_link_yt;
-        $item->bts_link_sc       = $request->bts_link_sc;
+        $item->name = $request->name;
+        $item->slug = $request->slug;
+        $item->profile = $request->profile;
+        $item->project_1_title = $request->project_1_title;
+        $item->project_2_title = $request->project_2_title;
+        $item->project_1_text = $request->project_1_text;
+        $item->project_2_text = $request->project_2_text;
+        $item->bts_text = $request->bts_text;
+        $item->bts_link_fb = $request->bts_link_fb;
+        $item->bts_link_ins = $request->bts_link_ins;
+        $item->bts_link_tt = $request->bts_link_tt;
+        $item->bts_link_yt = $request->bts_link_yt;
+        $item->bts_link_sc = $request->bts_link_sc;
         $item->save();
         return redirect('admin/artists')->with('thongbao', 'Cập nhật nghệ sĩ thành công!');
     }
@@ -887,8 +1058,10 @@ class ArtistController extends Controller
         $id = $request->club_id;
         $item = $this->getSingleData($id);
         $clubs = explode(',', $item->clubs);
-        foreach ($clubs as $key => $value) {
-            if ($key == $request->image_id) {
+        foreach ($clubs as $key => $value)
+        {
+            if ($key == $request->image_id)
+            {
                 unset($clubs[$key]);
             }
         }
@@ -903,8 +1076,10 @@ class ArtistController extends Controller
         $id = $request->partner_id;
         $item = $this->getSingleData($id);
         $partners = explode(',', $item->partners);
-        foreach ($partners as $key => $value) {
-            if ($key == $request->image_id) {
+        foreach ($partners as $key => $value)
+        {
+            if ($key == $request->image_id)
+            {
                 unset($partners[$key]);
             }
         }
@@ -918,8 +1093,10 @@ class ArtistController extends Controller
         $id = $request->project_1_image;
         $item = $this->getSingleData($id);
         $project_1_image = explode(',', $item->project_1_image);
-        foreach ($project_1_image as $key => $value) {
-            if ($key == $request->image_id) {
+        foreach ($project_1_image as $key => $value)
+        {
+            if ($key == $request->image_id)
+            {
                 unset($project_1_image[$key]);
             }
         }
@@ -933,8 +1110,10 @@ class ArtistController extends Controller
         $id = $request->project_2_image;
         $item = $this->getSingleData($id);
         $project_2_image = explode(',', $item->project_2_image);
-        foreach ($project_2_image as $key => $value) {
-            if ($key == $request->image_id) {
+        foreach ($project_2_image as $key => $value)
+        {
+            if ($key == $request->image_id)
+            {
                 unset($project_2_image[$key]);
             }
         }

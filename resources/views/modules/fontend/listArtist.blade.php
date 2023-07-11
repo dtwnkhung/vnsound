@@ -22,7 +22,7 @@
     <div class="row">
       @foreach ($items as $item)
       <div class="col-md-4 col-sm-6">
-        <a href="{{ route('home.artistDetail', ['id' => $item['id']]) }}"
+        <a href="{{ route("home.artistDetail", ["slug" => $item['slug']]) }}"
           class="artists_item wow flipInY animated animated" style="visibility: visible; animation-name: flipInY;">
           <img src="{{ URL::to('/images/artists'). '/'. $item['images']}}" />
           <span class="artists_item_name">

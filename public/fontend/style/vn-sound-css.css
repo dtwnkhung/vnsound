@@ -348,7 +348,9 @@ header.header-mobile {
 /* vnsound_banner */
 .vnsound_banner {
   padding: 159px 0 100px;
-  background: transparent url("../images/bg-banner.jpg") no-repeat top center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/banner-home.png")
+      no-repeat center center;
   background-size: cover;
   margin-top: 99px;
 }
@@ -886,8 +888,9 @@ header.header-mobile {
 /* gioi-thieu */
 /* banner_introduct */
 .banner_introduct {
-  background: transparent url("../images/bg-gioithieu.jpg") no-repeat bottom
-    center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/banner-top.png")
+      no-repeat center center;
   background-size: cover;
   padding: 115px 0 280px;
 }
@@ -953,7 +956,10 @@ header.header-mobile {
 /* introduct_mttn */
 .introduct_mttn {
   padding: 74px 0 13px;
-  background: #030303 url("../images/bg-mttn.png") no-repeat center center;
+  /* background: #030303 url("../images/bg-mttn.png") no-repeat center center; */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_gioi_thieu/banner-muctieuvatamnhin.png")
+      no-repeat center center;
   background-size: cover;
 }
 
@@ -1006,7 +1012,11 @@ header.header-mobile {
 }
 
 .introduct_mttn2 {
-  background: #030303;
+  /* background: #030303; */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_gioi_thieu/banner-solieuthongke.png")
+      no-repeat center center;
+  background-size: cover;
 }
 
 /* introduct_video */
@@ -1024,8 +1034,9 @@ header.header-mobile {
 /* vnsound_service */
 .vnsound_service {
   padding: 94px 0 24px;
-  background: transparent url("../images/bg-service.png") no-repeat center
-    center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_gioi_thieu/banner-dichvucuavnsound.png")
+      no-repeat center center;
   background-size: cover;
 }
 
@@ -1365,8 +1376,9 @@ header.header-mobile {
 /* banner_pfartist */
 .banner_pfartist {
   padding: 173px 0;
-  background: transparent url("../images/bg-pfartist.jpg") no-repeat center
-    center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/khoa_hoc/banner-top.png")
+      no-repeat center center;
   background-size: cover;
 }
 
@@ -1510,8 +1522,9 @@ header.header-mobile {
 
 /* khoa-hoc-nghe-si */
 .banner_khartist {
-  background: transparent url("../images/bg-khartist.jpg") no-repeat center
-    center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/khoa-hoc-banner.png")
+      no-repeat center center;
   padding: 115px 0 270px;
   background-size: cover;
 }
@@ -2224,8 +2237,9 @@ textarea.input_control {
 /* detail-tin-tuc */
 /* banner_news */
 .banner_news {
-  background: transparent url("../images/banner-news.jpg") no-repeat bottom
-    center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/tin-tuc-banner.png")
+      no-repeat center center;
   background-size: cover;
   padding: 70px 0 35px;
 }

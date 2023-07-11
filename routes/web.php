@@ -38,15 +38,18 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Auth::routes();
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->group(function ()
+{
 
     Route::get('/resetPass', [ResetPasswordController::class, 'showResetForm'])->name('resetPass');
     Route::post('/changePass', [ResetPasswordController::class, 'changePass'])->name('password.update');
     Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
-    Route::group(['middleware' => 'verfiy-account'], function () {
+    Route::group(['middleware' => 'verfiy-account'], function ()
+    {
         Route::get('/', [StaterkitController::class, 'home'])->name('home');
         // Teacher
-        Route::prefix('teachers')->group(function () {
+        Route::prefix('teachers')->group(function ()
+        {
             Route::get('/', [UserController::class, 'indexTeacher'])->name('teachers.index');
             Route::get('data', [UserController::class, 'getListTeachers'])->name('teachers.data');
             Route::get('view/{id}', [UserController::class, 'view'])->name('teachers.view');
@@ -66,7 +69,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         });
 
         // Student
-        Route::prefix('students')->group(function () {
+        Route::prefix('students')->group(function ()
+        {
             Route::get('/representativeStudent', [StudentController::class, 'representativeStudent'])->name('students.representativeStudent');
             Route::get('/opinionStudent', [StudentController::class, 'opinionStudent'])->name('students.opinionStudent');
 
@@ -90,7 +94,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
         });
         // Product
-        Route::prefix('products')->group(function () {
+        Route::prefix('products')->group(function ()
+        {
             Route::get('/', [ProductController::class, 'index'])->name('products.index');
             Route::get('data', [ProductController::class, 'getList'])->name('products.data');
             Route::get('view/{id}', [ProductController::class, 'view'])->name('products.view');
@@ -106,7 +111,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [ProductController::class, 'delete'])->name('products.delete');
         });
         // Artists
-        Route::prefix('artists')->group(function () {
+        Route::prefix('artists')->group(function ()
+        {
             Route::get('/', [ArtistController::class, 'index'])->name('artists.index');
             Route::get('data', [ArtistController::class, 'getList'])->name('artists.data');
             Route::get('view/{id}', [ArtistController::class, 'view'])->name('artists.view');
@@ -125,7 +131,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [ArtistController::class, 'delete'])->name('artists.delete');
         });
         // events
-        Route::prefix('events')->group(function () {
+        Route::prefix('events')->group(function ()
+        {
             Route::get('/', [EventController::class, 'index'])->name('events.index');
             Route::get('data', [EventController::class, 'getList'])->name('events.data');
 
@@ -139,7 +146,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [EventController::class, 'delete'])->name('events.delete');
         });
         // services
-        Route::prefix('services')->group(function () {
+        Route::prefix('services')->group(function ()
+        {
             Route::get('/', [ServiceController::class, 'index'])->name('services.index');
             Route::get('data', [ServiceController::class, 'getList'])->name('services.data');
 
@@ -153,7 +161,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [ServiceController::class, 'delete'])->name('services.delete');
         });
         // services
-        Route::prefix('projects')->group(function () {
+        Route::prefix('projects')->group(function ()
+        {
             Route::get('/', [ProjectController::class, 'index'])->name('projects.index');
             Route::get('data', [ProjectController::class, 'getList'])->name('projects.data');
 
@@ -167,7 +176,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [ProjectController::class, 'delete'])->name('projects.delete');
         });
         // Categories
-        Route::prefix('categories')->group(function () {
+        Route::prefix('categories')->group(function ()
+        {
             Route::get('/', [CategoryController::class, 'index'])->name('categories.index');
             Route::get('data', [CategoryController::class, 'getList'])->name('categories.data');
             Route::get('view/{id}', [CategoryController::class, 'view'])->name('categories.view');
@@ -181,7 +191,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [CategoryController::class, 'delete'])->name('categories.delete');
         });
         // News
-        Route::prefix('news')->group(function () {
+        Route::prefix('news')->group(function ()
+        {
             Route::get('/', [NewsController::class, 'index'])->name('news.index');
             Route::get('data', [NewsController::class, 'getList'])->name('news.data');
             Route::get('view/{id}', [NewsController::class, 'view'])->name('news.view');
@@ -198,7 +209,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [NewsController::class, 'delete'])->name('news.delete');
         });
         // Other News
-        Route::prefix('otherNews')->group(function () {
+        Route::prefix('otherNews')->group(function ()
+        {
             Route::get('/', [OtherNewsController::class, 'index'])->name('otherNews.index');
             Route::get('data', [OtherNewsController::class, 'getList'])->name('otherNews.data');
             Route::get('view/{id}', [OtherNewsController::class, 'view'])->name('otherNews.view');
@@ -215,7 +227,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [OtherNewsController::class, 'delete'])->name('otherNews.delete');
         });
         // Sliders
-        Route::prefix('sliders')->group(function () {
+        Route::prefix('sliders')->group(function ()
+        {
             Route::get('/', [SlidersController::class, 'index'])->name('sliders.index');
             Route::get('data', [SlidersController::class, 'getList'])->name('sliders.data');
 
@@ -229,7 +242,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [SlidersController::class, 'delete'])->name('sliders.delete');
         });
         // Components
-        Route::prefix('components')->group(function () {
+        Route::prefix('components')->group(function ()
+        {
             Route::get('/', [ComponentsController::class, 'index'])->name('components.index');
             Route::get('data', [ComponentsController::class, 'getList'])->name('components.data');
 
@@ -244,7 +258,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [ComponentsController::class, 'delete'])->name('components.delete');
         });
         // partners
-        Route::prefix('partners')->group(function () {
+        Route::prefix('partners')->group(function ()
+        {
             Route::get('/', [PartnerController::class, 'index'])->name('partners.index');
             Route::get('data', [PartnerController::class, 'getList'])->name('partners.data');
 
@@ -259,7 +274,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [PartnerController::class, 'delete'])->name('partners.delete');
         });
         // achievements
-        Route::prefix('achievements')->group(function () {
+        Route::prefix('achievements')->group(function ()
+        {
             Route::get('/', [AchievementsController::class, 'index'])->name('achievements.index');
             Route::get('data', [AchievementsController::class, 'getList'])->name('achievements.data');
 
@@ -274,7 +290,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
             Route::get('delete/{id}', [AchievementsController::class, 'delete'])->name('achievements.delete');
         });
         // Contacts
-        Route::prefix('contacts')->group(function () {
+        Route::prefix('contacts')->group(function ()
+        {
             Route::get('/', [ContactController::class, 'index'])->name('contacts.index');
             Route::get('data', [ContactController::class, 'getList'])->name('contacts.data');
             Route::get('/lienhe', [ContactController::class, 'indexContact'])->name('contacts.indexContact');
@@ -318,7 +335,8 @@ Route::get('/khoa-hoc.html', [HomeController::class, 'product'])->name('home.pro
 Route::get('/lien-he.html', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/thu-vien.html', [HomeController::class, 'library'])->name('home.library');
 Route::get('/nghe-si.html', [HomeController::class, 'artists'])->name('home.artists');
-Route::get('/chi-tiet-nghe-si.html', [HomeController::class, 'artistDetail'])->name('home.artistDetail');
+Route::get('/nghe-si/{slug}.html', [HomeController::class, 'artistDetail'])->name('home.artistDetail');
+// Route::get('/chi-tiet-nghe-si.html', [HomeController::class, 'artistDetail'])->name('home.artistDetail');
 Route::get('/chinh-sach.html', [HomeController::class, 'policy'])->name('home.policy');
 Route::get('/dieu-khoan.html', [HomeController::class, 'rules'])->name('home.rules');
 Route::post('/addContact', [HomeController::class, 'addContact'])->name('home.addContact');
