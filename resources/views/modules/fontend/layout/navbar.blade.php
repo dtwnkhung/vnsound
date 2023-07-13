@@ -104,33 +104,39 @@
         <div class="proj_da_body">
           <div class="artists_list proj_follow_left">
             <div class="proj_follow_left_img">
-              <img src="{{ URL::to('/images/components'). '/'. $dataShare['contac-popup-image']}}" />
+              <!-- <img src="{{ URL::to('/images/components'). '/'. $dataShare['contac-popup-image']}}" /> -->
+              <img src="images/avatar-popup.jpg" />
             </div>
           </div>
           <div class="proj_follow_right">
             <div class="proj_follow_right_name">
               <span class="proj_follow_name">
-                {{ $dataShare['contac-popup-name'] }}
+                <!-- {{ $dataShare['contac-popup-name'] }} -->
+                TRẦN DUNG KỲ
               </span>
               <span class="proj_follow_vt">
-                {{ $dataShare['contac-popup-pos'] }}
+                <!-- {{ $dataShare['contac-popup-pos'] }} -->
+                ARTIST MANAGER
               </span>
             </div>
             <div class="proj_follow_right_info">
               {{ $dataShare['contac-popup-email'] }} | {{ $dataShare['contac-popup-phone'] }}
             </div>
             <div class="proj_follow_right_info_txt">
-              {{ $dataShare['contac-popup-text'] }}
+              <!-- {{ $dataShare['contac-popup-text'] }} -->
+              0966.609.807
             </div>
           </div>
         </div>
         <div class="proj_follow_bot">
           <div class="proj_follow_bot_mxh">
             <span>SOCIAL LINKS:</span>
-            <a href="{{ $dataShare['contac-popup-facebook'] }}">
+            <!-- <a href="{{ $dataShare['contac-popup-facebook'] }}"> -->
+            <a href="https://www.facebook.com/kytran2612" target="_blank">
               <img src="images/ic-follow1.png" alt="" />
             </a>
-            <a href="{{ $dataShare['contac-popup-zalo'] }}">
+            <!-- <a href="{{ $dataShare['contac-popup-zalo'] }}"> -->
+            <a href="https://zalo.me/0966609807" target="_blank">
               <img src="images/ic-follow2.png" alt="" />
             </a>
             <!-- <a href="{{ $dataShare['contac-popup-mess'] }}">
@@ -140,8 +146,8 @@
               <img src="images/ic-follow3.png" alt="" />
             </a>
           </div>
-          <div class="proj_follow_bot_txt">
-            vn Sound@music VietNam
+          <div class="proj_follow_bot_txt" style="text-transform:unset!important">
+            kytran2612@gmail.com
           </div>
         </div>
       </div>

@@ -334,8 +334,8 @@ Route::get('/news/{slug}.html', [HomeController::class, 'news'])->name('home.new
 Route::get('/khoa-hoc.html', [HomeController::class, 'product'])->name('home.products');
 Route::get('/lien-he.html', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/thu-vien.html', [HomeController::class, 'library'])->name('home.library');
-Route::get('/nghe-si.html', [HomeController::class, 'artists'])->name('home.artists');
-Route::get('/nghe-si/{slug}.html', [HomeController::class, 'artistDetail'])->name('home.artistDetail');
+Route::get('/nghe-sy.html', [HomeController::class, 'artists'])->name('home.artists');
+Route::get('/nghe-sy/{slug}.html', [HomeController::class, 'artistDetail'])->name('home.artistDetail');
 // Route::get('/chi-tiet-nghe-si.html', [HomeController::class, 'artistDetail'])->name('home.artistDetail');
 Route::get('/chinh-sach.html', [HomeController::class, 'policy'])->name('home.policy');
 Route::get('/dieu-khoan.html', [HomeController::class, 'rules'])->name('home.rules');
