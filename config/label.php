@@ -2,9 +2,11 @@
     return [
         'products' => [
             'name' => 'Tên khóa học',
+            'name_artist' => 'Tên nghệ sỹ',
             'sub_name' => 'Slogan',
             'description' => 'Mô tả',
             'images' => 'Hình ảnh',
+            'images_artist' => 'Ảnh đại diện nghệ sỹ',
             'start_date' => 'Ngày bắt đầu',
             'block_1_title' => 'Tiêu đề block 1',
             'block_2_title' => 'Tiêu đề block 2',

@@ -51,7 +51,7 @@
     <thead>
     <tr>
       <th>Tên khóa học</th>
-      <th>Nghệ sỹ</th>
+      {{-- <th>Nghệ sỹ</th> --}}
       <th>Created At</th>
       <th>Updated At</th>
       <th>Thao tác</th>
@@ -85,7 +85,7 @@
         ajax: '{!! route('products.data') !!}',
         columns: [
           { data: 'name', name: 'name' },
-          { data: 'teacher_id', name: 'teacher_id' },
+          // { data: 'teacher_id', name: 'teacher_id' },
           { data: 'created_at', name: 'created_at' },
           { data: 'updated_at', name: 'updated_at' },
           { name: 'actions' },

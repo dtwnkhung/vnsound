@@ -72,15 +72,16 @@
                                         <input type="text" id="name" class="form-control" name="name" />
                                     </div>
                                     {{-- @if ($errors->has('name'))
-                  <script>
-                    document.getElementById("name").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('name') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("name").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('name') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -92,15 +93,16 @@
                                         <input type="text" id="sub_name" class="form-control" name="sub_name" />
                                     </div>
                                     {{-- @if ($errors->has('sub_name'))
-                  <script>
-                    document.getElementById("sub_name").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('sub_name') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("sub_name").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('sub_name') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -118,17 +120,17 @@
 
                                     </ul>
                                     {{-- @if ($errors->has('images'))
-                  <script>
-                    document.getElementById("images").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('images') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("images").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('images') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
                                     <label for="teacher_id">{{ config('label.products.teacher') }}<span
@@ -142,13 +144,84 @@
                                             <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
                                         @endforeach
                                     </select>
-                                    {{-- @if ($errors->has('teacher_id'))
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('teacher_id') }}</div>
-                @endif --}}
+                                    @if ($errors->has('teacher_id'))
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('teacher_id') }}</div>
+                                    @endif
+                                    <div><span class="form-message"></span></div>
+                                </div>
+                            </div>
+                        </div> --}}
+
+                        <div class="col-12">
+                            <div class="form-group row">
+                                <div class="col-sm-3 col-form-label font-weight-bold">
+                                    <label for="name">{{ config('label.products.name_artist') }}<span
+                                            class="text-danger">*</span></label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="input-group input-group-merge">
+                                        <input type="text" id="name_artist" class="form-control" name="name_artist" />
+                                    </div>
+                                    {{-- @if ($errors->has('name'))
+                                        <script>
+                                            document.getElementById("name").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('name') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-12">
+                            <div class="form-group row">
+                                <div class="col-sm-3 col-form-label font-weight-bold">
+                                    <label for="color">{{ config('label.products.images_artist') }}<span
+                                        class="text-danger">*</span><span
+                                            class="text-danger font-italic d-block w-100">Kích thước ảnh 500 x
+                                            500</span></label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <button id="select-images_artist" class="btn btn-outline-primary mb-1">
+                                        <i data-feather="file"></i> Chọn ảnh
+                                    </button>
+                                    <input type="file" id="images_artist" class="form-control hidden"
+                                        name="images_artist[]" accept="image/*" />
+                                    <ul class="list-group" id="list-images_artist">
+
+                                    </ul>
+                                    {{-- @if ($errors->has('image_artist'))
+                                        <script>
+                                            document.getElementById("image_artist").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">
+                                            {{ $errors->first('image_artist') }}</div>
+                                    @endif --}}
+                                    <div><span class="form-message"></span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group row">
+                                <div class="col-sm-3 col-form-label font-weight-bold">
+                                    <label for="color">{{ config('label.artists.profile') }}<span
+                                            class="text-danger">*</span></label>
+                                </div>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" name="profile_artist" id="profile_artist" placeholder="Nội dung text"
+                                        id="floatingTextarea2" style="height: 100px"></textarea>
+                                    {{-- @if ($errors->has('description'))
+                                        <script>
+                                            document.getElementById("description").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('description') }}</div>
+                                    @endif --}}
+                                    <div><span class="form-message"></span></div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -159,11 +232,11 @@
                                     <textarea class="form-control" name="description" id="description" placeholder="Nội dung text"
                                         id="floatingTextarea2" style="height: 100px"></textarea>
                                     {{-- @if ($errors->has('description'))
-                  <script>
-                    document.getElementById("description").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('description') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("description").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('description') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -180,15 +253,16 @@
                                         <input type="text" id="start_time" class="form-control" name="start_time" />
                                     </div>
                                     {{-- @if ($errors->has('start_time'))
-                  <script>
-                    document.getElementById("start_time").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('start_time') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("start_time").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('start_time') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -200,11 +274,11 @@
                                         <input type="text" id="end_time" class="form-control" name="end_time" />
                                     </div>
                                     {{-- @if ($errors->has('end_time'))
-                  <script>
-                    document.getElementById("end_time").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('end_time') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("end_time").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('end_time') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -222,15 +296,16 @@
                                             name="block_1_title" />
                                     </div>
                                     {{-- @if ($errors->has('block_1_title'))
-                  <script>
-                    document.getElementById("block_1_title").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_1_title') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("block_1_title").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_1_title') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -257,6 +332,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -267,11 +343,11 @@
                                     <textarea class="form-control" name="block_1_content" id="block_1_content" placeholder="Nội dung text"
                                         id="floatingTextarea2" style="height: 100px"></textarea>
                                     {{-- @if ($errors->has('block_1_content'))
-                  <script>
-                    document.getElementById("block_1_content").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_1_content') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("block_1_content").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_1_content') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -289,15 +365,16 @@
                                             name="block_2_title" />
                                     </div>
                                     {{-- @if ($errors->has('block_2_title'))
-                  <script>
-                    document.getElementById("block_2_title").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_2_title') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("block_2_title").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_2_title') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -324,6 +401,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -334,11 +412,11 @@
                                     <textarea class="form-control" name="block_2_content" id="block_2_content" placeholder="Nội dung text"
                                         id="floatingTextarea2" style="height: 100px"></textarea>
                                     {{-- @if ($errors->has('block_2_content'))
-                  <script>
-                    document.getElementById("block_2_content").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_2_content') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("block_2_content").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_2_content') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -356,15 +434,16 @@
                                             name="block_3_title" />
                                     </div>
                                     {{-- @if ($errors->has('block_3_title'))
-                  <script>
-                    document.getElementById("block_3_title").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_3_title') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("block_3_title").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_3_title') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -391,6 +470,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -401,11 +481,11 @@
                                     <textarea class="form-control" name="block_3_content" id="block_3_content" placeholder="Nội dung text"
                                         id="floatingTextarea2" style="height: 100px"></textarea>
                                     {{-- @if ($errors->has('block_3_content'))
-                  <script>
-                    document.getElementById("block_3_content").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_3_content') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("block_3_content").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('block_3_content') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -423,15 +503,16 @@
                                             placeholder="mệnh giá là VND" id="free_price" />
                                     </div>
                                     {{-- @if ($errors->has('free_price'))
-                  <script>
-                    document.getElementById("free_price").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('free_price') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("free_price").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('free_price') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -448,8 +529,8 @@
                                         @endforeach
                                     </select>
                                     {{-- @if ($errors->has('free_benefit'))
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('free_benefit') }}</div>
-                @endif --}}
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('free_benefit') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -467,15 +548,16 @@
                                             placeholder="mệnh giá là VND" id="basic_price" />
                                     </div>
                                     {{-- @if ($errors->has('basic_price'))
-                  <script>
-                    document.getElementById("basic_price").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('basic_price') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("basic_price").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('basic_price') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -492,8 +574,8 @@
                                         @endforeach
                                     </select>
                                     {{-- @if ($errors->has('basic_benefit'))
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('basic_benefit') }}</div>
-                @endif --}}
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('basic_benefit') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
@@ -511,15 +593,16 @@
                                             class="form-control" placeholder="mệnh giá là VND" id="premium_price" />
                                     </div>
                                     {{-- @if ($errors->has('premium_price'))
-                  <script>
-                    document.getElementById("premium_price").classList.add("is-invalid");
-                  </script>
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('premium_price') }}</div>
-                @endif --}}
+                                        <script>
+                                            document.getElementById("premium_price").classList.add("is-invalid");
+                                        </script>
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('premium_price') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12">
                             <div class="form-group row">
                                 <div class="col-sm-3 col-form-label font-weight-bold">
@@ -536,13 +619,12 @@
                                         @endforeach
                                     </select>
                                     {{-- @if ($errors->has('pre_benefit'))
-                  <div class="invalid-feedback" style="display: block;">{{ $errors->first('pre_benefit') }}</div>
-                @endif --}}
+                                        <div class="invalid-feedback" style="display: block;">{{ $errors->first('pre_benefit') }}</div>
+                                    @endif --}}
                                     <div><span class="form-message"></span></div>
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="col-12">
                             <div class="form-group row">
@@ -570,7 +652,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="col-sm-9 offset-sm-3">
                             <button class="btn btn-primary mr-1" id="submitForm">Lưu</button>
@@ -600,9 +681,8 @@
         CKEDITOR.replace('block_2_content');
         CKEDITOR.replace('block_1_content');
         CKEDITOR.replace('description');
+        CKEDITOR.replace('profile_artist');
 
-
-        
         $(document).ready(function() {
             $('#start_time').flatpickr();
             $('#end_time').flatpickr();
@@ -620,6 +700,23 @@
                             this.files[i].name + '(' + this.files[i].size + 'B)</li>'
                     }
                     $('#list-images').html(html)
+                }
+            })
+
+            //artist_image
+            $('#select-images_artist').click(function() {
+                $('#images_artist').click()
+                return false
+            })
+            $('#images_artist').change(function() {
+                var html = ''
+                if (this.files.length > 0) {
+                    for (let i = 0; i < this.files.length; i++) {
+                        html +=
+                            '<li class="list-group-item list-group-item-action list-group-item-success">' +
+                            this.files[i].name + '(' + this.files[i].size + 'B)</li>'
+                    }
+                    $('#list-images_artist').html(html)
                 }
             })
 
@@ -742,8 +839,9 @@
                 errorSelector: '.form-message',
                 rules: [
                     Validator.isRequired('#name', "vui lòng nhập Tên khóa học !"),
+                    Validator.isRequired('#name_artist', "vui lòng nhập Tên Nghệ Sỹ !"),
                     Validator.isRequired('#sub_name', "vui lòng nhập Slogan !"),
-                    Validator.isRequired('#teacher_id', "vui lòng chọn Nghệ sỹ !"),
+                    // Validator.isRequired('#teacher_id', "vui lòng chọn Nghệ sỹ !"),
                     // Validator.isRequired('#description', "vui lòng nhập Mô tả !"),
                     Validator.isRequired('#start_time', "vui lòng chọn Thời gian bắt đầu !"),
                     Validator.isRequired('#end_time', "vui lòng chọn Thời gian kết thúc !"),
@@ -760,9 +858,11 @@
                     Validator.isRequired('#premium_price', "vui lòng nhập Giá gói Premium !"),
                     Validator.isRequired('#pre_benefit', "vui lòng chọn Lợi ích giá gói Premium!"),
                     Validator.isRequired('#images', "vui lòng chọn Hình ảnh!"),
+                    Validator.isRequired('#images_artist', "vui lòng chọn ảnh đại diện nghệ sĩ!"),
                     Validator.minLength('#name', 2),
+                    Validator.minLength('#name_artist', 2),
                     Validator.minLength('#sub_name', 2),
-                    Validator.minLength('#description', 2)
+                    // Validator.minLength('#description', 2)
                 ],
                 onSubmit: function(data) {
                     // $('#main-form').submit()

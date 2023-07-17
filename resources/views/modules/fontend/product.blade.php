@@ -38,16 +38,16 @@
         <div class="welcome_content">
           <div class="welcome_left">
             {{-- <img src="images/img-welcom1.png" alt="" /> --}}
-            <img src="{{ URL::to('/images/artists'). '/'. $artist['images']}}" alt="" />
+            <img src="{{ URL::to('/images/products'). '/'. $item['images_artist']}}" alt="" />
             <img src="images/img-welcom2.png" alt="" style="display: block;margin: 35px auto 0;" />
           </div>
           <div class="welcome_right">
             <div class="welcome_right_content">
               <div class="welcome_right_title">
-                {{ $artist['name'] }}
+                {{ $item['name_artist'] }}
               </div>
               <div class="mttn_left_txt text-artist-intro" id="html-convert_4">
-                {{ $artist['profile'] }}
+                {{ $item['profile_artist'] }}
               </div>
               <div class="welcome_right_box">
                 <!-- <a href="javascript:void(0)" class="btn welcome_right_btn" data-toggle="modal"
@@ -315,27 +315,27 @@
           <div class="form_title">
             Liên hệ với chúng tôi
           </div>
-          <form>
+          <form id="contactForm" method="POST">
             <div class="form_content">
               <div class="form_row">
-                <input type="text" class="input_control" placeholder="Họ và tên" />
+                <input type="text" name="name_user" class="input_control" placeholder="Họ và tên" />
               </div>
               <div class="form_row">
-                <input type="text" class="input_control" placeholder="Số điện thoại" />
+                <input type="text" name="phone_user" class="input_control" placeholder="Số điện thoại" />
               </div>
               <div class="form_row">
-                <input type="text" class="input_control" placeholder="Gmail" />
+                <input type="text" name="mail_user" class="input_control" placeholder="Gmail" />
               </div>
               <div class="form_row">
-                <input type="text" class="input_control" placeholder="Địa chỉ" />
+                <input type="text" name="add_user" class="input_control" placeholder="Địa chỉ" />
               </div>
               <div class="form_row">
-                <textarea class="input_control" placeholder="Nội dung"></textarea>
+                <textarea class="input_control" placeholder="Nội dung" name="content_user"></textarea>
               </div>
             </div>
-            <a href="javascript:void(0)" class="btn btn-form">
+            <button type="submit" href="javascript:void(0)" class="btn btn-form">
               Gửi
-            </a>
+            </button>
           </form>
         </div>
       </div>
@@ -442,14 +442,27 @@ $(document).ready(function() {
   $("#html-convert_4").html($("#html-convert_4").text());
 
   function change_image(image) {
-
     var container = document.getElementById("main-image");
-
     container.src = image.src;
   }
-  document.addEventListener("DOMContentLoaded", function(event) {
 
-  });
+  // $(document).ready(function() {
+  //   $('#contactForm').submit(function() {
+  //       var formData = $(this).serialize();
+  //       $.ajax({
+  //           url: '{{ route('register') }}',
+  //           type: 'POST',
+  //           data: formData,
+  //           success: function(response) {
+  //               alert(response.message);
+  //               // Xử lý phản hồi thành công ở đây (ví dụ: hiển thị thông báo)
+  //           },
+  //           error: function(xhr) {
+  //               // Xử lý lỗi ở đây (ví dụ: hiển thị thông báo lỗi)
+  //           }
+  //       });
+  //   });
+  // });
 });
 </script>
 @endsection
