@@ -61,7 +61,7 @@
             <div class="col-12">
               <div class="form-group row">
                 <div class="col-sm-3 col-form-label font-weight-bold">
-                  <label for="email">Email<span class="text-danger">*</span></label>
+                  <label for="email">Email</label>
                 </div>
                 <div class="col-sm-9">
                   <div class="input-group input-group-merge">
@@ -79,6 +79,56 @@
                       document.getElementById("email").classList.add("is-invalid");
                     </script>
                     <div class="invalid-feedback" style="display: block;">{{ $errors->first('email') }}</div>
+                  @endif
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group row">
+                <div class="col-sm-3 col-form-label font-weight-bold">
+                  <label for="email">Số điện thoại<span class="text-danger">*</span></label>
+                </div>
+                <div class="col-sm-9">
+                  <div class="input-group input-group-merge">
+                    <input
+                            type="text"
+                            id="email"
+                            class="form-control"
+                            name="email"
+                            value="{{$item->phone}}"
+                            disabled
+                    />
+                  </div>
+                  @if ($errors->has('phone'))
+                    <script>
+                      document.getElementById("phone").classList.add("is-invalid");
+                    </script>
+                    <div class="invalid-feedback" style="display: block;">{{ $errors->first('phone') }}</div>
+                  @endif
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group row">
+                <div class="col-sm-3 col-form-label font-weight-bold">
+                  <label for="email">Địa chỉ</label>
+                </div>
+                <div class="col-sm-9">
+                  <div class="input-group input-group-merge">
+                    <input
+                            type="text"
+                            id="address"
+                            class="form-control"
+                            name="address"
+                            value="{{$item->address}}"
+                            disabled
+                    />
+                  </div>
+                  @if ($errors->has('address'))
+                    <script>
+                      document.getElementById("address").classList.add("is-invalid");
+                    </script>
+                    <div class="invalid-feedback" style="display: block;">{{ $errors->first('address') }}</div>
                   @endif
                 </div>
               </div>

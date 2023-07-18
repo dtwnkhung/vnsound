@@ -12,6 +12,23 @@
 .text-artist-intro * {
   padding: 0 !important
 }
+
+.form-group.invalid .form-control {
+  border-color: #ea5455;
+  padding-right: calc(1.45em + 0.876rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ea5455' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea5455' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.3625em + 0.219rem) center;
+  background-size: calc(0.725em + 0.438rem) calc(0.725em + 0.438rem);
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  text-align: left;
+}
 </style>
 
 
@@ -315,25 +332,45 @@
           <div class="form_title">
             Liên hệ với chúng tôi
           </div>
-          <form id="contactForm" method="POST">
+          <form id="contactForm" action="{{ route("home.addLienhe") }}" method="POST">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div class="form_content">
               <div class="form_row">
-                <input type="text" name="name_user" class="input_control" placeholder="Họ và tên" />
+                <input type="hidden" name="id" class="input_control" value="{{$_GET['id']}}" />
+                <input type="text" name="name" class="input_control" placeholder="Họ và tên" value="{{ old('name') }}" />
+                @if ($errors->has('name'))
+                <script>
+                document.getElementById("name").classList.add("is-invalid");
+                </script>
+                <div class="invalid-feedback" style="display: block;">{{ $errors->first('name') }}</div>
+                @endif
               </div>
               <div class="form_row">
-                <input type="text" name="phone_user" class="input_control" placeholder="Số điện thoại" />
+                <input type="number" name="phone" class="input_control" value="{{ old('phone') }}" placeholder="Số điện thoại" />
+                @if ($errors->has('phone'))
+                <script>
+                document.getElementById("phone").classList.add("is-invalid");
+                </script>
+                <div class="invalid-feedback" style="display: block;">{{ $errors->first('phone') }}</div>
+                @endif
               </div>
               <div class="form_row">
-                <input type="text" name="mail_user" class="input_control" placeholder="Gmail" />
+                <input type="text" name="email" value="{{ old('email') }}" class="input_control" placeholder="Gmail" />
               </div>
               <div class="form_row">
-                <input type="text" name="add_user" class="input_control" placeholder="Địa chỉ" />
+                <input type="text" name="address" value="{{ old('address') }}" class="input_control" placeholder="Địa chỉ" />
               </div>
               <div class="form_row">
-                <textarea class="input_control" placeholder="Nội dung" name="content_user"></textarea>
+                <textarea class="input_control" placeholder="Nội dung" name="description">{{ old('description') }}</textarea>
+                @if ($errors->has('description'))
+                <script>
+                document.getElementById("description").classList.add("is-invalid");
+                </script>
+                <div class="invalid-feedback" style="display: block;">{{ $errors->first('description') }}</div>
+                @endif
               </div>
             </div>
-            <button type="submit" href="javascript:void(0)" class="btn btn-form">
+            <button type="submit" class="btn btn-form">
               Gửi
             </button>
           </form>

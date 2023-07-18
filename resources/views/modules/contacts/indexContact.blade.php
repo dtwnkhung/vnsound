@@ -42,6 +42,8 @@
     <tr>
       <th>Họ và tên</th>
       <th>Email</th>
+      <th>Số điện thoại</th>
+      <th>Địa chỉ</th>
       <th>Nội dung</th>
       <th>Trạng thái</th>
       <th>Created At</th>
@@ -78,6 +80,8 @@
         columns: [
           { data: 'name', name: 'name' },
           { data: 'email', name: 'email' },
+          { data: 'phone', name: 'phone' },
+          { data: 'address', name: 'address' },
           { data: 'description', name: 'description' },
           { data: 'status', name: 'status' },
           { data: 'created_at', name: 'created_at' },

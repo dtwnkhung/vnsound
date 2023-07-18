@@ -396,7 +396,7 @@ class HomeController extends Controller
                 ->withErrors($validator)
                 ->withInput();
         }
-        //        $this->validate($request, $arrRules, $arrMess);
+        // $this->validate($request, $arrRules, $arrMess);
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->description = $request->description;
@@ -406,9 +406,40 @@ class HomeController extends Controller
         $contact->save();
         return redirect('/')->with('thongbao', 'Cảm ơn bạn đã liên hệ!');
     }
+    public static function phoneNumberVN()
+    {
+        $str = '/^((0)[1-9][0-9\s\-\+\(\)]*)$/';
+        return $str;
+    }
 
     function addLienhe(Request $request)
     {
+        $arrRules = [
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'phone' => 'required|digits:10|regex:' . $this->phoneNumberVN(),
+        ];
+        $arrMess = [
+            'name.required' => 'Trường dữ liệu không được bỏ trống!',
+            'name.max' => 'Độ dài tối đa 255 kí tự!',
+            'description.required' => 'Trường dữ liệu không được bỏ trống!',
+            'description.max' => 'Độ dài tối đa 255 kí tự!',
+            'phone.required' => 'Trường dữ liệu không được bỏ trống!',
+            'phone.digits' => 'Số điện thoại phải là 10 chữ số!',
+        ];
+
+        $id = $request->id;
+        $direct = "/khoa-hoc.html?id=".$id."#contactForm";
+        $validator = Validator::make($request->all(), $arrRules, $arrMess);
+
+        if ($validator->fails())
+        {
+            return redirect($direct)
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $this->validate($request, $arrRules, $arrMess);
+
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->address = $request->address;
@@ -510,7 +541,6 @@ class HomeController extends Controller
     public function viewDetailLibrary(SliderRepository $sliderRepository, $id)
     {
         $imageLibrary = $sliderRepository->getListById($id);
-        // dd($imageLibrary);
         // switch($id) {
         //     case '1' :
         //         $title = "MC";
