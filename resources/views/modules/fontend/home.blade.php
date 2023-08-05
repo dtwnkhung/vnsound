@@ -128,7 +128,7 @@
                       <h3>
                         {{ $pro['name']}}
                       </h3>
-                      <div class="course_content_txt" id="html-convert">
+                      <div class="course_content_txt html-convert">
                         {{ $pro['description'] }}
                       </div>
                       <a href="{{ route('home.products', ['id' => $pro['id']]) }}" class="btn btn-main">
@@ -344,7 +344,10 @@ alert(message)
 @section('script')
 <script>
 $(document).ready(function() {
-  $("#html-convert").html($("#html-convert").text());
+  $(".html-convert").each(function() {
+    const htmlString = $(this).text();
+    $(this).html(htmlString);
+  })
   $('#select-files').click(function() {
     console.log('test')
     $('#certificate').click()
