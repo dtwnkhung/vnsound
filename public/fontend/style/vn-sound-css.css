@@ -2868,6 +2868,10 @@ textarea.input_contact_control {
   top: 40%;
 }
 
+.deco-3.deco-img {
+  mix-blend-mode: lighten;
+}
+
 .deco-5 {
   bottom: 0;
 }
