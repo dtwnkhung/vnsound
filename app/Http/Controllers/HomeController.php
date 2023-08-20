@@ -182,6 +182,52 @@ class HomeController extends Controller
         ]);
     }
 
+    function productsBySlug(
+        $slug,
+        ProductRepository $productRepository,
+        ComponentRepository $componentRepository,
+        ArtistRepository $artistRepository,
+        StudentRepository $studentRepository)
+    {
+        $product = $productRepository->getBySlug($slug);
+        $product['comments'] = explode(',', $product['comments']);
+        $listOption = file_get_contents(base_path('resources/data/list-profit-optons.json'));
+        $listOption = json_decode($listOption, true);
+        $listOption = $listOption['profit'];
+        $product['free_benefit'] = explode(',', $product['free_benefit']);
+        $product['basic_benefit'] = explode(',', $product['basic_benefit']);
+        $product['pre_benefit'] = explode(',', $product['pre_benefit']);
+        $free_benefit = [];
+        $basic_benefit = [];
+        $pre_benefit = [];
+        foreach ($product['free_benefit'] as $key => $opt)
+        {
+            $free_benefit[] = $listOption[$opt];
+        }
+        foreach ($product['basic_benefit'] as $key => $opt)
+        {
+            $basic_benefit[] = $listOption[$opt];
+        }
+        foreach ($product['pre_benefit'] as $key => $opt)
+        {
+            $pre_benefit[] = $listOption[$opt];
+        }
+        $product['free_benefit'] = $free_benefit;
+        $product['basic_benefit'] = $basic_benefit;
+        $product['pre_benefit'] = $pre_benefit;
+        $artist = $artistRepository->getById($product['teacher_id']);
+        $students = $studentRepository->getListOpinionByClassId($product['id']);
+        $activeProduct = 'active';
+      
+        return view('modules.fontend.product', [
+            'activeProduct' => $activeProduct,
+            'artist' => $artist,
+            'itemSlug' => $product,
+            'students' => $students,
+            // 'data' => $data
+        ]);
+    }
+
     function introduce(
         ArtistRepository $artistRepository,
         ComponentRepository $componentRepository,
@@ -295,7 +341,7 @@ class HomeController extends Controller
         $artist['project_2_image'] = explode(',', $artist['project_2_image']);
         return view('modules.fontend.artistDetail', [
             'activeArtist' => $activeArtist,
-            'item' => $artist,
+            'itemSlug' => $artist,
         ]);
     }
     function news($slug, NewsRepository $newsRepository)

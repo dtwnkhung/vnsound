@@ -1,6 +1,6 @@
 @extends('modules.fontend.layout.index')
 @section('facebook_meta')
-<meta property="og:image" content="{{ URL::to('/images/artists'). '/'. $item->images[0]}}" />
+<meta property="og:image" content="{{ URL::to('/images/artists'). '/'. $itemSlug->images[0]}}" />
 @endsection
 @section('content')
 <style>
@@ -11,14 +11,14 @@
 
 
 <div class="vnsound_banner banner_introduct banner_pfartist" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('http://vnsound.com.vn/images/anh_tu_lieu/khoa_hoc/banner-top.png') no-repeat
+    url({{ URL::to('/images/artists'). '/'. $itemSlug->banner}}) no-repeat
       center center;background-size: cover;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="banner_content">
           <h1 class="banner_title wow fadeInUp animated">
-            {{ $item['name'] }}
+            {{ $itemSlug['name'] }}
           </h1>
           <div class="banner_txt wow fadeInUp animated" data-wow-delay="0.3s">
             Rock off and rave on
@@ -34,7 +34,7 @@
       <div class="col-lg-12">
         <div class="welcome_content">
           <div class="welcome_left">
-            <img src="{{ URL::to('/images/artists'). '/'. $item->images[0]}}" alt="" class="w-100" />
+            <img src="{{ URL::to('/images/artists'). '/'. $itemSlug->images[0]}}" alt="" class="w-100" />
             <img src="images/img-welcom2.png" alt="" style="display: block;margin: 35px auto 0;" />
           </div>
           <div class="welcome_right">
@@ -43,10 +43,10 @@
                 <span>
                   Welcome to
                 </span>
-                Profile {{ $item['name'] }}
+                Profile {{ $itemSlug['name'] }}
               </div>
               <div class="mttn_left_txt" id="html-convert_1">
-                {{ $item['profile'] }}
+                {{ $itemSlug['profile'] }}
               </div>
               <div class="welcome_right_box">
                 <a href="" class="btn welcome_right_btn" data-toggle="modal" data-target="#proj_follow">
@@ -75,7 +75,7 @@
   <div class="dct_content">
     <div class="dct_other" id="dct1" style="display: block;">
       <div class="dct_child">
-        @foreach ($item['clubs'] as $img)
+        @foreach ($itemSlug['clubs'] as $img)
         <div class="dct_other_item">
           <img src="{{ URL::to('/images/artists'). '/'. $img}}" />
         </div>
@@ -84,7 +84,7 @@
     </div>
     <div class="dct_other" id="dct2">
       <div class="dct_child">
-        @foreach ($item['partners'] as $img)
+        @foreach ($itemSlug['partners'] as $img)
         <div class="dct_other_item">
           <img src="{{ URL::to('/images/artists'). '/'. $img}}" />
         </div>
@@ -117,13 +117,13 @@
             <h4>
               Project 1
             </h4>
-            {{ $item['project_1_title'] }}
+            {{ $itemSlug['project_1_title'] }}
           </div>
           <div class="boxdtns_left_item" id="popup_mennu_item_2" data-id="2">
             <h4>
               Project 2
             </h4>
-            {{ $item['project_2_title'] }}
+            {{ $itemSlug['project_2_title'] }}
           </div>
           <img src="images/img-dtn.png" alt="" />
         </div>
@@ -145,7 +145,7 @@
                 <div class="artists_list boxdtns_right_list">
                   <div class="swiper-container boxdtns_right_slide">
                     <div class="swiper-wrapper">
-                      @foreach ($item->project_1_image as $key => $img)
+                      @foreach ($itemSlug->project_1_image as $key => $img)
                       @if (!empty($img))
                       <div class="swiper-slide">
                         <div class="boxdtns_right_slide_img">
@@ -156,13 +156,13 @@
                       @endforeach
                       {{-- <div class="swiper-slide">
                                                 <div class="boxdtns_right_slide_img">
-                                                    <img src="{{ URL::to('/images/artists'). '/'. $item['project_1_image']}}"
+                                                    <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['project_1_image']}}"
                       />
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="boxdtns_right_slide_img">
-                      <img src="{{ URL::to('/images/artists'). '/'. $item['project_2_image']}}" />
+                      <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['project_2_image']}}" />
                     </div>
                   </div> --}}
                 </div>
@@ -179,7 +179,7 @@
             <div class="artists_list boxdtns_right_list">
               <div class="swiper-container boxdtns_right_slide_2">
                 <div class="swiper-wrapper">
-                  @foreach ($item->project_2_image as $key => $img)
+                  @foreach ($itemSlug->project_2_image as $key => $img)
                   @if (!empty($img))
                   <div class="swiper-slide">
                     <div class="boxdtns_right_slide_img">
@@ -190,13 +190,13 @@
                   @endforeach
                   {{-- <div class="swiper-slide">
                                                 <div class="boxdtns_right_slide_img">
-                                                    <img src="{{ URL::to('/images/artists'). '/'. $item['project_1_image']}}"
+                                                    <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['project_1_image']}}"
                   />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="boxdtns_right_slide_img">
-                  <img src="{{ URL::to('/images/artists'). '/'. $item['project_2_image']}}" />
+                  <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['project_2_image']}}" />
                 </div>
               </div> --}}
             </div>
@@ -216,8 +216,8 @@
     <div class="row">
       <div class="col-md-6">
         <div class="scenes_left">
-          <a href="{{ $item['bts_link_yt'] }}" target="_blank" class="d-block">
-            <img src="{{ URL::to('/images/artists'). '/'. $item['bts_image']}}" />
+          <a href="{{ $itemSlug['bts_link_yt'] }}" target="_blank" class="d-block">
+            <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['bts_image']}}" />
           </a>
         </div>
       </div>
@@ -228,29 +228,29 @@
             FOLLOW ME
           </h5>
           <div class="scenes_right_txt">
-            {{ $item['bts_text'] }}
+            {{ $itemSlug['bts_text'] }}
           </div>
           @php
-          $item['bts_link_yt'] = !empty( $item['bts_link_yt']) ? $item['bts_link_yt'] : "#";
-          $item['bts_link_tt'] = !empty( $item['bts_link_tt']) ? $item['bts_link_tt'] : "#";
-          $item['bts_link_fb'] = !empty( $item['bts_link_fb']) ? $item['bts_link_fb'] : "#";
-          $item['bts_link_ins'] = !empty( $item['bts_link_ins']) ? $item['bts_link_ins'] : "#";
-          $item['bts_link_sc'] = !empty( $item['bts_link_sc']) ? $item['bts_link_sc'] : "#";
+          $itemSlug['bts_link_yt'] = !empty( $itemSlug['bts_link_yt']) ? $itemSlug['bts_link_yt'] : "#";
+          $itemSlug['bts_link_tt'] = !empty( $itemSlug['bts_link_tt']) ? $itemSlug['bts_link_tt'] : "#";
+          $itemSlug['bts_link_fb'] = !empty( $itemSlug['bts_link_fb']) ? $itemSlug['bts_link_fb'] : "#";
+          $itemSlug['bts_link_ins'] = !empty( $itemSlug['bts_link_ins']) ? $itemSlug['bts_link_ins'] : "#";
+          $itemSlug['bts_link_sc'] = !empty( $itemSlug['bts_link_sc']) ? $itemSlug['bts_link_sc'] : "#";
           @endphp
           <div class="scenes_right_ic">
-            <a target="_blank" href="{{ $item['bts_link_sc'] }}">
+            <a target="_blank" href="{{ $itemSlug['bts_link_sc'] }}">
               <img src="images/ic-16.png" alt="" style="height:35px;" />
             </a>
-            <a target="_blank" href="{{ $item['bts_link_yt'] }}">
+            <a target="_blank" href="{{ $itemSlug['bts_link_yt'] }}">
               <img src="images/ic-17.png" alt="" style="height:35px;" />
             </a>
-            <a target="_blank" href="{{ $item['bts_link_tt'] }}">
+            <a target="_blank" href="{{ $itemSlug['bts_link_tt'] }}">
               <img src="images/ic-tiktok.png" alt="" style="height:35px;" />
             </a>
-            <a target="_blank" href="{{ $item['bts_link_fb'] }}">
+            <a target="_blank" href="{{ $itemSlug['bts_link_fb'] }}">
               <img src="images/ic-fb.png" alt="" style="height:35px;" />
             </a>
-            <a target="_blank" href="{{ $item['bts_link_ins'] }}">
+            <a target="_blank" href="{{ $itemSlug['bts_link_ins'] }}">
               <img src="images/ic-ins.png" alt="" style="height:35px;" />
             </a>
           </div>
@@ -285,16 +285,16 @@
               <div class="events_img_box">
                 <div class="row">
                   <div class="col-md-6 col-sm-6">
-                    @if($item['life_style_1'])
+                    @if($itemSlug['life_style_1'])
                     <a href="javascript:void(0)" class="events_img_item">
-                      <img src="{{ URL::to('/images/artists'). '/'. $item['life_style_1']}}" />
+                      <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['life_style_1']}}" />
                     </a>
                     @endif
                   </div>
                   <div class="col-md-6 col-sm-6">
-                    @if($item['life_style_2'])
+                    @if($itemSlug['life_style_2'])
                     <a href="javascript:void(0)" class="events_img_item">
-                      <img src="{{ URL::to('/images/artists'). '/'. $item['life_style_2']}}" />
+                      <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['life_style_2']}}" />
                     </a>
                     @endif
                   </div>
@@ -302,9 +302,9 @@
               </div>
             </div>
             <div class="col-md-12">
-              @if($item['life_style_3'])
+              @if($itemSlug['life_style_3'])
               <a href="javascript:void(0)" class="events_img_item events_img_item2">
-                <img src="{{ URL::to('/images/artists'). '/'. $item['life_style_3']}}" />
+                <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['life_style_3']}}" />
               </a>
               @endif
             </div>
@@ -315,22 +315,22 @@
         <div class="events_img_child">
           <div class="row">
             <div class="col-md-6 col-sm-6">
-              @if($item['life_style_4'])
+              @if($itemSlug['life_style_4'])
               <a href="javascript:void(0)" class="events_img_item events_img_item3">
-                <img src="{{ URL::to('/images/artists'). '/'. $item['life_style_4']}}" />
+                <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['life_style_4']}}" />
               </a>
               @endif
             </div>
             <div class="col-md-6 col-sm-6">
               <div class="events_img_box_last">
-                @if($item['life_style_5'])
+                @if($itemSlug['life_style_5'])
                 <a href="javascript:void(0)" class="events_img_item">
-                  <img src="{{ URL::to('/images/artists'). '/'. $item['life_style_5']}}" />
+                  <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['life_style_5']}}" />
                 </a>
                 @endif
-                @if($item['life_style_6'])
+                @if($itemSlug['life_style_6'])
                 <a href="javascript:void(0)" class="events_img_item">
-                  <img src="{{ URL::to('/images/artists'). '/'. $item['life_style_6']}}" />
+                  <img src="{{ URL::to('/images/artists'). '/'. $itemSlug['life_style_6']}}" />
                 </a>
                 @endif
               </div>
@@ -357,7 +357,6 @@ alert(message)
 $(document).ready(function() {
   $("#html-convert_1").html($("#html-convert_1").text());
   $('#select-files').click(function() {
-    console.log('test')
     $('#certificate').click()
     return false
   })
@@ -366,6 +365,18 @@ $(document).ready(function() {
   })
 
   $("#dct1 .dct_other_item").last().hide();
+
+  // var currentURL = window.location.href;
+  // var urlParts = currentURL.split('/');
+  // var lastPart = urlParts[urlParts.length - 1];
+  // var extractedValue = lastPart.split('.')[0];
+
+  // if (extractedValue != "") {
+  //   // Cập nhật tiêu đề dựa trên hashtag
+  //   var dynamicTitle = document.getElementById('dynamicTitle');
+  //   dynamicTitle.textContent = extractedValue.toUpperCase();
+  // }
+  
 })
 </script>
 

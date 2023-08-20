@@ -52,7 +52,7 @@
                 <a href="javascript:void(0)" class="{{ $activeProduct }}">Khóa học</a>
                 <ul>
                   @foreach ($dataShare['products'] as $item)
-                  <li><a href="{{ route('home.products', ['id' => $item['id']]) }}">{{ $item['name'] }}</a></li>
+                  <li><a href="{{ route('home.productsBySlug', ['slug' => $item['slug']]) }}">{{ $item['name'] }}</a></li>
                   @endforeach
                 </ul>
               </li>

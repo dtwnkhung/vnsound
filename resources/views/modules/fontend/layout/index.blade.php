@@ -9,7 +9,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   @yield('facebook_meta')
   <!-- <meta property="og:image" content="" /> -->
-  <title>VNSOUND</title>
+  {{-- <title id="dynamicTitle">VNSOUND</title> --}}
+  <title>{{ isset($itemSlug['name']) ? $itemSlug['name'] : 'VNSOUND' }}</title>
+
   <!--Meta view -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--Font Awesome-->

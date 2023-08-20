@@ -301,6 +301,7 @@ class ProductController extends Controller
         $product->free_price       = $request->free_price;
         $product->basic_price       = $request->basic_price;
         $product->premium_price       = $request->premium_price;
+        $product->slug       = $this->string_to_slug($request->name);
         $product->free_benefit       = implode(',', $request->free_benefit);
         $product->basic_benefit       = implode(',', $request->basic_benefit);
         $product->pre_benefit       = implode(',', $request->pre_benefit);
@@ -561,6 +562,7 @@ class ProductController extends Controller
         $product->free_price       = $request->free_price;
         $product->basic_price       = $request->basic_price;
         $product->premium_price       = $request->premium_price;
+        $product->slug       = $this->string_to_slug($request->name);
         $product->free_benefit       = implode(',', $request->free_benefit);
         $product->basic_benefit       = implode(',', $request->basic_benefit);
         $product->pre_benefit       = implode(',', $request->pre_benefit);
@@ -572,5 +574,23 @@ class ProductController extends Controller
     {
         $record = $this->repository->delete($id);
         return redirect('admin/products')->with('thongbao', 'Xóa khóa học thành công!');
+    }
+
+    public function string_to_slug($str) {
+        $str = trim($str); // trim
+        $str = mb_strtolower($str, 'UTF-8'); // Convert to lowercase using UTF-8 encoding
+    
+        // remove accents, swap ñ for n, etc
+        $from = "àáäâạèéëêệìíïîòóöôọùúüûñç·/_,:;";
+        $to = "aaaaaeeeeeiiiiooooouuuunc------";
+        for ($i = 0, $l = mb_strlen($from, 'UTF-8'); $i < $l; $i++) {
+            $str = str_replace(mb_substr($from, $i, 1, 'UTF-8'), mb_substr($to, $i, 1, 'UTF-8'), $str);
+        }
+    
+        $str = preg_replace('/[^a-z0-9 -]/', '', $str); // remove invalid chars
+        $str = preg_replace('/\s+/', '-', $str); // collapse whitespace and replace by -
+        $str = preg_replace('/-+/', '-', $str); // collapse dashes
+    
+        return $str;
     }
 }

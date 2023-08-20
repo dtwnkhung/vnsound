@@ -1,6 +1,6 @@
 @extends('modules.fontend.layout.index')
 @section('facebook_meta')
-<meta property="og:image" content="{{ URL::to('/images/products'). '/'. $item['block_2_image']}}" />
+<meta property="og:image" content="{{ URL::to('/images/products'). '/'. $itemSlug['block_2_image']}}" />
 @endsection
 @section('content')
 <!--Section: Block Content-->
@@ -38,10 +38,10 @@
       <div class="col-lg-12">
         <div class="banner_content">
           <h1 class="banner_title wow fadeInUp animated">
-            {{ $item['name'] }}
+            {{ $itemSlug['name'] }}
           </h1>
           <div class="banner_txt wow fadeInUp animated" data-wow-delay="0.3s">
-            {{ $item['sub_name'] }}
+            {{ $itemSlug['sub_name'] }}
           </div>
         </div>
       </div>
@@ -55,16 +55,16 @@
         <div class="welcome_content">
           <div class="welcome_left">
             {{-- <img src="images/img-welcom1.png" alt="" /> --}}
-            <img src="{{ URL::to('/images/products'). '/'. $item['images_artist']}}" alt="" />
+            <img src="{{ URL::to('/images/products'). '/'. $itemSlug['images_artist']}}" alt="" />
             <img src="images/img-welcom2.png" alt="" style="display: block;margin: 35px auto 0;" />
           </div>
           <div class="welcome_right">
             <div class="welcome_right_content">
               <div class="welcome_right_title">
-                {{ $item['name_artist'] }}
+                {{ $itemSlug['name_artist'] }}
               </div>
               <div class="mttn_left_txt text-artist-intro" id="html-convert_4">
-                {{ $item['profile_artist'] }}
+                {{ $itemSlug['profile_artist'] }}
               </div>
               <div class="welcome_right_box">
                 <!-- <a href="javascript:void(0)" class="btn welcome_right_btn" data-toggle="modal"
@@ -94,17 +94,17 @@
             <div class="col-md-6">
               <div class="mttn_left">
                 <h3 class="mttn_left_title">
-                  {{ $item['block_1_title'] }}
+                  {{ $itemSlug['block_1_title'] }}
                 </h3>
                 <div class="mttn_left_txt" id="html-convert_1">
-                  {{ $item['block_1_content'] }}
+                  {{ $itemSlug['block_1_content'] }}
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="mttn_right wow flipInY animated animated animated animated"
                 style="visibility: visible; animation-name: flipInY;">
-                <img src="{{ URL::to('/images/products'). '/'. $item['block_1_image']}}" />
+                <img src="{{ URL::to('/images/products'). '/'. $itemSlug['block_1_image']}}" />
               </div>
             </div>
           </div>
@@ -114,16 +114,16 @@
             <div class="col-md-6">
               <div class="mttn_right wow flipInY animated animated animated animated"
                 style="visibility: visible; animation-name: flipInY;">
-                <img src="{{ URL::to('/images/products'). '/'. $item['block_2_image']}}" />
+                <img src="{{ URL::to('/images/products'). '/'. $itemSlug['block_2_image']}}" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="mttn_left">
                 <h3 class="mttn_left_title">
-                  {{ $item['block_2_title'] }}
+                  {{ $itemSlug['block_2_title'] }}
                 </h3>
                 <div class="mttn_left_txt" id="html-convert_2">
-                  {{ $item['block_2_content'] }}
+                  {{ $itemSlug['block_2_content'] }}
                 </div>
               </div>
             </div>
@@ -134,10 +134,10 @@
             <div class="col-md-6">
               <div class="mttn_left">
                 <h3 class="mttn_left_title">
-                  {{ $item['block_3_title'] }}
+                  {{ $itemSlug['block_3_title'] }}
                 </h3>
                 <div class="mttn_left_txt" id="html-convert_3">
-                  {{ $item['block_3_content'] }}
+                  {{ $itemSlug['block_3_content'] }}
                 </div>
                 <div class="khartist_box_btn">
                   <!-- <a href="javascript:void(0)" class="btn btn_khartist" data-toggle="modal" data-target="#proj_follow">
@@ -152,7 +152,7 @@
             <div class="col-md-6">
               <div class="mttn_right wow flipInY animated animated animated animated"
                 style="visibility: visible; animation-name: flipInY;">
-                <img src="{{ URL::to('/images/products'). '/'. $item['block_3_image']}}" />
+                <img src="{{ URL::to('/images/products'). '/'. $itemSlug['block_3_image']}}" />
               </div>
             </div>
           </div>
@@ -181,12 +181,12 @@
         <div class="artists_list outstanding_content mb-4">
           <div class="swiper-container outstanding_slide ">
             <div class="slider-nav">
-              @foreach ($students as $items)
+              @foreach ($students as $itemSlugs)
               <div class="swiper-slide">
                 <div class="outstanding_item">
                   <div class="outstanding_item_img">
                     <span>
-                      <img src="{{ URL::to('/images/students'). '/'. $items['thumbnail']}}"
+                      <img src="{{ URL::to('/images/students'). '/'. $itemSlugs['thumbnail']}}"
                         style="height:100%;object-fit:cover" />
                     </span>
                   </div>
@@ -199,18 +199,18 @@
           <div class="swiper-container outstanding_slide mt-3">
             <div class="text-center"><img src="images/ic-13.png" alt="" /></div>
             <div class="slider-for">
-              @foreach ($students as $items)
+              @foreach ($students as $itemSlugs)
               <div class="swiper-slide">
                 <div class="outstanding_item">
                   <div class="outstanding_item_slide d-block">
                     <div class="outstanding_txt_top">
-                      {{ $items['opinion'] }}
+                      {{ $itemSlugs['opinion'] }}
                     </div>
                     <div class="outstanding_txt_bot">
                       <span>
-                        {{ $items['name'] }}
+                        {{ $itemSlugs['name'] }}
                       </span>
-                      {{ $items->getclass->name }}
+                      {{ $itemSlugs->getclass->name }}
                     </div>
                   </div>
                 </div>
@@ -241,11 +241,11 @@
                   Free
                 </div>
                 <div class="opinion_bot_money">
-                  {{ $item['free_price'] }}
+                  {{ $itemSlug['free_price'] }}
                 </div>
                 <div class="opinion_bot_body">
                   <div class="mttn_left_txt">
-                    @foreach ($item['free_benefit'] as $profit)
+                    @foreach ($itemSlug['free_benefit'] as $profit)
                     <p>
                       {{ $profit }}
                     </p>
@@ -260,11 +260,11 @@
                   Basic
                 </div>
                 <div class="opinion_bot_money">
-                  {{ $item['basic_price'] }}
+                  {{ $itemSlug['basic_price'] }}
                 </div>
                 <div class="opinion_bot_body">
                   <div class="mttn_left_txt">
-                    @foreach ($item['basic_benefit'] as $profit)
+                    @foreach ($itemSlug['basic_benefit'] as $profit)
                     <p>
                       {{ $profit }}
                     </p>
@@ -279,11 +279,11 @@
                   Pro
                 </div>
                 <div class="opinion_bot_money">
-                  {{ $item['premium_price'] }}
+                  {{ $itemSlug['premium_price'] }}
                 </div>
                 <div class="opinion_bot_body">
                   <div class="mttn_left_txt">
-                    @foreach ($item['pre_benefit'] as $profit)
+                    @foreach ($itemSlug['pre_benefit'] as $profit)
                     <p>
                       {{ $profit }}
                     </p>
@@ -336,7 +336,7 @@
             <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div class="form_content">
               <div class="form_row">
-                <input type="hidden" name="id" class="input_control" value="{{$_GET['id']}}" />
+                <input type="hidden" name="id" class="input_control" value="{{$itemSlug['id']}}" />
                 <input type="text" name="name" class="input_control" placeholder="Họ và tên" value="{{ old('name') }}" />
                 @if ($errors->has('name'))
                 <script>
