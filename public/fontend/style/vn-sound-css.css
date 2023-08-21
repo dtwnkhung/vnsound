@@ -349,7 +349,7 @@ header.header-mobile {
 .vnsound_banner {
   padding: 159px 0 100px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/banner-home.png")
+    url("http://vnsound.com.vn/images/banner_trang_chu/home_top_final.png")
       no-repeat center center;
   background-size: cover;
   margin-top: 99px;
@@ -534,8 +534,34 @@ header.header-mobile {
 .vnsound_course {
   padding: 0 0 15px;
   background: #030303
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/khoa-hoc-banner.png")
+    url("http://vnsound.com.vn/images/banner_trang_chu/home_khoc_hoc.png")
     no-repeat bottom center;
+}
+
+.vnsound_course::before {
+  content: "";
+  position: absolute;
+  height: 20rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(3, 3, 3);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(3, 3, 3, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(3, 3, 3, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(3, 3, 3, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#030303",endColorstr="#00d4ff",GradientType=1);
 }
 
 .course_tab {
@@ -721,7 +747,7 @@ header.header-mobile {
 .vnsound_knowledge {
   padding: 90px 0 154px;
   background: #030303
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/tin-tuc-banner.png")
+    url("http://vnsound.com.vn/images/banner_trang_chu/home_tin_tuc.png")
     no-repeat top center;
   background-size: cover;
 }
@@ -892,8 +918,8 @@ header.header-mobile {
 /* gioi-thieu */
 /* banner_introduct */
 .banner_introduct {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_chinh/banner-top.png")
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+    url("http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_top_final.png")
       no-repeat center center;
   background-size: cover;
   padding: 115px 0 280px;
@@ -962,7 +988,7 @@ header.header-mobile {
   padding: 74px 0 13px;
   /* background: #030303 url("../images/bg-mttn.png") no-repeat center center; */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_gioi_thieu/banner-muctieuvatamnhin.png")
+    url("http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_muc_tieu_va_tam_nhin.png")
       no-repeat center center;
   background-size: cover;
 }
@@ -1018,7 +1044,7 @@ header.header-mobile {
 .introduct_mttn2 {
   /* background: #030303; */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_gioi_thieu/banner-solieuthongke.png")
+    url("http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_so_lieu_thong_ke.png")
       no-repeat center center;
   background-size: cover;
 }
@@ -1039,7 +1065,7 @@ header.header-mobile {
 .vnsound_service {
   padding: 94px 0 24px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("http://vnsound.com.vn/images/anh_tu_lieu/trang_gioi_thieu/banner-dichvucuavnsound.png")
+    url("http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_dich_vu.png")
       no-repeat center center;
   background-size: cover;
 }
@@ -2830,6 +2856,7 @@ textarea.input_contact_control {
 .deco-5,
 .deco-8 {
   right: 0;
+  bottom: -1rem;
 }
 
 .deco-2 {
@@ -2839,6 +2866,10 @@ textarea.input_contact_control {
 
 .deco-3 {
   top: 40%;
+}
+
+.deco-3.deco-img {
+  mix-blend-mode: lighten;
 }
 
 .deco-5 {
