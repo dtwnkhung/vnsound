@@ -69,7 +69,7 @@
       Club đã cộng tác
     </div>
     <div class="dct_tab_item" data-id="2">
-      Đứng cùng nghệ sỹ lớn nhỏ
+      Sự kiện đã góp mặt
     </div>
   </div>
   <div class="dct_content">
@@ -266,11 +266,11 @@
         <div class="vnsound_box_all">
           <div class="vnsound_title_bg d-none wow slideInUp animated animated"
             style="visibility: visible; animation-name: slideInUp;">
-            life style
+            Gallery
           </div>
           <h2 class="vnsound_title wow fadeInUp animated animated" data-wow-delay="0.2s"
             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-            life style
+            Gallery
           </h2>
         </div>
       </div>

@@ -56,9 +56,17 @@
                     enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     @php
-                        $listOption = file_get_contents(base_path('resources/data/list-profit-optons.json'));
-                        $listOption = json_decode($listOption, true);
-                        $listOption = $listOption['profit'];
+                        $listOptionFree = file_get_contents(base_path('resources/data/list-profit-free-optons.json'));
+                        $listOptionFree = json_decode($listOptionFree, true);
+                        $listOptionFree = $listOptionFree['profit'];
+
+                        $listOptionBasic = file_get_contents(base_path('resources/data/list-profit-basic-optons.json'));
+                        $listOptionBasic = json_decode($listOptionBasic, true);
+                        $listOptionBasic = $listOptionBasic['profit'];
+
+                        $listOptionPro = file_get_contents(base_path('resources/data/list-profit-pro-optons.json'));
+                        $listOptionPro = json_decode($listOptionPro, true);
+                        $listOptionPro = $listOptionPro['profit'];
                     @endphp
                     <div class="row">
                         <div class="col-12">
@@ -524,7 +532,7 @@
                                     <select class="select2 form-control form-control-lg is-invalid" name="free_benefit[]"
                                         id="free_benefit" multiple>
                                         <option value="" disabled>-- Lựa chọn --</option>
-                                        @foreach ($listOption as $key => $item)
+                                        @foreach ($listOptionFree as $key => $item)
                                             <option value="{{ $key }}">{{ $item }}</option>
                                         @endforeach
                                     </select>
@@ -569,7 +577,7 @@
                                     <select class="select2 form-control form-control-lg is-invalid" name="basic_benefit[]"
                                         id="basic_benefit" multiple>
                                         <option value="" disabled>-- Lựa chọn --</option>
-                                        @foreach ($listOption as $key => $item)
+                                        @foreach ($listOptionBasic as $key => $item)
                                             <option value="{{ $key }}">{{ $item }}</option>
                                         @endforeach
                                     </select>
@@ -614,7 +622,7 @@
                                     <select class="select2 form-control form-control-lg is-invalid" name="pre_benefit[]"
                                         id="pre_benefit" multiple>
                                         <option value="" disabled>-- Lựa chọn --</option>
-                                        @foreach ($listOption as $key => $item)
+                                        @foreach ($listOptionPro as $key => $item)
                                             <option value="{{ $key }}">{{ $item }}</option>
                                         @endforeach
                                     </select>

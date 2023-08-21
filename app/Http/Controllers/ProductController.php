@@ -581,8 +581,8 @@ class ProductController extends Controller
         $str = mb_strtolower($str, 'UTF-8'); // Convert to lowercase using UTF-8 encoding
     
         // remove accents, swap ñ for n, etc
-        $from = "àáäâạèéëêệìíïîòóöôọùúüûñç·/_,:;";
-        $to = "aaaaaeeeeeiiiiooooouuuunc------";
+        $from = "àáäâạảèéëêệìíïîòóöôọơởỡửữưùúüûñç·/_,:;";
+        $to = "aaaaaaeeeeeiiiioooooooouuuuuuunc------";
         for ($i = 0, $l = mb_strlen($from, 'UTF-8'); $i < $l; $i++) {
             $str = str_replace(mb_substr($from, $i, 1, 'UTF-8'), mb_substr($to, $i, 1, 'UTF-8'), $str);
         }

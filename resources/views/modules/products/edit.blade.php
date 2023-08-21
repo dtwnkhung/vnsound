@@ -532,9 +532,21 @@
                         </div>
 
                         @php
-                            $listOption = file_get_contents(base_path('resources/data/list-profit-optons.json'));
-                            $listOption = json_decode($listOption, true);
-                            $listOption = $listOption['profit'];
+                            // $listOption = file_get_contents(base_path('resources/data/list-profit-optons.json'));
+                            // $listOption = json_decode($listOption, true);
+                            // $listOption = $listOption['profit'];
+
+                            $listOptionFree = file_get_contents(base_path('resources/data/list-profit-free-optons.json'));
+                            $listOptionFree = json_decode($listOptionFree, true);
+                            $listOptionFree = $listOptionFree['profit'];
+
+                            $listOptionBasic = file_get_contents(base_path('resources/data/list-profit-basic-optons.json'));
+                            $listOptionBasic = json_decode($listOptionBasic, true);
+                            $listOptionBasic = $listOptionBasic['profit'];
+
+                            $listOptionPro = file_get_contents(base_path('resources/data/list-profit-pro-optons.json'));
+                            $listOptionPro = json_decode($listOptionPro, true);
+                            $listOptionPro = $listOptionPro['profit'];
                         @endphp
 
                         <div class="col-12">
@@ -576,7 +588,7 @@
                                 <div class="col-sm-9">
                                     <select class="select2 form-control form-control-lg" name="free_benefit[]"
                                         id="free_benefit" multiple>
-                                        @foreach ($listOption as $key => $opt)
+                                        @foreach ($listOptionFree as $key => $opt)
                                             @if (in_array($key, $free_benefit))
                                                 <option value="{{ $key }}" selected>{{ $opt }}</option>
                                             @else
@@ -624,7 +636,7 @@
                                 <div class="col-sm-9">
                                     <select class="select2 form-control form-control-lg is-invalid" name="basic_benefit[]"
                                         id="basic_benefit" multiple>
-                                        @foreach ($listOption as $key => $opt)
+                                        @foreach ($listOptionBasic as $key => $opt)
                                             @if (in_array($key, $basic_benefit))
                                                 <option value="{{ $key }}" selected>{{ $opt }}</option>
                                             @else
@@ -672,7 +684,7 @@
                                 <div class="col-sm-9">
                                     <select class="select2 form-control form-control-lg is-invalid" name="pre_benefit[]"
                                         id="pre_benefit" multiple>
-                                        @foreach ($listOption as $key => $opt)
+                                        @foreach ($listOptionPro as $key => $opt)
                                             @if (in_array($key, $pre_benefit))
                                                 <option value="{{ $key }}" selected>{{ $opt }}</option>
                                             @else
