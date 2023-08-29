@@ -131,7 +131,7 @@
                       <div class="course_content_txt html-convert">
                         {{ $pro['description'] }}
                       </div>
-                      <a href="{{ route('home.products', ['id' => $pro['id']]) }}" class="btn btn-main">
+                      <a href="{{ route('home.productsBySlug', ['slug' => $pro['slug']]) }}" class="btn btn-main">
                         Tìm hiểu thêm
                       </a>
                     </div>
