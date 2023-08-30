@@ -12,7 +12,7 @@
             {{ $item['name'] }}
           </h1>
           <div class="banner_txt wow fadeInUp animated" data-wow-delay="0.3s">
-            Rock off and rave on
+            Build up your name
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
       <div class="col-lg-12">
         <div class="welcome_content">
           <div class="welcome_left">
-            <img src="{{ URL::to('/images/artists'). '/' .$item["images"] }}" alt="" class="w-100" />
+            <img src="{{ URL::to('/images/artists'). '/' .$item[" images"] }}" alt="" class="w-100" />
             <img src="images/img-welcom2.png" alt="" style="display: block;margin: 35px auto 0;" />
           </div>
           <div class="welcome_right">
@@ -146,61 +146,59 @@
                       @endif
                       @endforeach
                       {{-- <div class="swiper-slide">
-                                                <div class="boxdtns_right_slide_img">
-                                                    <img src="{{ URL::to('/images/artists'). '/'. $item['project_1_image']}}"
-                      />
+                        <div class="boxdtns_right_slide_img">
+                          <img src="{{ URL::to('/images/artists'). '/'. $item['project_1_image']}}" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="boxdtns_right_slide_img">
+                          <img src="{{ URL::to('/images/artists'). '/'. $item['project_2_image']}}" />
+                        </div>
+                      </div> --}}
                     </div>
+                    <div class="swiper-pagination swiper-pagination-boxdtns"></div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="boxdtns_right_slide_img">
-                      <img src="{{ URL::to('/images/artists'). '/'. $item['project_2_image']}}" />
-                    </div>
-                  </div> --}}
                 </div>
-                <div class="swiper-pagination swiper-pagination-boxdtns"></div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="prj-content ml-auto" data-prj-id="2">
-          <div class="boxdtns_right h-100">
-            <!-- <div class="boxdtns_right_img">
+            <div class="prj-content ml-auto" data-prj-id="2">
+              <div class="boxdtns_right h-100">
+                <!-- <div class="boxdtns_right_img">
                                     <img src="images/bg-left.png" alt="" />
                                 </div> -->
-            <div class="artists_list boxdtns_right_list">
-              <div class="swiper-container boxdtns_right_slide_2">
-                <div class="swiper-wrapper">
-                  @foreach ($item->project_2_image as $key => $img)
-                  @if (!empty($img))
-                  <div class="swiper-slide">
-                    <div class="boxdtns_right_slide_img">
-                      <img src="{{ URL::to('/images/artists'). '/'. $img}}" />
+                <div class="artists_list boxdtns_right_list">
+                  <div class="swiper-container boxdtns_right_slide_2">
+                    <div class="swiper-wrapper">
+                      @foreach ($item->project_2_image as $key => $img)
+                      @if (!empty($img))
+                      <div class="swiper-slide">
+                        <div class="boxdtns_right_slide_img">
+                          <img src="{{ URL::to('/images/artists'). '/'. $img}}" />
+                        </div>
+                      </div>
+                      @endif
+                      @endforeach
+                      {{-- <div class="swiper-slide">
+                        <div class="boxdtns_right_slide_img">
+                          <img src="{{ URL::to('/images/artists'). '/'. $item['project_1_image']}}" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="boxdtns_right_slide_img">
+                          <img src="{{ URL::to('/images/artists'). '/'. $item['project_2_image']}}" />
+                        </div>
+                      </div> --}}
                     </div>
+                    <div class="swiper-pagination swiper-pagination-boxdtns"></div>
                   </div>
-                  @endif
-                  @endforeach
-                  {{-- <div class="swiper-slide">
-                                                <div class="boxdtns_right_slide_img">
-                                                    <img src="{{ URL::to('/images/artists'). '/'. $item['project_1_image']}}"
-                  />
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="boxdtns_right_slide_img">
-                  <img src="{{ URL::to('/images/artists'). '/'. $item['project_2_image']}}" />
-                </div>
-              </div> --}}
             </div>
-            <div class="swiper-pagination swiper-pagination-boxdtns"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="detaiartist_scenes" id="follow-artist">
   <div class="container">
@@ -321,8 +319,8 @@
 </div>
 @if (session('thongbao'))
 <script>
-var message = "{{ session('thongbao') }}";
-alert(message)
+  var message = "{{ session('thongbao') }}";
+  alert(message)
 </script>
 @endif
 @endsection
@@ -332,18 +330,18 @@ alert(message)
 @endsection
 @section('script')
 <script>
-$(document).ready(function() {
-  $('#select-files').click(function() {
-    console.log('test')
-    $('#certificate').click()
-    return false
-  })
-  $('#submitForm').click(function() {
-    $('#main-form').submit()
-  })
+  $(document).ready(function () {
+    $('#select-files').click(function () {
+      console.log('test')
+      $('#certificate').click()
+      return false
+    })
+    $('#submitForm').click(function () {
+      $('#main-form').submit()
+    })
 
-  $("#dct1 .dct_other_item").last().hide();
-})
+    $("#dct1 .dct_other_item").last().hide();
+  })
 </script>
 
 @endsection
