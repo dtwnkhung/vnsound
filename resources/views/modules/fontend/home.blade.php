@@ -344,6 +344,7 @@ alert(message)
 @section('script')
 <script>
 $(document).ready(function() {
+  console.log("Ready!")
   $(".html-convert").each(function() {
     const htmlString = $(this).text();
     $(this).html(htmlString);
