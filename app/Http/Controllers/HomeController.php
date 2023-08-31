@@ -191,26 +191,41 @@ class HomeController extends Controller
     {
         $product = $productRepository->getBySlug($slug);
         $product['comments'] = explode(',', $product['comments']);
-        $listOption = file_get_contents(base_path('resources/data/list-profit-optons.json'));
-        $listOption = json_decode($listOption, true);
-        $listOption = $listOption['profit'];
+        // $listOption = file_get_contents(base_path('resources/data/list-profit-optons.json'));
+        // $listOption = json_decode($listOption, true);
+        // $listOption = $listOption['profit'];
+
+
+        $listOptionFree = file_get_contents(base_path('resources/data/list-profit-free-optons.json'));
+        $listOptionFree = json_decode($listOptionFree, true);
+        $listOptionFree = $listOptionFree['profit'];
+
+        $listOptionBasic = file_get_contents(base_path('resources/data/list-profit-basic-optons.json'));
+        $listOptionBasic = json_decode($listOptionBasic, true);
+        $listOptionBasic = $listOptionBasic['profit'];
+
+        $listOptionPro = file_get_contents(base_path('resources/data/list-profit-pro-optons.json'));
+        $listOptionPro = json_decode($listOptionPro, true);
+        $listOptionPro = $listOptionPro['profit'];
+
         $product['free_benefit'] = explode(',', $product['free_benefit']);
         $product['basic_benefit'] = explode(',', $product['basic_benefit']);
         $product['pre_benefit'] = explode(',', $product['pre_benefit']);
+        
         $free_benefit = [];
         $basic_benefit = [];
         $pre_benefit = [];
         foreach ($product['free_benefit'] as $key => $opt)
         {
-            $free_benefit[] = $listOption[$opt];
+            $free_benefit[] = $listOptionFree[$opt];
         }
         foreach ($product['basic_benefit'] as $key => $opt)
         {
-            $basic_benefit[] = $listOption[$opt];
+            $basic_benefit[] = $listOptionBasic[$opt];
         }
         foreach ($product['pre_benefit'] as $key => $opt)
         {
-            $pre_benefit[] = $listOption[$opt];
+            $pre_benefit[] = $listOptionPro[$opt];
         }
         $product['free_benefit'] = $free_benefit;
         $product['basic_benefit'] = $basic_benefit;
