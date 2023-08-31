@@ -125,7 +125,7 @@
             </h4>
             {{ $itemSlug['project_2_title'] }}
           </div>
-          <img src="images/img-dtn.png" alt="" />
+          {{-- <img src="images/img-dtn.png" alt="" /> --}}
         </div>
       </div>
       <div class="col-md-6 slider-container">
