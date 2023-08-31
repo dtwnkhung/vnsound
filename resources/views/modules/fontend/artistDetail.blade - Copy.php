@@ -12,7 +12,7 @@
             {{ $item['name'] }}
           </h1>
           <div class="banner_txt wow fadeInUp animated" data-wow-delay="0.3s">
-            Build up your name
+            "Build up your name"
           </div>
         </div>
       </div>
