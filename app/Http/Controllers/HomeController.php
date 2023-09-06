@@ -289,14 +289,23 @@ class HomeController extends Controller
             'data' => $data,
         ]);
     }
-    function artists(Request $request, ArtistRepository $artistRepository)
+    
+      function artists(Request $request, ArtistRepository $artistRepository)
     {
         $activeArtist = 'active';
         $text = isset($_GET['text-search']) ? $_GET['text-search'] : '';
-        $artists = $artistRepository->getPagination(9);
 
+        if ($request->has('id') && !empty($request->input('id'))) {
+            $artists = $artistRepository->getById($request->input('id'));
+        } else {
+            $artists = $artistRepository->getPagination(9);
+        }
+
+        $list_artists = $artistRepository->getList();
+        
         return view('modules.fontend.listArtist', [
             'activeArtist' => $activeArtist,
+            'list_artists' => $list_artists,
             'items' => $artists,
             'text_search' => $text,
         ]);

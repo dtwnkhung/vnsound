@@ -3556,3 +3556,10 @@ textarea.input_contact_control {
     padding: 20px 0 0;
   }
 }
+
+.bg-center-not {
+  background-color: #030303;
+}
+.font-08rem {
+  font-size: 0.8rem !important;
+}
