@@ -21,7 +21,7 @@
             {{ $itemSlug['name'] }}
           </h1>
           <div class="banner_txt wow fadeInUp animated" data-wow-delay="0.3s">
-           "Build up your name"
+            "Build up your name"
           </div>
         </div>
       </div>
@@ -365,6 +365,14 @@ $(document).ready(function() {
   })
 
   $("#dct1 .dct_other_item").last().hide();
+  $("#dct2 .dct_other_item").each(function() {
+    const matchSrc = "http://localhost/images/artists/" ?? "http://vnsound.com.vn/images/artists/"
+    const imageSrc = $(this).find("img").attr("src");
+    console.log("imageSrc", imageSrc)
+    if (imageSrc === matchSrc) {
+      $(this).hide()
+    }
+  })
 
   // var currentURL = window.location.href;
   // var urlParts = currentURL.split('/');
@@ -376,7 +384,7 @@ $(document).ready(function() {
   //   var dynamicTitle = document.getElementById('dynamicTitle');
   //   dynamicTitle.textContent = extractedValue.toUpperCase();
   // }
-  
+
 })
 </script>
 
