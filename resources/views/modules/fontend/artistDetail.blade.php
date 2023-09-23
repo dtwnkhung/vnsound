@@ -366,7 +366,7 @@ $(document).ready(function() {
 
   $("#dct1 .dct_other_item").last().hide();
   $("#dct2 .dct_other_item").each(function() {
-    const matchSrc = "http://localhost/images/artists/" ?? "http://vnsound.com.vn/images/artists/"
+    const matchSrc = "http://localhost/images/artists/" || "http://vnsound.com.vn/images/artists/"
     const imageSrc = $(this).find("img").attr("src");
     console.log("imageSrc", imageSrc)
     if (imageSrc === matchSrc) {
