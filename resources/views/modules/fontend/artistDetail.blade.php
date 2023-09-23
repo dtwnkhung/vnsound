@@ -355,6 +355,9 @@ alert(message)
 @section('script')
 <script>
 $(document).ready(function() {
+  const urlMatch = ["http://localhost/images/artists/", "http://vnsound.com.vn/images/artists/",
+    "https://vnsound.com.vn/images/artists/"
+  ]
   $("#html-convert_1").html($("#html-convert_1").text());
   $('#select-files').click(function() {
     $('#certificate').click()
@@ -366,10 +369,11 @@ $(document).ready(function() {
 
   $("#dct1 .dct_other_item").last().hide();
   $("#dct2 .dct_other_item").each(function() {
-    // const matchSrc = "http://localhost/images/artists/" || "http://vnsound.com.vn/images/artists/"
     const imageSrc = $(this).find("img").attr("src");
-    if (imageSrc === "http://vnsound.com.vn/images/artists/") {
-      $(this).hide()
+    for (const url of urlMatch) {
+      if (imageSrc === url) {
+        $(this).hide()
+      }
     }
   })
 
