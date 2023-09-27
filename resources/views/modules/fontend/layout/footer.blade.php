@@ -46,7 +46,7 @@
               </a>
             </li>
             <li>
-              <a href="nghe-si.html">
+              <a href="nghe-sy.html">
                 Profile nghệ sỹ
               </a>
             </li>
