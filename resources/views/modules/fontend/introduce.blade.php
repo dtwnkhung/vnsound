@@ -11,7 +11,7 @@
             Về chúng tôi
           </h1>
           <div class="banner_txt wow fadeInUp animated" data-wow-delay="0.3s">
-           "Build up your name"
+            "Build up your name"
           </div>
         </div>
       </div>
@@ -59,7 +59,12 @@
                   {{ $data['gioi-thieu-block-1-title'] }}
                 </h3>
                 <div class="mttn_left_txt">
-                  {{ $data['gioi-thieu-block-1-text'] }}
+                  <!-- {{ $data['gioi-thieu-block-1-text'] }} -->
+                  Xây dựng hệ thống sinh thái chuyên biệt về âm nhạc điện tử dành riêng cho các nghệ sĩ, bao gồm: đào
+                  tạo, định hướng và phát triển hình ảnh cá nhân.<br /><br />Kết nối, phát triển cộng đồng DJ và MC Hype
+                  tại
+                  Việt Nam một cách chuyên nghiệp và bài bản nhất.
+                  </p>
                 </div>
               </div>
             </div>
@@ -93,11 +98,11 @@
                 <div class="mttn_left_txt">
                   <!-- {{ $data['gioi-thieu-block-2-text'] }} -->
                   - Năm thành lập: 2017<br />
-                  - Số lượng học viên đã đào tạo: 93<br />
-                  - 30 sản phẩm phát hành bởi VNSound Music<br />
-                  - 32,000+ người hâm mộ trên fanpage VNSound<br />
-                  - Gần 500,000 lượt người đọc trên cổng thông tin về âm nhạc điện tử vietnamsound.com Bamboo City
-                  Carnival - chuỗi sự kiện do VNSound đồng tổ chức thu hút hơn 2500 người tham dự
+                  - Số lượng học viên đã đào tạo: ~300<br />
+                  - 90+ sản phẩm phát hành bởi VNSound Music<br />
+                  - 33,000+ người hâm mộ trên fanpage VNSound<br />
+                  - 4 sự kiện cộng đồng được tổ chức và Bamboo City Carnival - chuỗi sự kiện do VNSound đồng tổ chức thu
+                  hút hơn 5000 người tham dự
                 </div>
               </div>
             </div>
