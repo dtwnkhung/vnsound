@@ -1,6 +1,6 @@
 @extends('modules.fontend.layout.index')
 @section('facebook_meta')
-<meta property="og:image" content="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw" />
+<meta property="og:image" content="images/banner_trang_goi_thieu/banner_top_final.png" />
 @endsection
 @section('content')
 <div class="vnsound_banner">
