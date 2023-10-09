@@ -1,6 +1,6 @@
 @extends('modules.fontend.layout.index')
 @section('facebook_meta')
-<meta property="og:image" content="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw" />
+<meta property="og:image" content="{{ URL::to('/images/artists'). '/'. $itemSlug->images[0]}}" />
 @endsection
 @section('content')
 <style>
