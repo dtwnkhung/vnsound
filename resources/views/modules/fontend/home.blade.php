@@ -1,4 +1,7 @@
 @extends('modules.fontend.layout.index')
+@section('facebook_meta')
+<meta property="og:image" content="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw" />
+@endsection
 @section('content')
 <div class="vnsound_banner">
   <div class="container position-relative" style="z-index:9">
