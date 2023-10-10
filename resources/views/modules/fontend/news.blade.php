@@ -1,4 +1,7 @@
 @extends('modules.fontend.layout.index')
+@section('facebook_meta')
+<meta property="og:image" content="{{ URL::to('/images/news'). '/'. $news->images[0]}}" />
+@endsection
 @section('content')
 <style>
 img {

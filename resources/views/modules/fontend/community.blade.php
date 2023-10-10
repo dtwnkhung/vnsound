@@ -1,5 +1,8 @@
 
 @extends('modules.fontend.layout.index')
+@section('facebook_meta')
+<meta property="og:image" content="http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_top_final.png" />
+@endsection
 @section('content')
 <div class="cd_banner">
     <img class="img-cd1 wow fadeInRight" data-wow-duration="1.5s" src="images/cong-dong/img-cd1.png" alt="" />

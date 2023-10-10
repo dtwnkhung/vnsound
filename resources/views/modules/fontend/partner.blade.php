@@ -1,5 +1,8 @@
 
 @extends('modules.fontend.layout.index')
+@section('facebook_meta')
+<meta property="og:image" content="http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_top_final.png" />
+@endsection
 @section('css')
     <link rel="stylesheet" href="./css/fontend/news.css" />
 @endsection

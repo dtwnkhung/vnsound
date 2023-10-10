@@ -1,4 +1,7 @@
 @extends('modules.fontend.layout.index_not_header')
+@section('facebook_meta')
+<meta property="og:image" content="http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_top_final.png" />
+@endsection
 @section('css')
 <style>
 .libary_sidebar_child {

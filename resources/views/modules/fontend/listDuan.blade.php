@@ -1,5 +1,8 @@
 
 @extends('modules.fontend.layout.index')
+@section('facebook_meta')
+<meta property="og:image" content="http://vnsound.com.vn/images/banner_trang_goi_thieu/banner_top_final.png" />
+@endsection
 @section('content')
     <div class="container mt-3 product-container">
         <div class="d-flex align-items-center justify-content-between py-4 results">
