@@ -73,7 +73,7 @@
             </a>
           </li>
           <li>
-            <a href="/nghe-si.html">
+            <a href="/nghe-sy.html">
               Profile
             </a>
           </li>
@@ -87,7 +87,7 @@
             <div class="ic-click"></div>
             <div class="libary_sidebar_child">
               @foreach ($dataShare['products'] as $item)
-              <a href="{{ route('home.products', ['id' => $item['id']]) }}">{{ $item['name'] }}</a>
+              <a href="{{ route('home.productsBySlug', ['slug' => $item['slug']]) }}">{{ $item['name'] }}</a>
               @endforeach
             </div>
           </li>
