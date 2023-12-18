@@ -238,7 +238,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Free
+                   LILBEE CLASS
                 </div>
                 <div class="opinion_bot_money">
                   {{ $itemSlug['free_price'] }}
@@ -257,7 +257,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Basic
+                  QUÂN K CLASS
                 </div>
                 <div class="opinion_bot_money">
                   {{ $itemSlug['basic_price'] }}
@@ -276,7 +276,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  Pro
+                  QUÂN K & LILBEE CLASS
                 </div>
                 <div class="opinion_bot_money">
                   {{ $itemSlug['premium_price'] }}
