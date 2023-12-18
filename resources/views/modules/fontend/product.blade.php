@@ -5,30 +5,30 @@
 @section('content')
 <!--Section: Block Content-->
 <style>
-  #html-convert_4 p {
-    background: none
-  }
+#html-convert_4 p {
+  background: none
+}
 
-  .text-artist-intro * {
-    padding: 0 !important
-  }
+.text-artist-intro * {
+  padding: 0 !important
+}
 
-  .form-group.invalid .form-control {
-    border-color: #ea5455;
-    padding-right: calc(1.45em + 0.876rem);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ea5455' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea5455' stroke='none'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right calc(0.3625em + 0.219rem) center;
-    background-size: calc(0.725em + 0.438rem) calc(0.725em + 0.438rem);
-  }
+.form-group.invalid .form-control {
+  border-color: #ea5455;
+  padding-right: calc(1.45em + 0.876rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23ea5455' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea5455' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.3625em + 0.219rem) center;
+  background-size: calc(0.725em + 0.438rem) calc(0.725em + 0.438rem);
+}
 
-  .form-group.invalid .form-message {
-    color: #f33a58;
-  }
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
 
-  .form-message {
-    text-align: left;
-  }
+.form-message {
+  text-align: left;
+}
 </style>
 
 
@@ -238,7 +238,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  LILBEE CLASS
+                  Free
                 </div>
                 <div class="opinion_bot_money">
                   {{ $itemSlug['free_price'] }}
@@ -257,7 +257,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  QUÂN K CLASS
+                  Basic
                 </div>
                 <div class="opinion_bot_money">
                   {{ $itemSlug['basic_price'] }}
@@ -276,7 +276,7 @@
             <div class="col-md-4">
               <div class="opinion_bot_item">
                 <div class="opinion_bot_title">
-                  QUÂN K & LILBEE CLASS
+                  Pro
                 </div>
                 <div class="opinion_bot_money">
                   {{ $itemSlug['premium_price'] }}
@@ -332,26 +332,24 @@
           <div class="form_title">
             Liên hệ với chúng tôi
           </div>
-          <form id="contactForm" action="{{ route(" home.addLienhe") }}" method="POST">
+          <form id="contactForm" action="{{ route("home.addLienhe") }}" method="POST">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div class="form_content">
               <div class="form_row">
                 <input type="hidden" name="id" class="input_control" value="{{$itemSlug['id']}}" />
-                <input type="text" name="name" class="input_control" placeholder="Họ và tên"
-                  value="{{ old('name') }}" />
+                <input type="text" name="name" class="input_control" placeholder="Họ và tên" value="{{ old('name') }}" />
                 @if ($errors->has('name'))
                 <script>
-                  document.getElementById("name").classList.add("is-invalid");
+                document.getElementById("name").classList.add("is-invalid");
                 </script>
                 <div class="invalid-feedback" style="display: block;">{{ $errors->first('name') }}</div>
                 @endif
               </div>
               <div class="form_row">
-                <input type="number" name="phone" class="input_control" value="{{ old('phone') }}"
-                  placeholder="Số điện thoại" />
+                <input type="number" name="phone" class="input_control" value="{{ old('phone') }}" placeholder="Số điện thoại" />
                 @if ($errors->has('phone'))
                 <script>
-                  document.getElementById("phone").classList.add("is-invalid");
+                document.getElementById("phone").classList.add("is-invalid");
                 </script>
                 <div class="invalid-feedback" style="display: block;">{{ $errors->first('phone') }}</div>
                 @endif
@@ -360,15 +358,13 @@
                 <input type="text" name="email" value="{{ old('email') }}" class="input_control" placeholder="Gmail" />
               </div>
               <div class="form_row">
-                <input type="text" name="address" value="{{ old('address') }}" class="input_control"
-                  placeholder="Địa chỉ" />
+                <input type="text" name="address" value="{{ old('address') }}" class="input_control" placeholder="Địa chỉ" />
               </div>
               <div class="form_row">
-                <textarea class="input_control" placeholder="Nội dung"
-                  name="description">{{ old('description') }}</textarea>
+                <textarea class="input_control" placeholder="Nội dung" name="description">{{ old('description') }}</textarea>
                 @if ($errors->has('description'))
                 <script>
-                  document.getElementById("description").classList.add("is-invalid");
+                document.getElementById("description").classList.add("is-invalid");
                 </script>
                 <div class="invalid-feedback" style="display: block;">{{ $errors->first('description') }}</div>
                 @endif
@@ -475,35 +471,35 @@
 @endsection
 @section('script')
 <script>
-  $(document).ready(function () {
+$(document).ready(function() {
 
-    $("#html-convert_1").html($("#html-convert_1").text());
-    $("#html-convert_2").html($("#html-convert_2").text());
-    $("#html-convert_3").html($("#html-convert_3").text());
-    $("#html-convert_4").html($("#html-convert_4").text());
+  $("#html-convert_1").html($("#html-convert_1").text());
+  $("#html-convert_2").html($("#html-convert_2").text());
+  $("#html-convert_3").html($("#html-convert_3").text());
+  $("#html-convert_4").html($("#html-convert_4").text());
 
-    function change_image(image) {
-      var container = document.getElementById("main-image");
-      container.src = image.src;
-    }
+  function change_image(image) {
+    var container = document.getElementById("main-image");
+    container.src = image.src;
+  }
 
-    // $(document).ready(function() {
-    //   $('#contactForm').submit(function() {
-    //       var formData = $(this).serialize();
-    //       $.ajax({
-    //           url: '{{ route('register') }}',
-    //           type: 'POST',
-    //           data: formData,
-    //           success: function(response) {
-    //               alert(response.message);
-    //               // Xử lý phản hồi thành công ở đây (ví dụ: hiển thị thông báo)
-    //           },
-    //           error: function(xhr) {
-    //               // Xử lý lỗi ở đây (ví dụ: hiển thị thông báo lỗi)
-    //           }
-    //       });
-    //   });
-    // });
-  });
+  // $(document).ready(function() {
+  //   $('#contactForm').submit(function() {
+  //       var formData = $(this).serialize();
+  //       $.ajax({
+  //           url: '{{ route('register') }}',
+  //           type: 'POST',
+  //           data: formData,
+  //           success: function(response) {
+  //               alert(response.message);
+  //               // Xử lý phản hồi thành công ở đây (ví dụ: hiển thị thông báo)
+  //           },
+  //           error: function(xhr) {
+  //               // Xử lý lỗi ở đây (ví dụ: hiển thị thông báo lỗi)
+  //           }
+  //       });
+  //   });
+  // });
+});
 </script>
 @endsection
